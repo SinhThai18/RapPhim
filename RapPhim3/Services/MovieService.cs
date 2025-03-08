@@ -16,9 +16,14 @@ namespace RapPhim3.Services
         public List<Movie> GetMovies()
         {
             return _context.Movies
-                .Include(m => m.Director)
-                .Include(m => m.Genre)
                 .ToList();
         }
+
+        public Movie? GetMovieById(int id)
+        {
+            return _context.Movies
+                .FirstOrDefault(m => m.Id == id);
+        }
+
     }
 }

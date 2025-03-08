@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RapPhim3.Services;
 
 namespace RapPhim3.Controllers
@@ -18,6 +18,17 @@ namespace RapPhim3.Controllers
             var topMovies = movies.OrderByDescending(m => m.Id).Take(3).ToList();
             ViewBag.TopMovies = topMovies;
             return View(movies);
+        }
+
+        public IActionResult MovieDetail(int id)
+        {
+            var movie = _movieService.
+                GetMovieById(id); // Lấy phim theo ID
+            if (movie == null)
+            {
+                return NotFound();
+            }
+            return View(movie);
         }
     }
 }

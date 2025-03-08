@@ -15,23 +15,15 @@ public partial class Movie
 
     public int? Duration { get; set; }
 
-    public int? DirectorId { get; set; }
-
-    public int? GenreId { get; set; }
-
-    public string? TrailerUrl { get; set; }
-
     public string? LandscapeImage { get; set; }
 
     public string? PortraitImage { get; set; }
 
     public int? CountryId { get; set; }
 
+    public string? TrailerUrl { get; set; }
+
     public virtual Country? Country { get; set; }
-
-    public virtual Director? Director { get; set; }
-
-    public virtual Genre? Genre { get; set; }
 
     public virtual ICollection<MovieComment> MovieComments { get; set; } = new List<MovieComment>();
 
@@ -42,4 +34,8 @@ public partial class Movie
     public virtual ICollection<StarRating> StarRatings { get; set; } = new List<StarRating>();
 
     public virtual ICollection<Actor> Actors { get; set; } = new List<Actor>();
+
+    public virtual ICollection<Director> Directors { get; set; } = new List<Director>();
+
+    public virtual ICollection<Genre> Genres { get; set; } = new List<Genre>();
 }
