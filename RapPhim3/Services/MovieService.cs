@@ -25,5 +25,16 @@ namespace RapPhim3.Services
                 .FirstOrDefault(m => m.Id == id);
         }
 
+        public List<Genre> GetGenres()
+        {
+            return _context.Genres
+                .ToList();
+        }
+
+        public List<Country> GetCountries()
+        {
+            return _context.Countries
+                .ToList();
+        }
     }
 }

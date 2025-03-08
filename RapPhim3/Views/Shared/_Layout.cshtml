@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="~/css/gueststyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <div class="header">
@@ -27,112 +27,14 @@
                 </div>
                 <div class="col-md-5">
                     <ul class="list-gr-1 list-group list-group-horizontal">
-                        <li class="list-group-item movie-area">
-                            Phim
-                            <i class="ti-angle-down down-btn"></i>
-                            <ul class="movie-status list-group">
-                                <li class="movie-sta-text-1 py-1"><a href="playing.html">PHIM ĐANG CHIẾU</a></li>
-                                <div class="movie-list py-1">
-                                    <div class="row">
-                                        <div class="col-md-3">
-
-                                            <a href="moviedetail.html" class="text-dark-emphasis movie-name">
-                                                <img src="~/images/movie/exhuma.jpg" alt="" class="img-fluid img-movie">
-                                                <button class="buy-ticket-btn btn">
-                                                    <i class="ti-ticket"></i>
-                                                    Mua vé
-                                                </button>
-                                                Exhuma: Quật mộ trùng ma
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <a href="moviedetail.html" class="text-dark-emphasis movie-name">
-                                                <img src="~/images/movie/kungfu-panda-4.jpg" alt="" class="img-fluid img-movie">
-                                                <button class="buy-ticket-btn btn">
-                                                    <i class="ti-ticket"></i>
-                                                    Mua vé
-                                                </button>
-                                                KungFu Panda 4
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <a href="moviedetail.html" class="text-dark-emphasis movie-name">
-                                                <img src="~/images/movie/qu-co-thua-ke-2.jpg" alt="" class="img-fluid img-movie">
-                                                <button class="buy-ticket-btn btn">
-                                                    <i class="ti-ticket"></i>
-                                                    Mua vé
-                                                </button>
-                                                Quý cô thừa kế 2
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <a href="moviedetail.html" class="text-dark-emphasis movie-name py-1">
-                                                <img src="~/images/movie/dune-2.jpg" alt="" class="img-fluid img-movie">
-                                                <button class="buy-ticket-btn btn">
-                                                    <i class="ti-ticket"></i>
-                                                    Mua vé
-                                                </button>
-                                                Dune 2
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <li class="movie-sta-text-2 py-1"><a href="playing.html">PHIM SẮP CHIẾU</a></li>
-                                <div class="movie-list py-1">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <a href="moviedetail.html" class="text-dark-emphasis movie-name">
-                                                <img src="~/images/movie/exhuma.jpg" alt="" class="img-fluid img-movie">
-                                                <button class="buy-ticket-btn btn">
-                                                    <i class="ti-ticket"></i>
-                                                    Mua vé
-                                                </button>
-                                                Exhuma: Quật mộ trùng ma
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <a href="moviedetail.html" class="text-dark-emphasis movie-name">
-                                                <img src="~/images/movie/kungfu-panda-4.jpg" alt="" class="img-fluid img-movie">
-                                                <button class="buy-ticket-btn btn">
-                                                    <i class="ti-ticket"></i>
-                                                    Mua vé
-                                                </button>
-                                                KungFu Panda 4
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <a href="moviedetail.html" class="text-dark-emphasis movie-name">
-                                                <img src="~/images/movie/qu-co-thua-ke-2.jpg" alt="" class="img-fluid img-movie">
-                                                <button class="buy-ticket-btn btn">
-                                                    <i class="ti-ticket"></i>
-                                                    Mua vé
-                                                </button>
-                                                Quý cô thừa kế 2
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <a href="moviedetail.html" class="text-dark-emphasis movie-name py-1">
-                                                <img src="~/images/movie/dune-2.jpg" alt="" class="img-fluid img-movie">
-                                                <button class="buy-ticket-btn btn">
-                                                    <i class="ti-ticket"></i>
-                                                    Mua vé
-                                                </button>
-                                                Dune 2
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ul>
-                        </li>
                         <li class="list-group-item cinema-corner text-center">
                             Góc Điện Ảnh
                             <i class="ti-angle-down down-btn"></i>
                             <ul class="sub-list-gr-1 list-group">
-                                <li><a href="movietype.html">Thể loại phim</a></li>
-                                <li><a href="actor.html">Diễn viên</a></li>
-                                <li><a href="director.html">Đạo diễn</a></li>
-                                <li><a href="review.html">Bình luận phim</a></li>
+                                <li><a href="@Url.Action("MovieType","Home")">Thể loại phim</a></li>
+                                <li><a href="@Url.Action("Actor","Home")">Diễn viên</a></li>
+                                <li><a href="@Url.Action("Director","Home")">Đạo diễn</a></li>
+                                <li><a href="@Url.Action("Review","Home")">Bình luận phim</a></li>
                             </ul>
                         </li>
 
@@ -229,12 +131,44 @@
         @RenderBody()
     </div>
     
-    <div class="footer">
-    </div>
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Cột 1: Giới thiệu -->
+                <div class="col-md-4">
+                    <h5>Giới thiệu</h5>
+                    <p>Website đặt vé phim online nhanh chóng, tiện lợi với nhiều ưu đãi hấp dẫn.</p>
+                </div>
+
+                <!-- Cột 2: Liên hệ -->
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <p>Email: support@rapphim.com</p>
+                    <p>Hotline: 1900 123 456</p>
+                    <p>Địa chỉ: 123 Đường ABC, TP.HCM</p>
+                </div>
+
+                <!-- Cột 3: Mạng xã hội -->
+                <div class="col-md-4">
+                    <h5>Kết nối với chúng tôi</h5>
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Bản quyền -->
+            <div class="text-center mt-3">
+                <p>&copy; 2025 Rạp Phim. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="~/js/scripts.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="~/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
