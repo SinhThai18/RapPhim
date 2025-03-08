@@ -1,0 +1,2257 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RapPhim3.bundle.scp.css",
+      "PackagePath": "staticwebassets\\RapPhim3.kwozygjmdl.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\Ohayoustyle.css",
+      "PackagePath": "staticwebassets\\css\\Ohayoustyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\actordetailstyle.css",
+      "PackagePath": "staticwebassets\\css\\actordetailstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\actorstyle.css",
+      "PackagePath": "staticwebassets\\css\\actorstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bestmoviestyle.css",
+      "PackagePath": "staticwebassets\\css\\bestmoviestyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\directordetailstyle.css",
+      "PackagePath": "staticwebassets\\css\\directordetailstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\directorstyle.css",
+      "PackagePath": "staticwebassets\\css\\directorstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\favordetailstyle.css",
+      "PackagePath": "staticwebassets\\css\\favordetailstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\favorsstyle.css",
+      "PackagePath": "staticwebassets\\css\\favorsstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\gueststyle.css",
+      "PackagePath": "staticwebassets\\css\\gueststyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\moviedetailstyle.css",
+      "PackagePath": "staticwebassets\\css\\moviedetailstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\movietypestyle.css",
+      "PackagePath": "staticwebassets\\css\\movietypestyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\payfailstyle.css",
+      "PackagePath": "staticwebassets\\css\\payfailstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\paysuccessstyle.css",
+      "PackagePath": "staticwebassets\\css\\paysuccessstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\playingstyle.css",
+      "PackagePath": "staticwebassets\\css\\playingstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\reviewdetailstyle.css",
+      "PackagePath": "staticwebassets\\css\\reviewdetailstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\reviewstyle.css",
+      "PackagePath": "staticwebassets\\css\\reviewstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\userstyle.css",
+      "PackagePath": "staticwebassets\\css\\userstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\Italic.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\Italic.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\agenda.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\agenda.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\alarm-clock.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\alarm-clock.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\alert.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\alert.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\align-center.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\align-center.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\align-justify.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\align-justify.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\align-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\align-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\align-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\align-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\anchor.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\anchor.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\android.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\android.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\angle-double-down.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\angle-double-down.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\angle-double-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\angle-double-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\angle-double-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\angle-double-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\angle-double-up.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\angle-double-up.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\angle-down.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\angle-down.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\angle-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\angle-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\angle-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\angle-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\angle-up.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\angle-up.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\announcement.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\announcement.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\apple.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\apple.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\archive.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\archive.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-circle-down.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-circle-down.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-circle-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-circle-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-circle-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-circle-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-circle-up.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-circle-up.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-down.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-down.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-top-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-top-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-top-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-top-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow-up.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow-up.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrow.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrow.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrows-corner.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrows-corner.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrows-horizontal.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrows-horizontal.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\arrows-vertical.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\arrows-vertical.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\back-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\back-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\back-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\back-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\bag.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\bag.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\bar-chart-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\bar-chart-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\bar-chart.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\bar-chart.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\basketball.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\basketball.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\bell.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\bell.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\blackboard.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\blackboard.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\bolt-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\bolt-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\bolt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\bolt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\book.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\book.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\bookmark-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\bookmark-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\bookmark.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\bookmark.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\briefcase.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\briefcase.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\brush-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\brush-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\brush.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\brush.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\calendar.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\calendar.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\camera.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\camera.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\car.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\car.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\check-box.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\check-box.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\check.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\check.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\clip.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\clip.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\clipboard.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\clipboard.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\close.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\close.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\cloud-down.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\cloud-down.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\cloud-up.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\cloud-up.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\cloud.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\cloud.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\comment-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\comment-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\comment.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\comment.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\comments-smiley.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\comments-smiley.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\comments.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\comments.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-backward.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-backward.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-eject.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-eject.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-forward.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-forward.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-pause.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-pause.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-play.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-play.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-record.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-record.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-shuffle.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-shuffle.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-skip-backward.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-skip-backward.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-skip-forward.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-skip-forward.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\control-stop.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\control-stop.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\credit-card.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\credit-card.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\crown.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\crown.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\css3.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\css3.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\cup.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\cup.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\cut.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\cut.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\dashboard.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\dashboard.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\desktop.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\desktop.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\direction-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\direction-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\direction.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\direction.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\download.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\download.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\dribbble.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\dribbble.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\dropbox-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\dropbox-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\dropbox.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\dropbox.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\drupal.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\drupal.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\email.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\email.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\envelope.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\envelope.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\eraser.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\eraser.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\exchange-vertical.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\exchange-vertical.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\export.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\export.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\eye.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\eye.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\face-sad.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\face-sad.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\face-smile.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\face-smile.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\facebook.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\facebook.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\file.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\file.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\files.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\files.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\filter.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\filter.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\flag-alt-2.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\flag-alt-2.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\flag-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\flag-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\flag.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\flag.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\flickr-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\flickr-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\flickr.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\flickr.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\folder.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\folder.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\fullscreen.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\fullscreen.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\gallery.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\gallery.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\game.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\game.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\gift.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\gift.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\github.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\github.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\google.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\google.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\hand-drag.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\hand-drag.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\hand-open.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\hand-open.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\hand-point-down.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\hand-point-down.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\hand-point-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\hand-point-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\hand-point-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\hand-point-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\hand-point-up.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\hand-point-up.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\hand-stop.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\hand-stop.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\harddrive.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\harddrive.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\harddrives.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\harddrives.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\headphone-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\headphone-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\headphone.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\headphone.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\heart-broken.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\heart-broken.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\heart.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\heart.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\help-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\help-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\help.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\help.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\home.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\home.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\html5.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\html5.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\hummer.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\hummer.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\id-badge.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\id-badge.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\image.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\image.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\import.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\import.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\infinite.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\infinite.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\info-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\info-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\info.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\info.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\ink-pen.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\ink-pen.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\instagram.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\instagram.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\joomla.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\joomla.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\jsfiddle.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\jsfiddle.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\key.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\key.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layers-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layers-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layers.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layers.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-accordion-list.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-accordion-list.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-accordion-merged.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-accordion-merged.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-accordion-separated.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-accordion-separated.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-column2-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-column2-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-column2.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-column2.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-column3-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-column3-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-column3.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-column3.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-column4-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-column4-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-column4.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-column4.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-cta-btn-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-cta-btn-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-cta-btn-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-cta-btn-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-cta-center.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-cta-center.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-cta-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-cta-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-cta-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-cta-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-grid2-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-grid2-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-grid2-thumb.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-grid2-thumb.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-grid2.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-grid2.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-grid3-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-grid3-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-grid3.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-grid3.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-grid4-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-grid4-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-grid4.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-grid4.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-line-solid.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-line-solid.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-list-large-image.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-list-large-image.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-list-post.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-list-post.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-list-thumb-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-list-thumb-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-list-thumb.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-list-thumb.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-media-center-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-media-center-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-media-center.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-media-center.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-media-left-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-media-left-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-media-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-media-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-media-overlay-alt-2.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-media-overlay-alt-2.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-media-overlay-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-media-overlay-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-media-overlay.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-media-overlay.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-media-right-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-media-right-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-media-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-media-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-menu-full.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-menu-full.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-menu-separated.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-menu-separated.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-menu-v.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-menu-v.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-menu.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-menu.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-placeholder.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-placeholder.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-sidebar-2.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-sidebar-2.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-sidebar-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-sidebar-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-sidebar-none.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-sidebar-none.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-sidebar-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-sidebar-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-slider-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-slider-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-slider.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-slider.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-tab-min.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-tab-min.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-tab-v.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-tab-v.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-tab-window.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-tab-window.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-tab.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-tab.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-width-default-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-width-default-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-width-default.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-width-default.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout-width-full.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout-width-full.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\layout.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\layout.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\light-bulb.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\light-bulb.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\line-dashed.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\line-dashed.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\line-dotted.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\line-dotted.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\line-double.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\line-double.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\link.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\link.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\linkedin.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\linkedin.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\linux.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\linux.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\list-ol.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\list-ol.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\list.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\list.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\location-arrow.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\location-arrow.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\location-pin.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\location-pin.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\lock.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\lock.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\loop.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\loop.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\magnet.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\magnet.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\map-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\map-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\map.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\map.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\marker-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\marker-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\marker.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\marker.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\medall-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\medall-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\medall.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\medall.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\menu-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\menu-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\menu.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\menu.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\microphone-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\microphone-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\microphone.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\microphone.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\microsoft-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\microsoft-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\microsoft.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\microsoft.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\minus.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\minus.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\mobile.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\mobile.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\money.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\money.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\more-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\more-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\more.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\more.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\mouse-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\mouse-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\mouse.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\mouse.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\music-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\music-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\music.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\music.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\na.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\na.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\new-window.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\new-window.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\notepad.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\notepad.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\package.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\package.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\paint-bucket.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\paint-bucket.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\paint-roller.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\paint-roller.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\palette.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\palette.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\panel.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\panel.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\paragraph.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\paragraph.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pencil-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pencil-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pencil-alt2.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pencil-alt2.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pencil.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pencil.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pie-chart.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pie-chart.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pin-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pin-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pin.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pin.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pin2.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pin2.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pinterest-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pinterest-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pinterest.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pinterest.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\plug.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\plug.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\plus.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\plus.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\power-off.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\power-off.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\printer.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\printer.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\pulse.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\pulse.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\quote-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\quote-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\quote-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\quote-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\receipt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\receipt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\reddit.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\reddit.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\reload.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\reload.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\rocket.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\rocket.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\rss-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\rss-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\rss.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\rss.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\ruler-alt-2.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\ruler-alt-2.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\ruler-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\ruler-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\ruler-pencil.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\ruler-pencil.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\ruler.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\ruler.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\save-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\save-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\save.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\save.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\search.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\search.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\server.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\server.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\settings.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\settings.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\share-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\share-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\share.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\share.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\sharethis-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\sharethis-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\sharethis.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\sharethis.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\shield.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\shield.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\shift-left-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\shift-left-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\shift-left.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\shift-left.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\shift-right-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\shift-right-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\shift-right.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\shift-right.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\shine.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\shine.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\shopping-cart-full.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\shopping-cart-full.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\shopping-cart.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\shopping-cart.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\shortcode.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\shortcode.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\signal.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\signal.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\skype.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\skype.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\slice.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\slice.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\smallcap.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\smallcap.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\soundcloud.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\soundcloud.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\split-h.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\split-h.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\split-v-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\split-v-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\split-v.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\split-v.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\spray.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\spray.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\stack-overflow.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\stack-overflow.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\stamp.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\stamp.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\star.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\star.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\stats-down.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\stats-down.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\stats-up.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\stats-up.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\support.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\support.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\tablet.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\tablet.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\tag.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\tag.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\target.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\target.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\text.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\text.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\themify-favicon-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\themify-favicon-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\themify-favicon.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\themify-favicon.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\themify-logo.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\themify-logo.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\thought.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\thought.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\thumb-down.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\thumb-down.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\thumb-up.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\thumb-up.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\ticket.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\ticket.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\time.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\time.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\timer.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\timer.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\trash.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\trash.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\trello.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\trello.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\truck.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\truck.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\tumblr-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\tumblr-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\tumblr.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\tumblr.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\twitter-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\twitter-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\twitter.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\twitter.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\underline.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\underline.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\unlink.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\unlink.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\unlock.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\unlock.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\upload.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\upload.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\uppercase.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\uppercase.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\user.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\user.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\vector.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\vector.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\video-camera.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\video-camera.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\video-clapper.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\video-clapper.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\view-grid.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\view-grid.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\view-list-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\view-list-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\view-list.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\view-list.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\vimeo-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\vimeo-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\vimeo.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\vimeo.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\volume.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\volume.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\wallet.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\wallet.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\wand.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\wand.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\wheelchair.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\wheelchair.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\widget-alt.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\widget-alt.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\widget.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\widget.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\widgetized.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\widgetized.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\window.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\window.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\wordpress.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\wordpress.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\world.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\world.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\write.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\write.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\yahoo.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\yahoo.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\youtube.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\youtube.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\zip.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\zip.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\zoom-in.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\zoom-in.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\SVG\\zoom-out.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\SVG\\zoom-out.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\Themify IconFonts 5-23-2014.json",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\Themify IconFonts 5-23-2014.json"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\demo-files\\demo.css",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\demo-files\\demo.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\fonts\\themify.eot"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\fonts\\themify.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\fonts\\themify.woff"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\ie7\\ie7.css",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\ie7\\ie7.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\ie7\\ie7.js",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\ie7\\ie7.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\index.html",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\index.html"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\readme.txt",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\readme.txt"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\fonts\\themify-icons\\themify-icons.css",
+      "PackagePath": "staticwebassets\\fonts\\themify-icons\\themify-icons.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\account.png",
+      "PackagePath": "staticwebassets\\images\\account.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\actor\\lee-byung-hun-dung-tai-nang-tay-trang-bao-be-boi-5_1660990556413.jpg",
+      "PackagePath": "staticwebassets\\images\\actor\\lee-byung-hun-dung-tai-nang-tay-trang-bao-be-boi-5_1660990556413.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\actor\\lee-byung-hun-dung-tai-nang-tay-trang-bao-be-boi-7_1660990564989.jpg",
+      "PackagePath": "staticwebassets\\images\\actor\\lee-byung-hun-dung-tai-nang-tay-trang-bao-be-boi-7_1660990564989.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\actor\\ma-dong-seok4_1599204363952.png",
+      "PackagePath": "staticwebassets\\images\\actor\\ma-dong-seok4_1599204363952.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\actor\\ma-dong-seok5_1599204450802.png",
+      "PackagePath": "staticwebassets\\images\\actor\\ma-dong-seok5_1599204450802.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\actor\\ma-dong-seok6_1599204825651.jpg",
+      "PackagePath": "staticwebassets\\images\\actor\\ma-dong-seok6_1599204825651.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\actor\\ma-dong-seok7_1599204789702.jpg",
+      "PackagePath": "staticwebassets\\images\\actor\\ma-dong-seok7_1599204789702.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\actor\\ma-dong-seok8_1599204758882.jpg",
+      "PackagePath": "staticwebassets\\images\\actor\\ma-dong-seok8_1599204758882.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\booking-fail.0c03e999.png",
+      "PackagePath": "staticwebassets\\images\\booking-fail.0c03e999.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\btn-ticket.png",
+      "PackagePath": "staticwebassets\\images\\btn-ticket.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\button-play.2f9c0030.png",
+      "PackagePath": "staticwebassets\\images\\button-play.2f9c0030.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\cinema-logo.png",
+      "PackagePath": "staticwebassets\\images\\cinema-logo.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\75ee82f4d66dc6458306b811aff66370a269cd9d_1599240814983.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\75ee82f4d66dc6458306b811aff66370a269cd9d_1599240814983.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\aquaman-750_1703216431428.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\aquaman-750_1703216431428.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\james-wan-1_1640143202218.jpeg",
+      "PackagePath": "staticwebassets\\images\\director\\james-wan-1_1640143202218.jpeg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\james-wan-1_1640143206298.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\james-wan-1_1640143206298.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\james-wan-2_1640143104851.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\james-wan-2_1640143104851.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\james-wan-3_1640143119922.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\james-wan-3_1640143119922.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\james-wan-premiere-death-sentence-01.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\james-wan-premiere-death-sentence-01.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\lebaotrung.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\lebaotrung.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\malignant-james-wan-4_1634895384659.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\malignant-james-wan-4_1634895384659.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\the-conjuring-2-banner-preview.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\the-conjuring-2-banner-preview.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\wan1.jpg",
+      "PackagePath": "staticwebassets\\images\\director\\wan1.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\1135x660_1705629079869.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\1135x660_1705629079869.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\1200x1800_1705628936074.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\1200x1800_1705628936074.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\digital-1135x660_1713257506992.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\digital-1135x660_1713257506992.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\galaxy-studio-va-samsung-k-ket-hop-tac-chien-luoc--tai-dinh-nghia-su-ket-hop-giua-dien-anh--cong-nghe-1_1711006050968.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\galaxy-studio-va-samsung-k-ket-hop-tac-chien-luoc--tai-dinh-nghia-su-ket-hop-giua-dien-anh--cong-nghe-1_1711006050968.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\galaxy-studio-va-samsung-k-ket-hop-tac-chien-luoc--tai-dinh-nghia-su-ket-hop-giua-dien-anh--cong-nghe-8_1711006006561.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\galaxy-studio-va-samsung-k-ket-hop-tac-chien-luoc--tai-dinh-nghia-su-ket-hop-giua-dien-anh--cong-nghe-8_1711006006561.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\giaveu22-digital-1135x660_1700731582365.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\giaveu22-digital-1135x660_1700731582365.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\giaveu22-digital-1200x1800_1700731541347.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\giaveu22-digital-1200x1800_1700731541347.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\quy-dinh-do-tuoi-digital-1135x660_1684835353460.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\quy-dinh-do-tuoi-digital-1135x660_1684835353460.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\quy-dinh-do-tuoi-digital-1200x1800-1684835366729_1690277000962.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\quy-dinh-do-tuoi-digital-1200x1800-1684835366729_1690277000962.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\tuesday.jpg",
+      "PackagePath": "staticwebassets\\images\\favor\\tuesday.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\galaxy\\banggiave-2024-da-nang_1703839474675.jpg",
+      "PackagePath": "staticwebassets\\images\\galaxy\\banggiave-2024-da-nang_1703839474675.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\galaxy\\galaxy-da-nang-1_1698052206857.jpg",
+      "PackagePath": "staticwebassets\\images\\galaxy\\galaxy-da-nang-1_1698052206857.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\galaxy\\galaxy-da-nang-3_1698052210667.jpg",
+      "PackagePath": "staticwebassets\\images\\galaxy\\galaxy-da-nang-3_1698052210667.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\galaxy\\galaxy-da-nang-4_1698052214666.jpg",
+      "PackagePath": "staticwebassets\\images\\galaxy\\galaxy-da-nang-4_1698052214666.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\galaxy\\galaxy-da-nang-5_1698052220835.jpg",
+      "PackagePath": "staticwebassets\\images\\galaxy\\galaxy-da-nang-5_1698052220835.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\gold.ff661579.png",
+      "PackagePath": "staticwebassets\\images\\gold.ff661579.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\gstar.svg",
+      "PackagePath": "staticwebassets\\images\\gstar.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\icon-gift.190935e4.png",
+      "PackagePath": "staticwebassets\\images\\icon-gift.190935e4.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\icon-rules.9c822007.png",
+      "PackagePath": "staticwebassets\\images\\icon-rules.9c822007.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\icon-success.c42e4e43.png",
+      "PackagePath": "staticwebassets\\images\\icon-success.c42e4e43.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\logomini.png",
+      "PackagePath": "staticwebassets\\images\\logomini.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie.pnj.svg",
+      "PackagePath": "staticwebassets\\images\\movie.pnj.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\1800x1200_1709717527256.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\1800x1200_1709717527256.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\24_1.png",
+      "PackagePath": "staticwebassets\\images\\movie\\24_1.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\450x300_1685674204080.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\450x300_1685674204080.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\cai-gia-cua-hanh-phuc-1_1712733174711.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\cai-gia-cua-hanh-phuc-1_1712733174711.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\dune-2.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\dune-2.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\exhuma.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\exhuma.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\exhumangang.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\exhumangang.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\ghostbusters-frozen-empire-750_1712719795646.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\ghostbusters-frozen-empire-750_1712719795646.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\god-x-kong-750_1711942287259.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\god-x-kong-750_1711942287259.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\kungfu-panda-4.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\kungfu-panda-4.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\lm7-500_1714101585009.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\lm7-500_1714101585009.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\ma-dong-seok5_1599204402167.png",
+      "PackagePath": "staticwebassets\\images\\movie\\ma-dong-seok5_1599204402167.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\pht-750_1705374597885.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\pht-750_1705374597885.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\pht-750_1712045387498.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\pht-750_1712045387498.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\qu-co-thua-ke-2.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\qu-co-thua-ke-2.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\roundup-750_1713513441808.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\roundup-750_1713513441808.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\movie\\trum-com-ac-quy6_1558682370589.jpg",
+      "PackagePath": "staticwebassets\\images\\movie\\trum-com-ac-quy6_1558682370589.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\silver.6313aa20.png",
+      "PackagePath": "staticwebassets\\images\\silver.6313aa20.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\slider\\demonslayer.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\demonslayer.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\slider\\exhuma.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\exhuma.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\slider\\kong.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\kong.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\Ohayouscript.js",
+      "PackagePath": "staticwebassets\\js\\Ohayouscript.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\actorscript.js",
+      "PackagePath": "staticwebassets\\js\\actorscript.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\moviedetailscript.js",
+      "PackagePath": "staticwebassets\\js\\moviedetailscript.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\movietypescript.js",
+      "PackagePath": "staticwebassets\\js\\movietypescript.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\userscript.js",
+      "PackagePath": "staticwebassets\\js\\userscript.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RapPhim3.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RapPhim3.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.RapPhim3.props",
+      "PackagePath": "build\\RapPhim3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.RapPhim3.props",
+      "PackagePath": "buildMultiTargeting\\RapPhim3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.RapPhim3.props",
+      "PackagePath": "buildTransitive\\RapPhim3.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace RapPhim3.Models;
+
+public partial class Movie
+{
+    public int Id { get; set; }
+
+    public string Title { get; set; } = null!;
+
+    public string? Description { get; set; }
+
+    public DateOnly? ReleaseDate { get; set; }
+
+    public int? Duration { get; set; }
+
+    public int? DirectorId { get; set; }
+
+    public int? GenreId { get; set; }
+
+    public string? TrailerUrl { get; set; }
+
+    public string? LandscapeImage { get; set; }
+
+    public string? PortraitImage { get; set; }
+
+    public int? CountryId { get; set; }
+
+    public virtual Country? Country { get; set; }
+
+    public virtual Director? Director { get; set; }
+
+    public virtual Genre? Genre { get; set; }
+
+    public virtual ICollection<MovieComment> MovieComments { get; set; } = new List<MovieComment>();
+
+    public virtual ICollection<MovieSchedule> MovieSchedules { get; set; } = new List<MovieSchedule>();
+
+    public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
+
+    public virtual ICollection<StarRating> StarRatings { get; set; } = new List<StarRating>();
+
+    public virtual ICollection<Actor> Actors { get; set; } = new List<Actor>();
+}
