@@ -16,59 +16,60 @@
                     <div class="row">
                         <div class="col">
                             <div class="d-flex flex-wrap gap-2">
-                                <div class="item">
-                                    <button type="button" class="btn-option btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                        Thể loại
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        @foreach (var genre in Model.Genres)
-                                        {
-                                            <li><a class="dropdown-item" href="#">@genre.Name</a></li>
-                                        }
-                                    </ul>
-                                </div>
-                                <div class="item">
-                                    <button type="button" class="btn-option btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                        Quốc gia
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        @foreach (var country in Model.Countries)
-                                        {
-                                            <li><a class="dropdown-item" href="#">@country.Name</a></li>
-                                        }
-                                    </ul>
-                                </div>
-                                <div class="item">
-                                    <button type="button" class="btn-option btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                        Năm
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">2020</a></li>
-                                        <li><a class="dropdown-item" href="#">2021</a></li>
-                                        <li><a class="dropdown-item" href="#">2022</a></li>
-                                        <li><a class="dropdown-item" href="#">2023</a></li>
-                                        <li><a class="dropdown-item" href="#">2024</a></li>
-                                        <li><a class="dropdown-item" href="#">2025</a></li>
-                                    </ul>
-                                </div>
-                                <div class="item">
-                                    <button type="button" class="btn-option btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                        Đang chiếu/Sắp
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Đang chiếu</a></li>
-                                        <li><a class="dropdown-item" href="#">Sắp chiếu</a></li>
-                                    </ul>
-                                </div>
-                                <div class="item">
-                                    <button type="button" class="btn-option btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                        Xem nhiều nhất
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Mới nhất</a></li>
-                                        <li><a class="dropdown-item" href="#">Đánh giá tốt nhất</a></li>
-                                    </ul>
-                                </div>
+                                <form method="get" action="@Url.Action("FilterMovies", "Home")">
+                                    <div class="filter-container">
+                                        <!-- Bộ lọc thể loại -->
+                                        <div class="item">
+                                            <label for="genre">Thể loại:</label>
+                                            <select name="genreId" id="genre" class="form-control" onchange="this.form.submit()">
+                                                <option value="">-- Chọn thể loại --</option>
+                                                @foreach (var genre in Model.Genres)
+                                                {
+                                                    <option value="@genre.Id" selected="@(ViewBag.SelectedGenre == genre.Id ? "selected" : null)">
+                                                        @genre.Name
+                                                    </option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                        <!-- Bộ lọc quốc gia -->
+                                        <div class="item">
+                                            <label for="country">Quốc gia:</label>
+                                            <select name="countryId" id="country" class="form-control" onchange="this.form.submit()">
+                                                <option value="">-- Chọn quốc gia --</option>
+                                                @foreach (var country in Model.Countries)
+                                                {
+                                                    <option value="@country.Id" selected="@(ViewBag.SelectedCountry == country.Id ? "selected" : null)">
+                                                        @country.Name
+                                                    </option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                        <!-- Bộ lọc năm -->
+                                        <div class="item">
+                                            <label for="year">Năm:</label>
+                                            <select name="year" id="year" class="form-control" onchange="this.form.submit()">
+                                                <option value="">-- Chọn năm --</option>
+                                                @for (int y = 2020; y <= 2025; y++)
+                                                {
+                                                    <option value="@y" selected="@(ViewBag.SelectedYear == y ? "selected" : null)">
+                                                        @y
+                                                    </option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                        <div class="item">
+                                            <label for="year">Đang chiếu/Sắp:</label>
+                                            <select name="year" id="year" class="form-control" onchange="this.form.submit()">
+                                                <option value="">-- Đang chiếu/Sắp --</option>
+                                                <option value="">Đang chiếu</option>
+                                                <option value="">Sắp chiếu</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

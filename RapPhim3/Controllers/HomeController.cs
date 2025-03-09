@@ -25,16 +25,11 @@ namespace RapPhim3.Controllers
 
         public IActionResult MovieType()
         {
-            // Lấy danh sách thể loại phim
+            
             var genres = _movieService.GetGenres();
-
-            // Lấy danh sách quốc gia
             var countries = _movieService.GetCountries();
+             var allMovies = _movieService.GetMovies();
 
-            // Lấy toàn bộ danh sách phim
-            var allMovies = _movieService.GetMovies();
-
-            // Gửi dữ liệu sang View
             var model = new MovieTypeViewModel
             {
                 Genres = genres,
@@ -44,6 +39,41 @@ namespace RapPhim3.Controllers
 
             return View("MovieType",model);
         }
+
+        public IActionResult FilterMovies(int? genreId, int? countryId, int? year)
+        {
+            var movies = _movieService.GetMovies();
+
+            if (genreId.HasValue)
+            {
+                movies = movies.Where(m => m.Genres.Any(g => g.Id == genreId.Value)).ToList();
+                ViewBag.SelectedGenre = genreId;
+            }
+
+            if (countryId.HasValue)
+            {
+                movies = movies.Where(m => m.Country.Id == countryId.Value).ToList();
+                ViewBag.SelectedCountry = countryId;
+            }
+
+            if (year.HasValue)
+            {
+                movies = movies.Where(m => m.ReleaseDate.HasValue && m.ReleaseDate.Value.Year == year.Value).ToList();
+                ViewBag.SelectedYear = year;
+            }
+
+            var viewModel = new MovieTypeViewModel
+            {
+                Genres = _movieService.GetGenres(),
+                Countries = _movieService.GetCountries(),
+                AllMovies = movies
+            };
+
+            return View("MovieType", viewModel);
+        }
+
+
+
 
 
         public IActionResult Actors()

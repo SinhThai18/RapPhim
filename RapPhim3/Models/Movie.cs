@@ -25,14 +25,6 @@ public partial class Movie
 
     public virtual Country? Country { get; set; }
 
-    public virtual ICollection<MovieComment> MovieComments { get; set; } = new List<MovieComment>();
-
-    public virtual ICollection<MovieSchedule> MovieSchedules { get; set; } = new List<MovieSchedule>();
-
-    public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
-
-    public virtual ICollection<StarRating> StarRatings { get; set; } = new List<StarRating>();
-
     public virtual ICollection<Actor> Actors { get; set; } = new List<Actor>();
 
     public virtual ICollection<Director> Directors { get; set; } = new List<Director>();
