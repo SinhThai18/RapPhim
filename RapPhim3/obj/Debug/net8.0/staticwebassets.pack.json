@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RapPhim3.bundle.scp.css",
-      "PackagePath": "staticwebassets\\RapPhim3.kwozygjmdl.bundle.scp.css"
+      "PackagePath": "staticwebassets\\RapPhim3.9u27vexto9.bundle.scp.css"
     },
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\Ohayoustyle.css",
@@ -15,6 +15,14 @@
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\actorstyle.css",
       "PackagePath": "staticwebassets\\css\\actorstyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\addMovie.css",
+      "PackagePath": "staticwebassets\\css\\addMovie.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\adminprofile.css",
+      "PackagePath": "staticwebassets\\css\\adminprofile.css"
     },
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bestmoviestyle.css",
@@ -149,6 +157,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css.map"
     },
     {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\dailyreport.css",
+      "PackagePath": "staticwebassets\\css\\dailyreport.css"
+    },
+    {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\directordetailstyle.css",
       "PackagePath": "staticwebassets\\css\\directordetailstyle.css"
     },
@@ -165,8 +177,20 @@
       "PackagePath": "staticwebassets\\css\\favorsstyle.css"
     },
     {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome.min.css"
+    },
+    {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\gueststyle.css",
       "PackagePath": "staticwebassets\\css\\gueststyle.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\homepage.css",
+      "PackagePath": "staticwebassets\\css\\homepage.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\movie.css",
+      "PackagePath": "staticwebassets\\css\\movie.css"
     },
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\moviedetailstyle.css",
@@ -201,8 +225,28 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\staffManagement.css",
+      "PackagePath": "staticwebassets\\css\\staffManagement.css"
+    },
+    {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\templatemo-style.css",
+      "PackagePath": "staticwebassets\\css\\templatemo-style.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\updateMovie.css",
+      "PackagePath": "staticwebassets\\css\\updateMovie.css"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\usersManagement.css",
+      "PackagePath": "staticwebassets\\css\\usersManagement.css"
     },
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\userstyle.css",
@@ -1697,6 +1741,14 @@
       "PackagePath": "staticwebassets\\images\\actor\\ma-dong-seok8_1599204758882.jpg"
     },
     {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\arrow-down.png",
+      "PackagePath": "staticwebassets\\images\\arrow-down.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\avatar.png",
+      "PackagePath": "staticwebassets\\images\\avatar.png"
+    },
+    {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\booking-fail.0c03e999.png",
       "PackagePath": "staticwebassets\\images\\booking-fail.0c03e999.png"
     },
@@ -1707,6 +1759,14 @@
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\button-play.2f9c0030.png",
       "PackagePath": "staticwebassets\\images\\button-play.2f9c0030.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\cai-gia-cua-hanh-phuc-1_1712733174711.jpg",
+      "PackagePath": "staticwebassets\\images\\cai-gia-cua-hanh-phuc-1_1712733174711.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\check-mark.png",
+      "PackagePath": "staticwebassets\\images\\check-mark.png"
     },
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\cinema-logo.png",
@@ -1755,6 +1815,18 @@
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\director\\wan1.jpg",
       "PackagePath": "staticwebassets\\images\\director\\wan1.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\dune-2.jpg",
+      "PackagePath": "staticwebassets\\images\\dune-2.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\exhuma.jpg",
+      "PackagePath": "staticwebassets\\images\\exhuma.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\exhumangang.jpg",
+      "PackagePath": "staticwebassets\\images\\exhumangang.jpg"
     },
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\favor\\1135x660_1705629079869.jpg",
@@ -1817,6 +1889,14 @@
       "PackagePath": "staticwebassets\\images\\galaxy\\galaxy-da-nang-5_1698052220835.jpg"
     },
     {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\ghostbusters-frozen-empire-750_1712719795646.jpg",
+      "PackagePath": "staticwebassets\\images\\ghostbusters-frozen-empire-750_1712719795646.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\god-x-kong-750_1711942287259.jpg",
+      "PackagePath": "staticwebassets\\images\\god-x-kong-750_1711942287259.jpg"
+    },
+    {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\gold.ff661579.png",
       "PackagePath": "staticwebassets\\images\\gold.ff661579.png"
     },
@@ -1835,6 +1915,10 @@
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\icon-success.c42e4e43.png",
       "PackagePath": "staticwebassets\\images\\icon-success.c42e4e43.png"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\kungfu-panda-4.jpg",
+      "PackagePath": "staticwebassets\\images\\kungfu-panda-4.jpg"
     },
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\logomini.png",
@@ -1913,6 +1997,30 @@
       "PackagePath": "staticwebassets\\images\\movie\\trum-com-ac-quy6_1558682370589.jpg"
     },
     {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\notification-01.jpg",
+      "PackagePath": "staticwebassets\\images\\notification-01.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\notification-02.jpg",
+      "PackagePath": "staticwebassets\\images\\notification-02.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\notification-03.jpg",
+      "PackagePath": "staticwebassets\\images\\notification-03.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\ohayoucinema.svg",
+      "PackagePath": "staticwebassets\\images\\ohayoucinema.svg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\product-image.jpg",
+      "PackagePath": "staticwebassets\\images\\product-image.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\qu-co-thua-ke-2.jpg",
+      "PackagePath": "staticwebassets\\images\\qu-co-thua-ke-2.jpg"
+    },
+    {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\silver.6313aa20.png",
       "PackagePath": "staticwebassets\\images\\silver.6313aa20.png"
     },
@@ -1927,6 +2035,10 @@
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\images\\slider\\kong.jpg",
       "PackagePath": "staticwebassets\\images\\slider\\kong.jpg"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\Chart.min.js",
+      "PackagePath": "staticwebassets\\js\\Chart.min.js"
     },
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\Ohayouscript.js",
@@ -1985,6 +2097,14 @@
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\moment.min.js"
+    },
+    {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\moviedetailscript.js",
       "PackagePath": "staticwebassets\\js\\moviedetailscript.js"
     },
@@ -1999,6 +2119,10 @@
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\tooplate-scripts.js",
+      "PackagePath": "staticwebassets\\js\\tooplate-scripts.js"
     },
     {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\js\\userscript.js",

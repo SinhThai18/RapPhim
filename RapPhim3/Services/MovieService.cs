@@ -38,7 +38,7 @@ namespace RapPhim3.Services
             return _context.Countries.ToList();
         }
 
-        // 🔥 Thêm phương thức lọc phim
+        
         public List<Movie> FilterMovies(int? genreId, int? countryId, int? year)
         {
             var movies = _context.Movies

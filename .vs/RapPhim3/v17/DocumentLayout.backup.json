@@ -3,40 +3,36 @@
   "WorkspaceRootPath": "D:\\prnn\\RapPhim3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\models\\rapphimcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\models\\rapphimcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\home\\movietype.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\home\\movietype.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\movies\\moviedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\movies\\moviedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\viewmodel\\movietypeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\viewmodel\\movietypeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\controllers\\movies\\moviescontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\movies\\moviescontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,119 +42,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-09T07:57:19.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RapPhimContext.cs",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Models\\RapPhimContext.cs",
-              "RelativeDocumentMoniker": "RapPhim3\\Models\\RapPhimContext.cs",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Models\\RapPhimContext.cs",
-              "RelativeToolTip": "RapPhim3\\Models\\RapPhimContext.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAcwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T07:54:56.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABIAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-09T02:57:48.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MovieTypeViewModel.cs",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
-              "RelativeDocumentMoniker": "RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
-              "RelativeToolTip": "RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T03:10:20.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MovieDetail.cshtml",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Movies\\MovieDetail.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Movies\\MovieDetail.cshtml",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Movies\\MovieDetail.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Movies\\MovieDetail.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-09T02:49:51.869Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "MovieService.cs",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\MovieService.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Services\\MovieService.cs",
               "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\MovieService.cs",
               "RelativeToolTip": "RapPhim3\\Services\\MovieService.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAowD4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAuwCgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T02:45:16.788Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "RapPhim3\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "RapPhim3\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAowEkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T02:33:33.637Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MovieType.cshtml",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Home\\MovieType.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Home\\MovieType.cshtml",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Home\\MovieType.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Home\\MovieType.cshtml",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAmwEMAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-09T02:33:06.705Z",
+              "WhenOpened": "2025-03-09T16:50:55.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "RelativeToolTip": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T16:50:45.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MoviesController .cs",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Movies\\MoviesController .cs",
+              "RelativeDocumentMoniker": "RapPhim3\\Controllers\\Movies\\MoviesController .cs",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Movies\\MoviesController .cs",
+              "RelativeToolTip": "RapPhim3\\Controllers\\Movies\\MoviesController .cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAkwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T16:47:26.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Movie.cs",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Models\\Movie.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Models\\Movie.cs",
               "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Models\\Movie.cs",
               "RelativeToolTip": "RapPhim3\\Models\\Movie.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAwCkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAA9wBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T02:35:45.459Z"
+              "WhenOpened": "2025-03-09T16:45:32.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\Add.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\Add.cshtml",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\Add.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\Admin\\Add.cshtml",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAowJIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T16:44:36.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\Home.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\Home.cshtml",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\Home.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\Admin\\Home.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T16:42:24.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\_Layout.cshtml",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\_Layout.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\Admin\\_Layout.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAACsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T16:40:25.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\List.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\List.cshtml",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\List.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\Admin\\List.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswCAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T16:27:49.81Z",
+              "EditorCaption": ""
             }
           ]
         }
