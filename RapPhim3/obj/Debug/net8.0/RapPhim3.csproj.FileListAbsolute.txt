@@ -172,3 +172,4 @@ D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.csproj.Up2Date
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.sourcelink.json
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\scopedcss\Views\Admin\_Layout.cshtml.rz.scp.css
+D:\prnn\RapPhim3\RapPhim3\bin\Debug\net8.0\Newtonsoft.Json.dll

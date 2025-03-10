@@ -16,5 +16,7 @@
 
         // Chuỗi diễn viên (cách nhau bởi dấu phẩy)
         public string? Actors { get; set; }
+
+        public string Directors { get; set; }
     }
 }

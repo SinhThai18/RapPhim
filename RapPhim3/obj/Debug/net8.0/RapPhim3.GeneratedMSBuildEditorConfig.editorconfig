@@ -32,6 +32,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/prnn/RapPhim3/RapPhim3/Views/Admin/Demo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVtby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/prnn/RapPhim3/RapPhim3/Views/Admin/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

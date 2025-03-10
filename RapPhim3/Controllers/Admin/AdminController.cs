@@ -2,6 +2,7 @@
 using RapPhim3.Models;
 using RapPhim3.Services;
 using RapPhim3.ViewModel;
+using Newtonsoft.Json;
 
 namespace RapPhim3.Controllers.Admin
 {
@@ -37,21 +38,11 @@ namespace RapPhim3.Controllers.Admin
         {
             if (!ModelState.IsValid)
             {
-                Console.WriteLine("ModelState.IsValid = false");
-                foreach (var key in ModelState.Keys)
-                {
-                    var state = ModelState[key];
-                    foreach (var error in state.Errors)
-                    {
-                        Console.WriteLine($"Lỗi ở {key}: {error.ErrorMessage}");
-                    }
-                }
-
                 ViewBag.Genres = _movieService.GetGenres();
                 ViewBag.Countries = _movieService.GetCountries();
                 return View(model);
             }
-            // Kiểm tra GenreIds trước khi xử lý
+
             if (model.GenreIds == null || !model.GenreIds.Any())
             {
                 ModelState.AddModelError("GenreIds", "Vui lòng chọn ít nhất một thể loại.");
@@ -60,7 +51,11 @@ namespace RapPhim3.Controllers.Admin
                 return View(model);
             }
 
-            // Tạo movie từ dữ liệu nhập vào
+            if (model.TrailerUrl.Contains("watch?v="))
+            {
+                model.TrailerUrl = model.TrailerUrl.Replace("watch?v=", "embed/");
+            }
+
             var movie = new Movie
             {
                 Title = model.Title,
@@ -71,17 +66,42 @@ namespace RapPhim3.Controllers.Admin
                 PortraitImage = model.PortraitImage,
                 CountryId = model.CountryId,
                 TrailerUrl = model.TrailerUrl,
-                Genres = _movieService.GetGenresByIds(model.GenreIds)
+                Genres = _movieService.GetGenresByIds(model.GenreIds),
+                Actors = _movieService.GetOrCreateActors(model.Actors?.Split(',').Select(a => a.Trim()).ToList()),
+                Directors = _movieService.GetOrCreateDirectors(model.Directors?.Split(',').Select(d => d.Trim()).ToList())
             };
 
-            // Xử lý danh sách diễn viên (Actors)
-            if (!string.IsNullOrEmpty(model.Actors))
+            // Lưu vào session
+            HttpContext.Session.SetString("PendingMovie", JsonConvert.SerializeObject(movie));
+
+            return RedirectToAction("Demo");
+        }
+
+        public IActionResult Demo()
+        {
+            var movieJson = HttpContext.Session.GetString("PendingMovie");
+            if (string.IsNullOrEmpty(movieJson))
             {
-                var actorNames = model.Actors.Split(',').Select(a => a.Trim()).ToList();
-                movie.Actors = _movieService.GetOrCreateActors(actorNames);
+                return RedirectToAction("Add");
             }
 
+            var movie = JsonConvert.DeserializeObject<Movie>(movieJson);
+            return View(movie);
+        }
+
+        [HttpPost]
+        public IActionResult Confirm()
+        {
+            var movieJson = HttpContext.Session.GetString("PendingMovie");
+            if (string.IsNullOrEmpty(movieJson))
+            {
+                return RedirectToAction("Add");
+            }
+
+            var movie = JsonConvert.DeserializeObject<Movie>(movieJson);
             _movieService.AddMovie(movie);
+
+            HttpContext.Session.Remove("PendingMovie");
 
             return RedirectToAction("List");
         }

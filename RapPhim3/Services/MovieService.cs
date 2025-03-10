@@ -71,9 +71,25 @@ namespace RapPhim3.Services
 
         public void AddMovie(Movie movie)
         {
+            foreach (var actor in movie.Actors)
+            {
+                actor.Id = 0; // Đảm bảo ID = 0 để EF tự động sinh ID
+            }
+
+            foreach (var director in movie.Directors)
+            {
+                director.Id = 0;
+            }
+
+            foreach (var genre in movie.Genres)
+            {
+                genre.Id = 0;
+            }
+
             _context.Movies.Add(movie);
             _context.SaveChanges();
         }
+
 
         public List<Actor> GetOrCreateActors(List<string> actorNames)
         {
@@ -89,6 +105,27 @@ namespace RapPhim3.Services
 
             return existingActors.Concat(newActors).ToList();
         }
+
+        public List<Director> GetOrCreateDirectors(List<string> directorNames)
+        {
+            var existingDirectors = _context.Directors
+                .Where(d => directorNames.Contains(d.Name))
+                .ToList();
+
+            var newDirectors = directorNames
+                .Where(d => existingDirectors.All(ed => ed.Name != d))
+                .Select(d => new Director { Name = d })
+                .ToList();
+
+            if (newDirectors.Any())
+            {
+                _context.Directors.AddRange(newDirectors);
+                _context.SaveChanges();
+            }
+
+            return existingDirectors.Concat(newDirectors).ToList();
+        }
+
 
     }
 }
