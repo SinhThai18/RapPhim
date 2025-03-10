@@ -146,16 +146,19 @@
         closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
     </script>
     <script>
-        document.querySelector("form").addEventListener("submit", function () {
+                      document.querySelector("form").addEventListener("submit", function (e) {
             let selectedGenres = Array.from(document.querySelector("#genres").selectedOptions)
                 .map(option => option.value);
 
-            let inputHidden = document.createElement("input");
-            inputHidden.type = "hidden";
-            inputHidden.name = "GenreIds";
-            inputHidden.value = selectedGenres.join(",");
-
-            this.appendChild(inputHidden);
+            if (selectedGenres.length > 0) {
+                selectedGenres.forEach(value => {
+                    let inputHidden = document.createElement("input");
+                    inputHidden.type = "hidden";
+                    inputHidden.name = "GenreIds"; // Đặt đúng tên mà ASP.NET mong đợi
+                    inputHidden.value = value;
+                    this.appendChild(inputHidden);
+                });
+            }
         });
     </script>
 

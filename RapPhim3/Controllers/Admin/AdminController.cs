@@ -37,6 +37,24 @@ namespace RapPhim3.Controllers.Admin
         {
             if (!ModelState.IsValid)
             {
+                Console.WriteLine("ModelState.IsValid = false");
+                foreach (var key in ModelState.Keys)
+                {
+                    var state = ModelState[key];
+                    foreach (var error in state.Errors)
+                    {
+                        Console.WriteLine($"Lỗi ở {key}: {error.ErrorMessage}");
+                    }
+                }
+
+                ViewBag.Genres = _movieService.GetGenres();
+                ViewBag.Countries = _movieService.GetCountries();
+                return View(model);
+            }
+            // Kiểm tra GenreIds trước khi xử lý
+            if (model.GenreIds == null || !model.GenreIds.Any())
+            {
+                ModelState.AddModelError("GenreIds", "Vui lòng chọn ít nhất một thể loại.");
                 ViewBag.Genres = _movieService.GetGenres();
                 ViewBag.Countries = _movieService.GetCountries();
                 return View(model);
