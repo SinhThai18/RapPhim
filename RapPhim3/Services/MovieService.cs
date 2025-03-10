@@ -63,5 +63,32 @@ namespace RapPhim3.Services
 
             return movies.ToList();
         }
+
+        public List<Genre> GetGenresByIds(List<int> genreIds)
+        {
+            return _context.Genres.Where(g => genreIds.Contains(g.Id)).ToList();
+        }
+
+        public void AddMovie(Movie movie)
+        {
+            _context.Movies.Add(movie);
+            _context.SaveChanges();
+        }
+
+        public List<Actor> GetOrCreateActors(List<string> actorNames)
+        {
+            var existingActors = _context.Actors.Where(a => actorNames.Contains(a.Name)).ToList();
+
+            var newActors = actorNames
+                .Where(name => !existingActors.Any(a => a.Name == name))
+                .Select(name => new Actor { Name = name })
+                .ToList();
+
+            _context.Actors.AddRange(newActors);
+            _context.SaveChanges();
+
+            return existingActors.Concat(newActors).ToList();
+        }
+
     }
 }
