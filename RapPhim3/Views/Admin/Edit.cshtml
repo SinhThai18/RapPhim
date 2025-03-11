@@ -3,3 +3,197 @@
 *@
 @{
 }
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Edit Movie ";
+}
+@model RapPhim3.Models.Movie
+@section Styles {
+    <link rel="icon" href="~/imagescinema-logo.png" type="image/png">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
+    <link rel="stylesheet" href="~/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="webfonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_orange.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="~/css/addMovie.css">
+    <style>
+        input, textarea {
+            border: 1px solid #ccc;
+            padding: 8px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: white;
+        }
+
+        option {
+            padding: 5px;
+        }
+
+        .fixed-media {
+            width: 300px; /* Chiều rộng cố định */
+            height: auto; /* Chiều cao cố định */
+            object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+        }
+    </style>
+
+}
+<div class="line-default"></div>
+<div class="container-fluid wrapper">
+    <div class="container update-box">
+        <p>CHỈNH SỬA THÔNG TIN PHIM</p>
+        <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div class="row tm-edit-product-row">
+                <form asp-action="Edit" method="post">
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="row">
+                        <!-- Cột trái -->
+                        <div class="col-md-6">
+                            <div class="subform-group">
+                                <label for="movieTitle">Tên phim</label>
+                                <input type="text" asp-for="Title" id="movieTitle" class="form-control" required>
+                            </div>
+
+                            <div class="subform-group">
+                                <label for="releaseDate">Ngày ra mắt</label>
+                                <input type="date" asp-for="ReleaseDate" id="releaseDate" class="form-control">
+                            </div>
+
+                            <div class="subform-group">
+                                <label for="duration">Thời lượng (phút)</label>
+                                <input type="number" asp-for="Duration" id="duration" class="form-control" min="1">
+                            </div>
+
+                            <div class="subform-group">
+                                <label for="directors">Đạo diễn</label>
+                                <input type="text" asp-for="Directors" id="directors" class="form-control">
+                            </div>
+
+                            <div class="subform-group">
+                                <label for="genres">Thể loại</label>
+                                <select asp-for="Genres" id="genres" class="form-control" multiple>
+                                    @foreach (var genre in ViewBag.Genres)
+                                    {
+                                        <option value="@genre.Id">@genre.Name</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <div class="subform-group">
+                                <label for="portraitImage">Ảnh dọc (URL)</label>
+                                <input type="text" asp-for="PortraitImage" id="portraitImage"
+                                        class="form-control">
+                                <img id="portraitPreview" class="preview-image fixed-media" src="@Model.PortraitImage" alt="Ảnh dọc">
+                            </div>
+                        </div>
+
+                        <!-- Cột phải -->
+                        <div class="col-md-6">
+                            <div class="subform-group">
+                                <label for="description">Mô tả</label>
+                                <textarea asp-for="Description" id="description" class="form-control" rows="5"></textarea>
+                            </div>
+
+                            <div class="subform-group">
+                                <label for="actors">Diễn viên</label>
+                                <input type="text" asp-for="Actors" id="actors" class="form-control">
+                            </div>
+
+                            <div class="subform-group">
+                                <label for="country">Quốc gia</label>
+                                <select asp-for="CountryId" id="country" class="form-control">
+                                    <option value="">Chọn quốc gia</option>
+                                    @foreach (var country in ViewBag.Countries)
+                                    {
+                                        <option value="@country.Id">@country.Name</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <div class="subform-group">
+                                <label for="landscapeImage">Ảnh ngang (URL)</label>
+                                <input type="text" asp-for="LandscapeImage" id="landscapeImage" class="form-control">
+                                <img id="landscapePreview" class="preview-image fixed-media"
+                                     src="@Model.LandscapeImage" alt="Ảnh ngang">
+                            </div>
+
+                            <div class="subform-group">
+                                <label for="trailerUrl">Trailer (URL)</label>
+                                <input type="text" asp-for="TrailerUrl" id="trailerUrl" class="form-control">
+                                <iframe width="600"
+                                        height="400"
+                                        src="@Model.TrailerUrl"
+                                        frameborder="0"
+                                        class="fixed-media"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary">Cập nhật phim</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#myID", {
+            dateFormat: "d-m-Y",
+        });
+    </script>
+   
+    <script>
+                      document.querySelector("form").addEventListener("submit", function (e) {
+            let selectedGenres = Array.from(document.querySelector("#genres").selectedOptions)
+                .map(option => option.value);
+
+            if (selectedGenres.length > 0) {
+                selectedGenres.forEach(value => {
+                    let inputHidden = document.createElement("input");
+                    inputHidden.type = "hidden";
+                    inputHidden.name = "GenreIds"; // Đặt đúng tên mà ASP.NET mong đợi
+                    inputHidden.value = value;
+                    this.appendChild(inputHidden);
+                });
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function updatePreview(inputId, previewId) {
+                document.getElementById(inputId).addEventListener("input", function () {
+                    document.getElementById(previewId).src = this.value;
+                });
+            }
+
+            updatePreview("portraitImage", "portraitPreview");
+            updatePreview("landscapeImage", "landscapePreview");
+            updatePreview("trailerUrl", "trailerPreview");
+        });
+
+        flatpickr("#releaseDate", {
+            dateFormat: "Y-m-d",
+        });
+    </script>
+}

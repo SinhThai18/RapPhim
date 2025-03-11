@@ -25,7 +25,7 @@ namespace RapPhim3.Services
         public Movie? GetMovieById(int id)
         {
             return _context.Movies
-                .FirstOrDefault(m => m.Id == id);
+                .FirstOrDefault(m => m.Id == id); ;
         }
 
         public List<Genre> GetGenres()
@@ -124,6 +124,51 @@ namespace RapPhim3.Services
             }
 
             return existingDirectors.Concat(newDirectors).ToList();
+        }
+
+        public void UpdateMovie(Movie updatedMovie)
+        {
+            var existingMovie = _context.Movies
+                .Include(m => m.Genres)
+                .Include(m => m.Actors)
+                .Include(m => m.Directors)
+                .FirstOrDefault(m => m.Id == updatedMovie.Id);
+
+            if (existingMovie == null)
+            {
+                throw new KeyNotFoundException("Không tìm thấy phim.");
+            }
+
+            // Cập nhật thông tin cơ bản
+            existingMovie.Title = updatedMovie.Title;
+            existingMovie.Description = updatedMovie.Description;
+            existingMovie.ReleaseDate = updatedMovie.ReleaseDate;
+            existingMovie.CountryId = updatedMovie.CountryId;
+
+            // Cập nhật danh sách thể loại
+            existingMovie.Genres.Clear();
+            foreach (var genre in _context.Genres.Where(g => updatedMovie.Genres.Select(ug => ug.Id).Contains(g.Id)))
+            {
+                existingMovie.Genres.Add(genre);
+            }
+
+            // Cập nhật danh sách diễn viên
+            existingMovie.Actors.Clear();
+            var actors = GetOrCreateActors(updatedMovie.Actors.Select(a => a.Name).ToList());
+            foreach (var actor in actors)
+            {
+                existingMovie.Actors.Add(actor);
+            }
+
+            // Cập nhật danh sách đạo diễn
+            existingMovie.Directors.Clear();
+            var directors = GetOrCreateDirectors(updatedMovie.Directors.Select(d => d.Name).ToList());
+            foreach (var director in directors)
+            {
+                existingMovie.Directors.Add(director);
+            }
+
+            _context.SaveChanges();
         }
 
 

@@ -105,5 +105,38 @@ namespace RapPhim3.Controllers.Admin
 
             return RedirectToAction("List");
         }
+        public IActionResult Edit(int id)
+        {
+            var movie = _movieService.GetMovieById(id);
+           
+            if (movie == null)
+            {
+                return NotFound();
+            }
+            if (movie.TrailerUrl!.Contains("watch?v="))
+            {
+                movie.TrailerUrl = movie.TrailerUrl.Replace("watch?v=", "embed/");
+            }
+            ViewBag.Genres = _movieService.GetGenres();
+            ViewBag.Countries = _movieService.GetCountries();
+
+            return View(movie);
+        }
+
+        // POST: Movies/Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Movie movie)
+        {
+            if (ModelState.IsValid)
+            {
+                _movieService.UpdateMovie(movie);
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Genres = _movieService.GetGenres();
+            ViewBag.Countries = _movieService.GetCountries();
+            return View(movie);
+        }
     }
-}
+ }

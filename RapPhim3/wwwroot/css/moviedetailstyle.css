@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     padding: 0;
@@ -263,22 +263,29 @@
     padding: 0px;
 }
 
-.mv-trailer{
+.mv-trailer {
     background-color: #000;
     position: relative;
     justify-content: center;
+    place-items: center;
 }
 
+
+
+.mv-img {
+    max-width: 100%;
+    height: auto; /* Đảm bảo không bị méo */
+    display: block;
+    object-fit: cover; /* Giữ nguyên tỷ lệ khung hình */
+}
 .mv-poster {
     margin-left: -1rem;
 }
 
-.mv-img
-{
-    padding-left: 400px;
+/*.mv-img {
+    position: center;
     z-index: -1;
-    
-}
+}*/
 
 .mv-country {
     padding-top: 1rem;
