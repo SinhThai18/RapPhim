@@ -9,7 +9,7 @@
 @{
     ViewData["Title"] = "Edit Movie ";
 }
-@model RapPhim3.Models.Movie
+@model RapPhim3.ViewModel.MovieViewModel
 @section Styles {
     <link rel="icon" href="~/imagescinema-logo.png" type="image/png">
     <link rel="stylesheet"
@@ -77,14 +77,14 @@
                                 <input type="number" asp-for="Duration" id="duration" class="form-control" min="1">
                             </div>
 
-                            <div class="subform-group">
-                                <label for="directors">Đạo diễn</label>
-                                <input type="text" asp-for="Directors" id="directors" class="form-control">
+                            <div class="form-group">
+                                <label for="Directors">Đạo diễn</label>
+                                <input type="text" id="Directors" name="Directors" class="form-control" value="@Model.Directors">
                             </div>
 
                             <div class="subform-group">
                                 <label for="genres">Thể loại</label>
-                                <select asp-for="Genres" id="genres" class="form-control" multiple>
+                                <select asp-for="GenreIds" id="genres" class="form-control" multiple>
                                     @foreach (var genre in ViewBag.Genres)
                                     {
                                         <option value="@genre.Id">@genre.Name</option>
@@ -107,9 +107,9 @@
                                 <textarea asp-for="Description" id="description" class="form-control" rows="5"></textarea>
                             </div>
 
-                            <div class="subform-group">
-                                <label for="actors">Diễn viên</label>
-                                <input type="text" asp-for="Actors" id="actors" class="form-control">
+                            <div class="form-group">
+                                <label for="Actors">Diễn viên</label>
+                                <input type="text" id="Actors" name="Actors" class="form-control" value="@Model.Actors">
                             </div>
 
                             <div class="subform-group">

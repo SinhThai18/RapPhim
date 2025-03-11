@@ -2,6 +2,7 @@
 {
     public class MovieViewModel
     {
+        public int Id { get; set; }
         public string Title { get; set; } = null!;
         public string? Description { get; set; }
         public DateOnly? ReleaseDate { get; set; }
@@ -17,6 +18,6 @@
         // Chuỗi diễn viên (cách nhau bởi dấu phẩy)
         public string? Actors { get; set; }
 
-        public string Directors { get; set; }
+        public string? Directors { get; set; }
     }
 }

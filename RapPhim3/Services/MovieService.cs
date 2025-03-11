@@ -25,7 +25,12 @@ namespace RapPhim3.Services
         public Movie? GetMovieById(int id)
         {
             return _context.Movies
-                .FirstOrDefault(m => m.Id == id); ;
+                .AsNoTracking() // Ngăn không cho EF Core giữ trạng thái tracking
+                .Include(m => m.Genres)
+                .Include(m => m.Country)
+                .Include(m => m.Actors)
+                .Include(m => m.Directors)
+                .FirstOrDefault(m => m.Id == id);
         }
 
         public List<Genre> GetGenres()
@@ -93,8 +98,12 @@ namespace RapPhim3.Services
 
         public List<Actor> GetOrCreateActors(List<string> actorNames)
         {
-            var existingActors = _context.Actors.Where(a => actorNames.Contains(a.Name)).ToList();
-
+            //sua loi tieng viet co dau
+            var existingActors = _context.Actors
+                .AsEnumerable()
+                .Where(a => actorNames.Any(name => string.Equals(a.Name, name, StringComparison.InvariantCultureIgnoreCase)))
+                .ToList();
+            
             var newActors = actorNames
                 .Where(name => !existingActors.Any(a => a.Name == name))
                 .Select(name => new Actor { Name = name })
@@ -109,8 +118,9 @@ namespace RapPhim3.Services
         public List<Director> GetOrCreateDirectors(List<string> directorNames)
         {
             var existingDirectors = _context.Directors
-                .Where(d => directorNames.Contains(d.Name))
-                .ToList();
+     .AsEnumerable()
+     .Where(d => directorNames.Any(name => string.Equals(d.Name, name, StringComparison.InvariantCultureIgnoreCase)))
+     .ToList();
 
             var newDirectors = directorNames
                 .Where(d => existingDirectors.All(ed => ed.Name != d))
@@ -146,27 +156,17 @@ namespace RapPhim3.Services
             existingMovie.CountryId = updatedMovie.CountryId;
 
             // Cập nhật danh sách thể loại
-            existingMovie.Genres.Clear();
-            foreach (var genre in _context.Genres.Where(g => updatedMovie.Genres.Select(ug => ug.Id).Contains(g.Id)))
-            {
-                existingMovie.Genres.Add(genre);
-            }
+            existingMovie.Genres = _context.Genres
+                .Where(g => updatedMovie.Genres.Select(ug => ug.Id).Contains(g.Id))
+                .ToList();
 
             // Cập nhật danh sách diễn viên
-            existingMovie.Actors.Clear();
-            var actors = GetOrCreateActors(updatedMovie.Actors.Select(a => a.Name).ToList());
-            foreach (var actor in actors)
-            {
-                existingMovie.Actors.Add(actor);
-            }
+            var newActors = GetOrCreateActors(updatedMovie.Actors.Select(a => a.Name).ToList());
+            existingMovie.Actors = newActors.ToList(); // Gán danh sách mới tránh lỗi
 
             // Cập nhật danh sách đạo diễn
-            existingMovie.Directors.Clear();
-            var directors = GetOrCreateDirectors(updatedMovie.Directors.Select(d => d.Name).ToList());
-            foreach (var director in directors)
-            {
-                existingMovie.Directors.Add(director);
-            }
+            var newDirectors = GetOrCreateDirectors(updatedMovie.Directors.Select(d => d.Name).ToList());
+            existingMovie.Directors = newDirectors.ToList();
 
             _context.SaveChanges();
         }

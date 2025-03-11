@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\prnn\\RapPhim3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\movies\\moviedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\movies\\moviedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\wwwroot\\css\\moviedetailstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\wwwroot\\css\\moviedetailstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MovieDetail.cshtml",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Movies\\MovieDetail.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Movies\\MovieDetail.cshtml",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Movies\\MovieDetail.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Movies\\MovieDetail.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-11T04:06:25.407Z",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "RelativeToolTip": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAArwJIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T14:55:53.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "moviedetailstyle.css",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\moviedetailstyle.css",
-              "RelativeDocumentMoniker": "RapPhim3\\wwwroot\\css\\moviedetailstyle.css",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\moviedetailstyle.css",
-              "RelativeToolTip": "RapPhim3\\wwwroot\\css\\moviedetailstyle.css",
-              "ViewState": "AgIAAAEBAAAAAAAAAAAYwA0BAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-11T03:59:31.47Z",
+              "DocumentIndex": 0,
+              "Title": "MovieService.cs",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\MovieService.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\Services\\MovieService.cs",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\MovieService.cs",
+              "RelativeToolTip": "RapPhim3\\Services\\MovieService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAArwGcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T13:49:45.859Z",
               "EditorCaption": ""
             }
           ]

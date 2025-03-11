@@ -108,35 +108,78 @@ namespace RapPhim3.Controllers.Admin
         public IActionResult Edit(int id)
         {
             var movie = _movieService.GetMovieById(id);
-           
             if (movie == null)
             {
                 return NotFound();
             }
-            if (movie.TrailerUrl!.Contains("watch?v="))
+
+            // Chuẩn hóa TrailerUrl từ "watch?v=" thành "embed/"
+            if (!string.IsNullOrEmpty(movie.TrailerUrl) && movie.TrailerUrl.Contains("watch?v="))
             {
                 movie.TrailerUrl = movie.TrailerUrl.Replace("watch?v=", "embed/");
             }
+
             ViewBag.Genres = _movieService.GetGenres();
             ViewBag.Countries = _movieService.GetCountries();
 
-            return View(movie);
+            var model = new MovieViewModel
+            {
+                Id = movie.Id,
+                Title = movie.Title,
+                Description = movie.Description,
+                ReleaseDate = movie.ReleaseDate,
+                Duration = movie.Duration,
+                LandscapeImage = movie.LandscapeImage,
+                PortraitImage = movie.PortraitImage,
+                CountryId = movie.CountryId,
+                TrailerUrl = movie.TrailerUrl,
+                GenreIds = movie.Genres.Select(g => g.Id).ToList(),
+                Actors = string.Join(", ", movie.Actors.Select(a => a.Name)),
+                Directors = string.Join(", ", movie.Directors.Select(d => d.Name))
+            };
+
+            return View(model);
         }
 
-        // POST: Movies/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Movie movie)
+        public IActionResult Edit(MovieViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _movieService.UpdateMovie(movie);
-                return RedirectToAction("Index");
+                ViewBag.Genres = _movieService.GetGenres();
+                ViewBag.Countries = _movieService.GetCountries();
+                return View(model);
             }
 
-            ViewBag.Genres = _movieService.GetGenres();
-            ViewBag.Countries = _movieService.GetCountries();
-            return View(movie);
+            var movie = _movieService.GetMovieById(model.Id);
+            if (movie == null)
+            {
+                return NotFound();
+            }
+
+            // Cập nhật thông tin cơ bản
+            movie.Title = model.Title;
+            movie.Description = model.Description;
+            movie.ReleaseDate = model.ReleaseDate;
+            movie.Duration = model.Duration;
+            movie.LandscapeImage = model.LandscapeImage;
+            movie.PortraitImage = model.PortraitImage;
+            movie.CountryId = model.CountryId;
+            movie.TrailerUrl = model.TrailerUrl;
+
+            // Cập nhật thể loại
+            movie.Genres = _movieService.GetGenresByIds(model.GenreIds);
+
+            // Cập nhật danh sách diễn viên
+            movie.Actors = _movieService.GetOrCreateActors(model.Actors?.Split(',').Select(a => a.Trim()).ToList());
+
+            // Cập nhật danh sách đạo diễn
+            movie.Directors = _movieService.GetOrCreateDirectors(model.Directors?.Split(',').Select(d => d.Trim()).ToList());
+
+            _movieService.UpdateMovie(movie);
+            return RedirectToAction("List");
         }
+
     }
- }
+}
