@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\prnn\\RapPhim3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\wwwroot\\css\\gueststyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\wwwroot\\css\\gueststyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\demo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\demo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MovieService.cs",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\MovieService.cs",
-              "RelativeDocumentMoniker": "RapPhim3\\Services\\MovieService.cs",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\MovieService.cs*",
-              "RelativeToolTip": "RapPhim3\\Services\\MovieService.cs*",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAkwFsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T13:27:50.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "RelativeDocumentMoniker": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "RelativeToolTip": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T13:20:57.007Z",
+              "Title": "gueststyle.css",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\gueststyle.css",
+              "RelativeDocumentMoniker": "RapPhim3\\wwwroot\\css\\gueststyle.css",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\gueststyle.css*",
+              "RelativeToolTip": "RapPhim3\\wwwroot\\css\\gueststyle.css*",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAvwHIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-11T02:38:59.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Demo.cshtml",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\Demo.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\Demo.cshtml",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\Demo.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Admin\\Demo.cshtml",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAuwG8AAAAaAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAnwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T13:19:17.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\Add.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\Add.cshtml",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\Add.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Admin\\Add.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAYwCcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T11:12:08.3Z",
+              "WhenOpened": "2025-03-11T02:33:22.318Z",
               "EditorCaption": ""
             }
           ]

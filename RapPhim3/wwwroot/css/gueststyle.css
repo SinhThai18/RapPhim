@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     padding: 0;
@@ -111,8 +111,10 @@
 }
 
 .img-movie {
-    padding-bottom: 10px;
-    transition: filter 0.3s ease;
+    width: 100%; /* Đảm bảo ảnh luôn rộng 100% trong container */
+    height: 400px; /* Đặt chiều cao cố định */
+    object-fit: cover; /* Cắt ảnh nếu cần để giữ tỷ lệ */
+    border-radius: 10px; /* Bo góc ảnh nếu muốn */
 }
 
 .ti-ticket {
