@@ -18,4 +18,8 @@ public partial class User
     public string Role { get; set; } = null!;
 
     public DateTime? CreatedAt { get; set; }
+
+    public bool EmailConfirmed { get; set; }
+
+    public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
 }

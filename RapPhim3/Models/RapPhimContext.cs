@@ -25,6 +25,14 @@ public partial class RapPhimContext : DbContext
 
     public virtual DbSet<Movie> Movies { get; set; }
 
+    public virtual DbSet<Room> Rooms { get; set; }
+
+    public virtual DbSet<Seat> Seats { get; set; }
+
+    public virtual DbSet<ShowTime> ShowTimes { get; set; }
+
+    public virtual DbSet<Ticket> Tickets { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -36,6 +44,8 @@ public partial class RapPhimContext : DbContext
         modelBuilder.Entity<Actor>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Actors__3214EC07DF6308D0");
+
+            entity.HasIndex(e => e.Name, "UQ_Actors_Name").IsUnique();
 
             entity.Property(e => e.ImageUrl).HasMaxLength(500);
             entity.Property(e => e.Name).HasMaxLength(255);
@@ -56,6 +66,8 @@ public partial class RapPhimContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Director__3214EC0701028503");
 
+            entity.HasIndex(e => e.Name, "UQ_Directors_Name").IsUnique();
+
             entity.Property(e => e.Name).HasMaxLength(255);
         });
 
@@ -63,12 +75,16 @@ public partial class RapPhimContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Genres__3214EC07FEE46422");
 
+            entity.HasIndex(e => e.Name, "UQ_Genres_Name").IsUnique();
+
             entity.Property(e => e.Name).HasMaxLength(100);
         });
 
         modelBuilder.Entity<Movie>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Movies__3214EC07F23C3755");
+
+            entity.HasIndex(e => e.Title, "UQ_Movie_Name").IsUnique();
 
             entity.Property(e => e.LandscapeImage).HasMaxLength(500);
             entity.Property(e => e.PortraitImage).HasMaxLength(500);
@@ -123,6 +139,82 @@ public partial class RapPhimContext : DbContext
                         j.HasKey("MovieId", "GenreId").HasName("PK__MovieGen__BBEAC44D878BC081");
                         j.ToTable("MovieGenres");
                     });
+        });
+
+        modelBuilder.Entity<Room>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Room__3214EC271BE4EAE2");
+
+            entity.ToTable("Room");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.Name).HasMaxLength(100);
+        });
+
+        modelBuilder.Entity<Seat>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Seat__3214EC27C93D2A76");
+
+            entity.ToTable("Seat");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
+            entity.Property(e => e.RoomId).HasColumnName("RoomID");
+            entity.Property(e => e.SeatNumber).HasMaxLength(10);
+            entity.Property(e => e.SeatType).HasMaxLength(50);
+
+            entity.HasOne(d => d.Room).WithMany(p => p.Seats)
+                .HasForeignKey(d => d.RoomId)
+                .HasConstraintName("FK__Seat__RoomID__42E1EEFE");
+        });
+
+        modelBuilder.Entity<ShowTime>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__ShowTime__3214EC2774061802");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.MovieId).HasColumnName("MovieID");
+            entity.Property(e => e.RoomId).HasColumnName("RoomID");
+            entity.Property(e => e.ShowTime1).HasColumnName("ShowTime");
+
+            entity.HasOne(d => d.Movie).WithMany(p => p.ShowTimes)
+                .HasForeignKey(d => d.MovieId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__ShowTimes__Movie__4E53A1AA");
+
+            entity.HasOne(d => d.Room).WithMany(p => p.ShowTimes)
+                .HasForeignKey(d => d.RoomId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__ShowTimes__RoomI__4F47C5E3");
+        });
+
+        modelBuilder.Entity<Ticket>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Tickets__3214EC272146BC07");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.BookingTime)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
+            entity.Property(e => e.SeatId).HasColumnName("SeatID");
+            entity.Property(e => e.ShowTimeId).HasColumnName("ShowTimeID");
+            entity.Property(e => e.UserId).HasColumnName("UserID");
+
+            entity.HasOne(d => d.Seat).WithMany(p => p.Tickets)
+                .HasForeignKey(d => d.SeatId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Tickets__SeatID__540C7B00");
+
+            entity.HasOne(d => d.ShowTime).WithMany(p => p.Tickets)
+                .HasForeignKey(d => d.ShowTimeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Tickets__ShowTim__531856C7");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Tickets)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Tickets__UserID__55009F39");
         });
 
         modelBuilder.Entity<User>(entity =>

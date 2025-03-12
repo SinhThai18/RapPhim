@@ -25,6 +25,8 @@ public partial class Movie
 
     public virtual Country? Country { get; set; }
 
+    public virtual ICollection<ShowTime> ShowTimes { get; set; } = new List<ShowTime>();
+
     public virtual ICollection<Actor> Actors { get; set; } = new List<Actor>();
 
     public virtual ICollection<Director> Directors { get; set; } = new List<Director>();

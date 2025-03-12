@@ -79,15 +79,13 @@
                      <div class="modal js-modal">
                         <div class="login-container" id="js-login-container">
                             <div class="form-container sign-up">
-                                <form>
+                                <form method="post" action="/Account/Register">
                                     <h1>Tạo Tài Khoản</h1>
-                                        <input type="text" required placeholder="Name">
-                                        <input type="email" required placeholder="Email">
-                                        <input type="tel" required placeholder="Phone Number">
-                                        <input type="date" required placeholder="">
-                                        <input type="password" required placeholder="Password">
-                                        <input type="password" required placeholder="Confirm Password">
-                                        <button class="js-signup">Đăng Ký</button>
+                                    <input type="text" name="fullName" required placeholder="Họ và Tên">
+                                    <input type="email" name="email" required placeholder="Email">
+                                    <input type="tel" name="phoneNumber" required placeholder="Số điện thoại">
+                                    <input type="password" name="password" required placeholder="Mật khẩu">
+                                    <button type="submit">Đăng Ký</button>
                                 </form>
                             </div>
 
@@ -158,8 +156,22 @@
             </div>
         </div>
     </footer>
+    @if (TempData["Error"] != null)
+    {
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lỗi!',
+                    html: '@Html.Raw(TempData["Error"])',
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'Đóng'
+                });
+            });
+        </script>
+    }
 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="~/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="~/js/bootstrap.bundle.min.js"></script>

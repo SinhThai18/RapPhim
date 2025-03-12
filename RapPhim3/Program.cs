@@ -11,6 +11,8 @@ builder.Services.AddDbContext<RapPhimContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("RapPhimDB")));
 
 builder.Services.AddScoped<MovieService>();
+builder.Services.AddScoped<AccountService>();
+builder.Services.AddScoped<EmailService>();
 
 builder.Services.AddSession(options =>
 {
