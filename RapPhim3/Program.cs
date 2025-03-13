@@ -10,9 +10,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<RapPhimContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("RapPhimDB")));
 
+builder.Services.AddHttpClient();
+
 builder.Services.AddScoped<MovieService>();
 builder.Services.AddScoped<AccountService>();
 builder.Services.AddScoped<EmailService>();
+builder.Services.AddMemoryCache();
+
 
 builder.Services.AddSession(options =>
 {

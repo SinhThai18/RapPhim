@@ -68,5 +68,35 @@ namespace RapPhim3.Services
             return true;
         }
 
+        public async Task<User> GetUserByUsername(string username)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == username);
+        }
+
+        // So sánh mật khẩu nhập vào với mật khẩu đã hash trong database
+        private bool VerifyPassword(string enteredPassword, string storedHash)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(enteredPassword));
+                StringBuilder builder = new StringBuilder();
+                foreach (var t in bytes)
+                {
+                    builder.Append(t.ToString("x2"));
+                }
+                return builder.ToString() == storedHash;
+            }
+        }
+        public async Task<bool> IsValidUser(string username, string password)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == username);
+            if (user == null || !VerifyPassword(password, user.PasswordHash))
+            {
+                return false;
+            }
+            return true;
+        }
+
+
     }
 }
