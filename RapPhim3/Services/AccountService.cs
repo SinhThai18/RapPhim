@@ -97,6 +97,13 @@ namespace RapPhim3.Services
             return true;
         }
 
+        public async Task<User> GetUserByEmail(string username)
+        {
+            return await _context.Users
+                .Where(u => u.Email == username)
+                .Select(u => new User { Id = u.Id,FullName=u.FullName, Email = u.Email, PasswordHash = u.PasswordHash })
+                .FirstOrDefaultAsync();
+        }
 
     }
 }

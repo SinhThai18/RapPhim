@@ -181,13 +181,132 @@
 }
 
 .account-wrapper {
-    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.user-name {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #333;
 }
 
+.account-wrapper:hover .account-list {
+    display: block;
+}
+
+.account-list {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    top: 50px;
+    left: 0;
+}
 .account-img {
     width: 75px;
     height: auto;
     padding: 10px 20px;
+}
+/* Căn chỉnh login area */
+.login-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Nếu chưa đăng nhập */
+.hidden-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .login-btn:hover {
+        background-color: #e63900;
+    }
+
+/* Nếu đã đăng nhập */
+.account-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #fff;
+}
+
+.dropdown-icon {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Dropdown menu */
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #fff;
+    list-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 160px;
+}
+
+    .account-dropdown li {
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+
+        .account-dropdown li a,
+        .account-dropdown li button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #333;
+            width: 100%;
+            border: none;
+            background: none;
+            font-size: 14px;
+        }
+
+        .account-dropdown li:hover {
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+
+/* Hover để hiển thị dropdown */
+.account-wrapper:hover .account-dropdown {
+    display: block;
 }
 
 .account-list li:hover a {

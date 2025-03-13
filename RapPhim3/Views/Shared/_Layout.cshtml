@@ -1,10 +1,116 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    var fullName = HttpContextAccessor.HttpContext?.Session.GetString("FullName");
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+        /* Căn chỉnh login area */
+        .login-area {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
 
+        /* Nếu chưa đăng nhập */
+        .hidden-login {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .login-btn {
+            background-color: #ff4500;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+            .login-btn:hover {
+                background-color: #e63900;
+            }
+
+        /* Nếu đã đăng nhập */
+        .account-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .account-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .account-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+
+        .user-name {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .dropdown-icon {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        /* Dropdown menu */
+        .account-dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background: #fff;
+            list-style: none;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 160px;
+        }
+
+            .account-dropdown li {
+                padding: 8px 12px;
+                cursor: pointer;
+            }
+
+                .account-dropdown li a,
+                .account-dropdown li button {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    text-decoration: none;
+                    color: #333;
+                    width: 100%;
+                    border: none;
+                    background: none;
+                    font-size: 14px;
+                }
+
+                .account-dropdown li:hover {
+                    background: #f1f1f1;
+                    border-radius: 5px;
+                }
+
+        /* Hover để hiển thị dropdown */
+        .account-wrapper:hover .account-dropdown {
+            display: block;
+        }
+
+    </style>
     <link rel="icon" href="~/images/cinema-logo.png">
     <title>Ohayou Cinema</title>
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
@@ -57,26 +163,40 @@
                     </button>
                 </div>
                 <div class="login-area col-md-2">
-                    <div class="hidden-login js-hidden-login">
-                        <button class="login-btn btn js-login-btn">
-                            Đăng Nhập
-                        </button>
-                        <img class="g-star-img" src="~/images/gstar.svg" alt="G-star">
-                    </div>
-                   <div class="show-login js-show-login">
+                    @if (string.IsNullOrEmpty(fullName))
+                    {
+                        <!-- Nếu chưa đăng nhập, hiển thị nút đăng nhập -->
+                        <div class="hidden-login js-hidden-login">
+                            <button class="login-btn btn js-login-btn">
+                                Đăng Nhập
+                            </button>
+                            <img class="g-star-img" src="~/images/gstar.svg" alt="G-star">
+                        </div>
+                    }
+                    else
+                    {
+                        <!-- Nếu đã đăng nhập, hiển thị avatar + dropdown menu -->
                         <div class="account-wrapper">
-                            <img src="~/images/account.png" alt="" class="img-fluid account-img">
-                            <ul class="list-group account-list">
-                                <li class="list-group-item"><a href="#"><i class="fa-solid fa-id-badge account-icon"></i>
-                                    Tài Khoản</a></li>
-                                <li class="list-group-item"><a href="#"><i class="fa-solid fa-list-ol account-icon"></i>
-                                    Lịch Sử</a></li>
-                                <li class="list-group-item"><a href="#" class="js-logout"><i class="fa-solid fa-arrow-right-from-bracket account-icon"></i>
-                                    Đăng Xuất</a></li>
+                            <div class="account-info">
+                                <img class="account-img" src="~/images/account.png" alt="Avatar">
+                                <span class="user-name">@fullName</span>
+                                <i class="fas fa-chevron-down dropdown-icon"></i>
+                            </div>
+                            <ul class="account-dropdown">
+                                <li><a href="/profile"><i class="fas fa-user"></i> Hồ sơ</a></li>
+                                <li>
+                                    <form id="logoutForm" action="/Account/Logout" method="post">
+                                        <button type="submit"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+                                    </form>
+                                </li>
                             </ul>
                         </div>
-                    </div> 
-                     <div class="modal js-modal">
+                    }
+                </div>
+
+
+
+                    <div class="modal js-modal">
                         <div class="login-container" id="js-login-container">
                             <div class="form-container sign-up">
                                 <form method="post" action="/Account/Register">
@@ -94,7 +214,7 @@
                                     <h1>Đăng nhập</h1>
                                     <input type="text" name="username" placeholder="Tài khoản">
                                     <input type="password" name="password" placeholder="Mật khẩu">
-                                    <a href="#">Quên mật khẩu?</a>
+                                    <!--<a href="#">Quên mật khẩu?</a>-->
                                     <button type="submit">Đăng nhập</button>
                                 </form>
                             </div>

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
+using RapPhim3.Models;
 using RapPhim3.Services;
 using RapPhim3.ViewModel;
 
@@ -80,14 +82,25 @@ namespace RapPhim3.Controllers.Account
 
             if (await _accountService.IsValidUser(username, password))
             {
+                var user = await _accountService.GetUserByEmail(username);
+                HttpContext.Session.SetInt32("UserId", user.Id);
+                HttpContext.Session.SetString("FullName", user.FullName);
+                Console.WriteLine("Session FullName: " + user.FullName);
                 _cache.Remove(cacheKey); // Xóa cache nếu đăng nhập thành công
-                return Json(new { success = true, message = "Đăng nhập thành công!" });
+                 return Json(new { success = true, message = "Đăng nhập thành công!" });
             }
             else
             {
                 _cache.Set(cacheKey, attempts + 1, TimeSpan.FromMinutes(BLOCK_TIME_MINUTES));
                 return Json(new { success = false, message = $"Sai tài khoản hoặc mật khẩu! Bạn còn {MAX_ATTEMPTS - attempts - 1} lần thử." });
             }
+        }
+
+        [HttpPost]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear(); // Xóa toàn bộ session
+            return RedirectToAction("Index", "Home");
         }
 
     }
