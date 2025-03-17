@@ -1,0 +1,187 @@
+﻿@model List<RapPhim3.Models.ShowTime>
+
+@{
+    ViewData["Title"] = "Danh sách suất chiếu";
+}
+
+@section Styles {
+    <link rel="icon" href="img/cinema-logo.png" type="image/png">
+    <link rel="stylesheet" href="~/css/movie.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="webfonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_orange.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style>
+        #roomSelect {
+            width: 200px;
+            font-size: 16px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+            #roomSelect:hover {
+                border-color: #ff5733;
+            }
+
+        input[type="date"] {
+            width: 200px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            input[type="date"]:hover {
+                border-color: #ff5733;
+            }
+
+        .movie-poster {
+            width: 50px; /* Điều chỉnh kích thước ảnh */
+            height: 75px; /* Giữ tỷ lệ ảnh */
+            object-fit: cover;
+            border-radius: 5px; /* Bo góc nhẹ */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline-primary {
+            color: orange;
+            border-color: orange;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: orange;
+                color: white;
+            }
+    </style>
+
+}
+
+<div class="container-fluid wrapper">
+    <div class="getdate">
+        <a href="@Url.Action("AddShowTime", "Admin")">
+            <button class="report-btn addStaff">
+                Thêm suất chiếu
+            </button>
+        </a>
+        <select class="form-select" id="roomSelect">
+            <option value="">Chọn phòng</option>
+            @foreach (var room in Model.Select(s => s.Room).Distinct())
+            {
+                <option value="@room.Id">@room.Name</option>
+            }
+        </select>
+        <div style="margin-inline:10px">
+            <button id="prevDate" class="btn btn-outline-primary">&laquo; Trước</button>
+            <input type="date" id="showDate" name="showDate">
+            <button id="nextDate" class="btn btn-outline-primary">Sau &raquo;</button>
+        </div>
+    </div>
+
+
+    <div class="wrapper-content">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Tên phim</th>
+                    <th>Thời Lượng</th>
+                    <th>Giờ chiếu</th>
+                    <th>Ngày chiếu</th>
+                    <th>Phòng</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    int count = 1;
+                    foreach (var showTime in Model)
+                    {
+                        <tr>
+                            <td>
+                                <img src="@showTime.Movie.PortraitImage" alt="@showTime.Movie.Title" class="movie-poster">
+                            </td>
+                            <td>@showTime.Movie.Title</td>
+                            <td>@showTime.Movie.Duration phút</td>
+                            <td>@showTime.ShowTime1.ToString("HH:mm")</td>
+                            <td>@showTime.ShowDate.ToString("dd/MM/yyyy")</td>
+                            <td data-room-id="@showTime.Room.Id">@showTime.Room.Name</td>
+                            <td>
+                                <a href="@Url.Action("EditShowTime", "Admin", new { id = showTime.Id })" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i> Sửa
+                                </a>
+                                <a href="@Url.Action("DeleteShowTime", "Admin", new { id = showTime.Id })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">
+                                    <i class="fas fa-trash"></i> Xóa
+                                </a>
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="7" class="text-center">Không có suất chiếu nào</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let dateInput = document.getElementById("showDate");
+            let prevBtn = document.getElementById("prevDate");
+            let nextBtn = document.getElementById("nextDate");
+            let roomSelect = document.getElementById("roomSelect");
+
+            // Set ngày mặc định là hôm nay
+            let today = new Date();
+            dateInput.value = today.toISOString().split('T')[0];
+
+            // Xử lý khi nhấn nút "Trước"
+            prevBtn.addEventListener("click", function () {
+                let currentDate = new Date(dateInput.value);
+                currentDate.setDate(currentDate.getDate() - 1);
+                dateInput.value = currentDate.toISOString().split('T')[0];
+                filterShowTimes();
+            });
+
+            // Xử lý khi nhấn nút "Sau"
+            nextBtn.addEventListener("click", function () {
+                let currentDate = new Date(dateInput.value);
+                currentDate.setDate(currentDate.getDate() + 1);
+                dateInput.value = currentDate.toISOString().split('T')[0];
+                filterShowTimes();
+            });
+
+            // Lọc phim khi thay đổi ngày hoặc chọn phòng
+            dateInput.addEventListener("change", filterShowTimes);
+            roomSelect.addEventListener("change", filterShowTimes);
+
+            function filterShowTimes() {
+                let selectedDate = dateInput.value;
+                let selectedRoom = roomSelect.value;
+                let rows = document.querySelectorAll(".wrapper-content tbody tr");
+
+                rows.forEach(row => {
+                    let showDate = row.children[4].textContent.trim().split('/').reverse().join('-'); // Định dạng lại ngày
+                    let roomId = row.children[5].getAttribute("data-room-id");
+
+                    let dateMatch = !selectedDate || showDate === selectedDate;
+                    let roomMatch = !selectedRoom || roomId === selectedRoom;
+
+                    row.style.display = (dateMatch && roomMatch) ? "" : "none";
+                });
+            }
+        });
+    </script>
+}

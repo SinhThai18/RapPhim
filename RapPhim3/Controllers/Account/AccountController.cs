@@ -85,9 +85,20 @@ namespace RapPhim3.Controllers.Account
                 var user = await _accountService.GetUserByEmail(username);
                 HttpContext.Session.SetInt32("UserId", user.Id);
                 HttpContext.Session.SetString("FullName", user.FullName);
+                HttpContext.Session.SetString("Role", user.Role); // Lưu role vào session
                 Console.WriteLine("Session FullName: " + user.FullName);
+
                 _cache.Remove(cacheKey); // Xóa cache nếu đăng nhập thành công
-                 return Json(new { success = true, message = "Đăng nhập thành công!" });
+
+                // Điều hướng dựa trên role
+                if (user.Role == "Admin")
+                {
+                    return Json(new { success = true, redirectUrl = Url.Action("Home", "Admin") });
+                }
+                else
+                {
+                    return Json(new { success = true, redirectUrl = Url.Action("Index", "Home") });
+                }
             }
             else
             {
@@ -95,6 +106,7 @@ namespace RapPhim3.Controllers.Account
                 return Json(new { success = false, message = $"Sai tài khoản hoặc mật khẩu! Bạn còn {MAX_ATTEMPTS - attempts - 1} lần thử." });
             }
         }
+
 
         [HttpPost]
         public IActionResult Logout()

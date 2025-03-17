@@ -101,7 +101,8 @@ namespace RapPhim3.Services
         {
             return await _context.Users
                 .Where(u => u.Email == username)
-                .Select(u => new User { Id = u.Id,FullName=u.FullName, Email = u.Email, PasswordHash = u.PasswordHash })
+                .Select(u => new User { Id = u.Id,FullName=u.FullName, Email = u.Email,
+                    Role=u.Role,PasswordHash = u.PasswordHash })
                 .FirstOrDefaultAsync();
         }
 

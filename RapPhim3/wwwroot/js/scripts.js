@@ -13,15 +13,7 @@ const signinBtn = document.querySelector('.js-signin');
 login.addEventListener('click', () => {
     modal.classList.add('open');
 })
-document.querySelector('.js-logout').addEventListener('click', () => {
-    // G?i yêu c?u ðãng xu?t và ?n tài kho?n
-    fetch('/logout', { method: 'POST' })
-        .then(() => {
-            document.querySelector('.account-wrapper').classList.add('hidden');
-            document.querySelector('.hidden-login').classList.remove('active');
-            document.querySelector('.show-login').classList.remove('active');
-        });
-});
+
 modal.addEventListener('click', () => {
     modal.classList.remove('open');
     container.classList.remove("active");

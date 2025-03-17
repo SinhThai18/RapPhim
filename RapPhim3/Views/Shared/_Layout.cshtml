@@ -157,11 +157,11 @@
 
                     </ul>
                 </div>
-                <div class="col-md-1">
-                    <button class="search-btn btn">
-                        <i class="search-icon ti-search"></i>
-                    </button>
-                </div>
+                @* <div class="col-md-1"> *@
+                @*     <button class="search-btn btn"> *@
+                @*         <i class="search-icon ti-search"></i> *@
+                @*     </button> *@
+                @* </div> *@
                 <div class="login-area col-md-2">
                     @if (string.IsNullOrEmpty(fullName))
                     {
@@ -178,7 +178,7 @@
                         <!-- Nếu đã đăng nhập, hiển thị avatar + dropdown menu -->
                         <div class="account-wrapper">
                             <div class="account-info">
-                                <img class="account-img" src="~/images/account.png" alt="Avatar">
+                                <img src="~/images/account.png">
                                 <span class="user-name">@fullName</span>
                                 <i class="fas fa-chevron-down dropdown-icon"></i>
                             </div>
@@ -193,8 +193,6 @@
                         </div>
                     }
                 </div>
-
-
 
                     <div class="modal js-modal">
                         <div class="login-container" id="js-login-container">
@@ -304,10 +302,12 @@
             });
         </script>
     }
+  
     <script>
-        document.querySelector("#loginForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            let formData = new FormData(this);
+                     document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var formData = new FormData(this);
 
             fetch("/Account/Login", {
                 method: "POST",
@@ -316,16 +316,15 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    Swal.fire("Thành công", data.message, "success").then(() => {
-                        window.location.href = "/";
-                    });
+                    window.location.href = data.redirectUrl; // Chuyển hướng đến trang tương ứng
                 } else {
-                    Swal.fire("Lỗi", data.message, "error");
+                    alert(data.message);
                 }
-            });
+            })
+            .catch(error => console.error("Lỗi:", error));
         });
-    </script>
 
+    </script>
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="~/js/scripts.js"></script>

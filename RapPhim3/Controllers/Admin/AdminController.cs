@@ -10,9 +10,12 @@ namespace RapPhim3.Controllers.Admin
     {
         private readonly MovieService _movieService;
 
-        public AdminController(MovieService movieService)
+        private readonly ShowTimeService _showTimeService;
+
+        public AdminController(MovieService movieService, ShowTimeService showTimeService)
         {
             _movieService = movieService;
+            _showTimeService = showTimeService;
         }
 
         public IActionResult Home()
@@ -179,6 +182,15 @@ namespace RapPhim3.Controllers.Admin
 
             _movieService.UpdateMovie(movie);
             return RedirectToAction("List");
+        }
+
+
+        //-------------------------------------------------------------------------------
+
+        public IActionResult ListShowTimes()
+        {
+            var showTimes = _showTimeService.ShowTimes();
+            return View(showTimes);
         }
 
     }

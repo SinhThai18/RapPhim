@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@* @{ *@
+@*     var role = Context.Session.GetString("Role"); *@
+@*     if (string.IsNullOrEmpty(role) || role != "Admin") *@
+@*     { *@
+@*         Context.Response.Redirect("/Home/Index"); *@
+@*     } *@
+@* } *@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -42,7 +49,7 @@
                                 <i class="ti-angle-down down-btn"></i>
                                 <ul class="sub-list-gr-1 list-group">
                                     <li><a href="@Url.Action("List","Admin")">Phim</a></li>
-                                    <li><a href="">Suất chiếu</a></li>
+                                    <li><a href="@Url.Action("ListShowTimes","Admin")">Suất chiếu</a></li>
                                 </ul>
                             </a>
                         </li>
@@ -76,10 +83,9 @@
                                 </a>
                             </li>
                             <li class="list-group-item">
-                                <a href="" class="js-logout">
-                                    <i class="fa-solid fa-arrow-right-from-bracket account-icon"></i>
-                                    Đăng Xuất
-                                </a>
+                                <form id="logoutForm" action="/Account/Logout" method="post">
+                                    <button type="submit"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+                                </form>
                             </li>
                         </ul>
                     </div>

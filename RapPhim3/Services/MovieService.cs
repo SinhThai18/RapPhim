@@ -76,20 +76,16 @@ namespace RapPhim3.Services
 
         public void AddMovie(Movie movie)
         {
-            foreach (var actor in movie.Actors)
-            {
-                actor.Id = 0; // Đảm bảo ID = 0 để EF tự động sinh ID
-            }
+            // Lấy hoặc tạo mới danh sách diễn viên
+            var actors = GetOrCreateActors(movie.Actors.Select(a => a.Name).ToList());
+            movie.Actors = actors;
 
-            foreach (var director in movie.Directors)
-            {
-                director.Id = 0;
-            }
+            // Lấy hoặc tạo mới danh sách đạo diễn
+            var directors = GetOrCreateDirectors(movie.Directors.Select(d => d.Name).ToList());
+            movie.Directors = directors;
 
-            foreach (var genre in movie.Genres)
-            {
-                genre.Id = 0;
-            }
+            // Lấy danh sách thể loại từ database (tránh thêm thể loại trùng lặp)
+            movie.Genres = _context.Genres.Where(g => movie.Genres.Select(mg => mg.Id).Contains(g.Id)).ToList();
 
             _context.Movies.Add(movie);
             _context.SaveChanges();
