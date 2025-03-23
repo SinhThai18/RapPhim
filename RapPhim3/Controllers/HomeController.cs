@@ -8,36 +8,36 @@ namespace RapPhim3.Controllers
     public class HomeController : Controller
     {
         private readonly MovieService _movieService;
-
-        public HomeController(MovieService movieService)
+        private readonly ShowTimeService _showTimeService;
+        public HomeController(MovieService movieService, ShowTimeService showTimeService)
         {
             _movieService = movieService;
+            _showTimeService = showTimeService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(DateOnly? selectedDate)
         {
-            var movies = _movieService.GetMovies();
-            var topMovies = movies.OrderByDescending(m => m.Id).Take(3).ToList();
-            ViewBag.TopMovies = topMovies;
+            DateOnly today = DateOnly.FromDateTime(DateTime.Now);
+            DateOnly targetDate = selectedDate ?? today;
+
+            // Lấy danh sách phim có suất chiếu trong ngày được chọn
+            var movies = _showTimeService.GetMoviesByDate(targetDate);
+            ViewBag.SelectedDate = targetDate;
+            ViewBag.Next7Days = Enumerable.Range(0, 7).Select(i => today.AddDays(i)).ToList();
+            ViewBag.LastDate = ((List<DateOnly>)ViewBag.Next7Days).Last();
+
+
+            ViewBag.TopMovies = _movieService.GetTopMoviesByNewest() ?? new List<Movie>();
+
             return View(movies);
         }
 
 
+
         public IActionResult MovieType()
         {
-            
-            var genres = _movieService.GetGenres();
-            var countries = _movieService.GetCountries();
-             var allMovies = _movieService.GetMovies();
-
-            var model = new MovieTypeViewModel
-            {
-                Genres = genres,
-                Countries = countries,
-                AllMovies = allMovies
-            };
-
-            return View("MovieType",model);
+            var viewModel = _movieService.GetMovieTypeViewModel();
+            return View(viewModel);
         }
 
         public IActionResult FilterMovies(int? genreId, int? countryId, int? year)

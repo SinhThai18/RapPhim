@@ -33,6 +33,6 @@ namespace RapPhim3.Controllers.Movies
             }
             return View("MovieDetail", movie);
         }
-
+       
     }
 }

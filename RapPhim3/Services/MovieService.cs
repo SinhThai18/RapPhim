@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using RapPhim3.ViewModel;
 
 namespace RapPhim3.Services
 {
@@ -167,6 +168,26 @@ namespace RapPhim3.Services
             _context.SaveChanges();
         }
 
+        public List<Movie> GetTopMoviesByNewest()
+        {
+            return _context.Movies
+                .OrderByDescending(m => m.ReleaseDate) // Sắp xếp theo ngày phát hành mới nhất
+                .Take(5)
+                .ToList();
+        }
+        public MovieTypeViewModel GetMovieTypeViewModel()
+        {
+            var today = DateTime.Today;
 
+            return new MovieTypeViewModel
+            {
+                AllMovies = _context.Movies.ToList(),
+                MoviesShowingToday = _context.Movies
+                    .Where(m => m.ShowTimes.Any(st => st.ShowDate == DateOnly.FromDateTime(today)))
+                    .ToList(),
+                Genres = _context.Genres.ToList(),
+                Countries = _context.Countries.ToList()
+            };
+        }
     }
 }

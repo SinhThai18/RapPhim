@@ -60,14 +60,14 @@
                                             </select>
                                         </div>
 
-                                        <div class="item">
-                                            <label for="year">Đang chiếu/Sắp:</label>
-                                            <select name="year" id="year" class="form-control" onchange="this.form.submit()">
-                                                <option value="">-- Đang chiếu/Sắp --</option>
-                                                <option value="">Đang chiếu</option>
-                                                <option value="">Sắp chiếu</option>
-                                            </select>
-                                        </div>
+                                        @* <div class="item"> *@
+                                        @*     <label for="year">Đang chiếu/Sắp:</label> *@
+                                        @*     <select name="year" id="year" class="form-control" onchange="this.form.submit()"> *@
+                                        @*         <option value="">-- Đang chiếu/Sắp --</option> *@
+                                        @*         <option value="">Đang chiếu</option> *@
+                                        @*         <option value="">Sắp chiếu</option> *@
+                                        @*     </select> *@
+                                        @* </div> *@
                                     </div>
                                 </form>
                             </div>
@@ -115,46 +115,24 @@
                 </div>
             </div>
 
-            <div class="col-md-3 right">
-                <div class="row ">
-                    <h1 class="text-right">Phim đang chiếu</h1>
-                </div>
-                <div class="row mv">
-                    <img src="~/images/movie/cai-gia-cua-hanh-phuc-1_1712733174711.jpg" alt="" class="img-fluid img-movie">
-                    <button class="buy-ticket-btn btn">
-                        <i class="ti-ticket"></i>
-                        Mua vé
-                    </button>
-                    <a href="moviedetail.html" class="text-dark-emphasis movie-name">Cái giá của hạnh phúc</a>
-                </div>
-                <div class="row mv">
-                    <img src="~/images/movie/ghostbusters-frozen-empire-750_1712719795646.jpg" alt="" class="img-fluid img-movie">
-                    <button class="buy-ticket-btn btn">
-                        <i class="ti-ticket"></i>
-                        Mua vé
-                    </button>
-                    <a href="moviedetail.html" class="text-dark-emphasis movie-name">Biệt đội săn ma: Kỷ nguyên băng giá</a>
-                </div>
-                <div class="row mv">
-                    <img src="~/images/movie/god-x-kong-750_1711942287259.jpg" alt="" class="img-fluid img-movie">
-                    <button class="buy-ticket-btn btn">
-                        <i class="ti-ticket"></i>
-                        Mua vé
-                    </button>
-                    <a href="moviedetail.html" class="text-dark-emphasis movie-name py-1">Godzilla X Kong: Đế chế mới</a>
-                </div>
-                <div class="row bonus">
-                    <div class="col-md-7"></div>
-                    <div class="col-md-4">
-                        <button type="button" class="new-mv">
-                            <a href="playing.html" class="">
-                                Xem thêm
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" class="svg-inline--fa fa-angle-right ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="width: 15px; height:15px; "><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
-                            </a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            @* <div class="col-md-3 right"> *@
+            @*     <div class="row"> *@
+            @*         <h1 class="text-right">Phim đang chiếu hôm nay</h1> *@
+            @*     </div> *@
+            @*     <div class="row mv"> *@
+            @*         @foreach (var movie in Model.MoviesShowingToday) *@
+            @*         { *@
+            @*             <div class="col-md-12 movie-item"> *@
+            @*                 <a href="@Url.Action("MovieDetail", "Movies", new { id = movie.Id })"> *@
+            @*                     <img src="@(movie.PortraitImage ?? "default.jpg")" alt="@movie.Title" class="img-fluid img-movie"> *@
+            @*                 </a> *@
+            @*                 <button class="buy-ticket-btn btn"> *@
+            @*                     <i class="ti-ticket"></i> Mua vé *@
+            @*                 </button> *@
+            @*             </div> *@
+            @*         } *@
+            @*     </div> *@
+            @* </div> *@
         </div>
     </div>
 </div>
@@ -171,5 +149,41 @@
 
 @section Scripts {
     <script src="~/js/movietypescript.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+    const moviesPerPage = 5; // Số lượng phim hiển thị trên mỗi trang
+    const movieList = document.querySelector(".post-list");
+    const movies = Array.from(movieList.children);
+    const totalPages = Math.ceil(movies.length / moviesPerPage);
+    const paginationContainer = document.createElement("div");
+    paginationContainer.className = "pagination";
+
+    function showPage(page) {
+        movieList.innerHTML = "";
+        const start = (page - 1) * moviesPerPage;
+        const end = start + moviesPerPage;
+        const moviesToShow = movies.slice(start, end);
+
+        moviesToShow.forEach(movie => movieList.appendChild(movie));
+        updatePagination(page);
+    }
+
+    function updatePagination(currentPage) {
+        paginationContainer.innerHTML = "";
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement("button");
+            pageButton.textContent = i;
+            pageButton.className = "page-button";
+            if (i === currentPage) {
+                pageButton.classList.add("active");
+            }
+            pageButton.addEventListener("click", () => showPage(i));
+            paginationContainer.appendChild(pageButton);
+        }
+    }
+
+    movieList.after(paginationContainer);
+    showPage(1);
+});
+</script>
 }
    

@@ -176,3 +176,5 @@ D:\prnn\RapPhim3\RapPhim3\bin\Debug\net8.0\X.PagedList.dll
 D:\prnn\RapPhim3\RapPhim3\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.MvcApplicationPartsAssemblyInfo.cs
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\prnn\RapPhim3\RapPhim3\bin\Debug\net8.0\PagedList.dll
+D:\prnn\RapPhim3\RapPhim3\bin\Debug\net8.0\PagedList.Mvc.dll

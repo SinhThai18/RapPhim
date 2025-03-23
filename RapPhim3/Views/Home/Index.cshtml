@@ -3,28 +3,36 @@
 }
 @model List<RapPhim3.Models.Movie>
 
-<style>
-    .slider img {
-        height: 400px; /* Điều chỉnh chiều cao */
-        object-fit: cover;
-    }
-</style>
+@section Styles{
+    <style>
+        .slider img {
+            height: 400px; /* Điều chỉnh chiều cao */
+            object-fit: cover;
+        }
+    </style>
+}
 <div class="slider">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            @for (int i = 0; i < ((List<RapPhim3.Models.Movie>)ViewBag.TopMovies).Count; i++)
+            @if (ViewBag.TopMovies != null && ViewBag.TopMovies.Count > 0)
             {
-                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="@i" class="@(i == 0 ? "active" : "")" aria-label="Slide @(i+1)"></button>
+                @for (int i = 0; i < ViewBag.TopMovies.Count; i++)
+                {
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="@i" class="@(i == 0 ? "active" : "")" aria-label="Slide @(i+1)"></button>
+                }
             }
         </div>
         <div class="carousel-inner">
-            @foreach (var movie in ViewBag.TopMovies)
+            @if (ViewBag.TopMovies != null && ViewBag.TopMovies.Count > 0)
             {
-                <div class="carousel-item @(movie == ViewBag.TopMovies[0] ? "active" : "")">
-                    <a href="@Url.Action("MovieDetail", "Movies", new { id = movie.Id })">
-                        <img src="@Url.Content(movie.LandscapeImage)" class="d-block w-100" alt="@movie.Title">
-                    </a>
-                </div>
+                @foreach (var movie in ViewBag.TopMovies)
+                {
+                    <div class="carousel-item @(movie == ViewBag.TopMovies[0] ? "active" : "")">
+                        <a href="@Url.Action("MovieDetail", "Movies", new { id = movie.Id })">
+                            <img src="@Url.Content(movie.LandscapeImage)" class="d-block w-100" alt="@movie.Title">
+                        </a>
+                    </div>
+                }
             }
         </div>
         <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -46,28 +54,93 @@
             PHIM
         </li>
         <li class="item">
-            <a href="#playing" class="accordion-toggle" data-bs-toggle="collapse" data-bs-target="#playing" aria-expanded="false">Đang chiếu</a>
-        </li>
-        <li class="item">
-            <a href="#coming" class="accordion-toggle" data-bs-toggle="collapse" data-bs-target="#coming" aria-expanded="false">Sắp chiếu</a>
-        </li>
-    </ul>
+            <div class="date-picker d-flex align-items-center">
+                <!-- Nút Trước -->
+                @{
+                    bool isPrevDisabled = ViewBag.SelectedDate == ViewBag.Next7Days[0]; // Nếu là ngày đầu tiên thì disable
+                }
+                <button id="prevDate" class="btn btn-secondary me-2" @(isPrevDisabled ? "disabled" : "")>Trước</button>
 
+                <!-- Dropdown chọn ngày -->
+                <label for="dateSelect" class="me-2">Chọn ngày: </label>
+                <select id="dateSelect" class="form-select">
+                    @foreach (var date in ViewBag.Next7Days)
+                    {
+                        bool isSelected = ViewBag.SelectedDate == date;
+                        <option value="@date" selected="@(isSelected ? "selected" : null)">
+                            @date.ToString("dd/MM/yyyy")
+                        </option>
+                    }
+                </select>
+
+                <!-- Nút Sau -->
+                @{
+                    bool isNextDisabled = ViewBag.SelectedDate == ViewBag.LastDate;
+                }
+                <button id="nextDate" class="btn btn-secondary ms-2" @(isNextDisabled ? "disabled" : "")>Sau</button>
+            </div>
+        </li>
+
+    </ul>
     <div class="list1" id="playing">
-        <div class="row">
-            @foreach (var movie in Model)
-            {
-                <div class="col-md-3">
-                    <img src="@Url.Content(movie.PortraitImage)" alt="" class="img-fluid img-movie">
-                    <button class="buy-ticket-btn btn">
-                        <i class="ti-ticket"></i>
-                        Mua vé
-                    </button>
-                    <a href="@Url.Action("MovieDetail", "Movies", new { id = movie.Id })" class="text-dark-emphasis movie-name">
-                        @movie.Title
-                    </a>
-                </div>
-            }
-        </div>
+        @if (Model != null && Model.Count > 0)
+        {
+            <div class="row">
+                @foreach (var movie in Model)
+                {
+                    <div class="col-md-3">
+                        <img src="@Url.Content(movie.PortraitImage)" alt="" class="img-fluid img-movie">
+                        <button class="buy-ticket-btn btn">
+                            <i class="ti-ticket"></i> Mua vé
+                        </button>
+                        <a href="@Url.Action("MovieDetail", "Movies", new { id = movie.Id })" class="text-dark-emphasis movie-name">
+                            @movie.Title
+                        </a>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>Không có phim nào để hiển thị.</p>
+        }
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var dateSelect = document.getElementById("dateSelect");
+            var prevBtn = document.getElementById("prevDate");
+            var nextBtn = document.getElementById("nextDate");
+            var availableDates = Array.from(dateSelect.options).map(opt => opt.value);
+
+            function updateButtons() {
+                var selectedIndex = dateSelect.selectedIndex;
+                prevBtn.disabled = (selectedIndex === 0);
+                nextBtn.disabled = (selectedIndex === availableDates.length - 1);
+            }
+
+            prevBtn.addEventListener("click", function () {
+                if (dateSelect.selectedIndex > 0) {
+                    dateSelect.selectedIndex--;
+                    dateSelect.dispatchEvent(new Event("change"));
+                }
+            });
+
+            nextBtn.addEventListener("click", function () {
+                if (dateSelect.selectedIndex < availableDates.length - 1) {
+                    dateSelect.selectedIndex++;
+                    dateSelect.dispatchEvent(new Event("change"));
+                }
+            });
+
+            dateSelect.addEventListener("change", function () {
+                var selectedDate = this.value;
+                window.location.href = "/Home/Index?selectedDate=" + selectedDate;
+            });
+
+            updateButtons(); // Cập nhật trạng thái nút khi trang tải xong
+        });
+    </script>
+}

@@ -858,8 +858,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>v0ha1auwt7</Fingerprint>
-      <Integrity>r12Qk9dt5jcJn5qoHWRpfQ6MhP72N0ihNrdlBTCNUJ8=</Integrity>
+      <Fingerprint>qjm33z392v</Fingerprint>
+      <Integrity>GqxwpxHFw1edh0TvJzZwpYHDTiPktyDUrdyj4zlM+g8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\movietypestyle.css'))</OriginalItemSpec>
