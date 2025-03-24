@@ -193,31 +193,14 @@ namespace RapPhim3.Controllers.Admin
 
         public IActionResult ListShowTimes()
         {
+            ViewBag.Rooms = _showTimeService.GetRooms(); // Lấy danh sách phòng chiếu
+            ViewBag.Movies = _movieService.GetMovies(); // Lấy danh sách phim
+
             var showTimes = _showTimeService.ShowTimes();
             return View(showTimes);
         }
 
 
-        [HttpGet]
-        public JsonResult GetAvailableShowTimes(int roomId, string showDate)
-        {
-            DateOnly date = DateOnly.Parse(showDate);
-            var availableTimes = _showTimeService.GetAvailableShowTimes(roomId, date);
-            return Json(availableTimes);
-        }
-
-        [HttpPost]
-        public IActionResult AddShowTime(string showDate, int roomId, string showTime, int movieId)
-        {
-            bool isSuccess = _showTimeService.AddShowTime(showDate, roomId, showTime, movieId);
-            if (isSuccess)
-            {
-                return Json(new { success = true });
-            }
-            return BadRequest(new { success = false, message = "Thêm suất chiếu thất bại!" });
-        }
-
-     
         public async Task<IActionResult> AdminProfile()
         
         {
@@ -245,5 +228,27 @@ namespace RapPhim3.Controllers.Admin
             return RedirectToAction("AdminProfile");
         }
 
+        [HttpPost]
+        public IActionResult AddShowTime(string ShowDate, int RoomId, string ShowTime, int MovieId)
+        {
+            if (string.IsNullOrEmpty(ShowDate) || RoomId == 0 || string.IsNullOrEmpty(ShowTime) || MovieId == 0)
+            {
+                TempData["ErrorMessage"] = "Vui lòng nhập đầy đủ thông tin!";
+                return RedirectToAction("ListShowTimes");
+            }
+
+            bool success = _showTimeService.AddShowTime(ShowDate, RoomId, ShowTime, MovieId);
+            if (success)
+            {
+                TempData["SuccessMessage"] = "Thêm suất chiếu thành công!";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Đã xảy ra lỗi khi thêm suất chiếu!";
+            }
+
+            return RedirectToAction("ListShowTimes");
+        }
     }
 }
+

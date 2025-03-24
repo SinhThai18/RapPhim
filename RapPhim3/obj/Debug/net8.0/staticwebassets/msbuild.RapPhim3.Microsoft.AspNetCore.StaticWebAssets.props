@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6ytgxaixji</Fingerprint>
-      <Integrity>Ynsb6hgXYJ/qQzcGUTtC+clwc0Xb3oJf9e+F09nEM6Q=</Integrity>
+      <Fingerprint>0pymuca3yh</Fingerprint>
+      <Integrity>JEeo6taF19Bow5Q+Jp6C1igkAg/ZoZfx4tR/VZnkJMY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\adminprofile.css'))</OriginalItemSpec>
@@ -858,13 +858,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< HEAD
-      <Fingerprint>qjm33z392v</Fingerprint>
-      <Integrity>GqxwpxHFw1edh0TvJzZwpYHDTiPktyDUrdyj4zlM+g8=</Integrity>
-=======
-      <Fingerprint>r40wg23i0e</Fingerprint>
-      <Integrity>VS9UkykfSxStx73ET1MgZ9Y3ncRh3wiuqD3UI17nu9E=</Integrity>
->>>>>>> 6a47b7d (admin profile)
+      <Fingerprint>t8u1mw54y1</Fingerprint>
+      <Integrity>owrcy0J3/s/Rjg623Eu9Ulk4A80zWbp6q84tkOcV/Ow=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\movietypestyle.css'))</OriginalItemSpec>

@@ -20,23 +20,6 @@ namespace RapPhim3.Services
                 .ToList();
         }
 
-        public List<TimeOnly> GetAvailableShowTimes(int roomId, DateOnly showDate)
-        {
-            var allShowTimes = new List<TimeOnly>
-            {
-                new TimeOnly(9, 0),
-                new TimeOnly(14, 0),
-                new TimeOnly(17, 0)
-            };
-
-            var bookedShowTimes = _context.ShowTimes
-                .Where(s => s.RoomId == roomId && s.ShowDate == showDate)
-                .Select(s => s.ShowTime1)
-                .ToList();
-
-            return allShowTimes.Except(bookedShowTimes).ToList();
-        }
-
         public bool AddShowTime(string showDate, int roomId, string showTime, int movieId)
         {
             try
@@ -77,5 +60,10 @@ namespace RapPhim3.Services
                 .ToList();
         }
 
+
+        public List<Room> GetRooms()
+        {
+            return _context.Rooms.ToList();
+        }
     }
 }

@@ -64,10 +64,6 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
-            "PagedList.Mvc": {
-              "target": "Package",
-              "version": "[4.5.0, )"
-            },
             "X.PagedList.Mvc.Core": {
               "target": "Package",
               "version": "[10.5.7, )"

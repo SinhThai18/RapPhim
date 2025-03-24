@@ -63,6 +63,7 @@
 
 <div class="container-fluid wrapper">
     <div class="getdate">
+        <!-- Button mở form modal -->
         <button class="btn btn-success" id="btnAddShowTime">Thêm suất chiếu</button>
 
         <select class="form-select" id="roomSelect">
@@ -130,6 +131,7 @@
         </table>
     </div>
 </div>
+
 <!-- Modal thêm suất chiếu -->
 <div id="addShowTimeModal" class="modal fade" tabindex="-1">
     <div class="modal-dialog">
@@ -138,62 +140,56 @@
                 <h5 class="modal-title">Thêm suất chiếu</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
-                <label>Ngày chiếu:</label>
-                <input type="date" id="showDate" class="form-control">
+            <form id="addShowTimeForm" asp-action="AddShowTime" method="post">
+                <div class="modal-body">
+                    <label>Ngày chiếu:</label>
+                    <input type="date" id="modalShowDate" name="ShowDate" class="form-control" required>
 
-                <label>Chọn phòng:</label>
-                <select id="roomSelect" class="form-control">
-                    <option value="">-- Chọn phòng --</option>
-                    @if (ViewBag.Rooms != null)
-                    {
+                    <label>Chọn phòng:</label>
+                    <select id="modalRoomSelect" name="RoomId" class="form-control" required>
+                        <option value="">-- Chọn phòng --</option>
                         @foreach (var room in ViewBag.Rooms)
                         {
                             <option value="@room.Id">@room.Name</option>
                         }
-                    }
-                    else
-                    {
-                        <option disabled>Không có phòng chiếu</option>
-                    }
-                </select>
+                    </select>
 
-                <label>Chọn suất chiếu:</label>
-                <select id="showTimeSelect" class="form-control" disabled>
-                    <option value="">-- Chọn suất chiếu --</option>
-                </select>
+                    <label>Chọn giờ chiếu:</label>
+                    <input type="text" id="modalShowTimePicker" name="ShowTime" class="form-control" required>
 
-                <label>Chọn phim:</label>
-                <select id="modalRoomSelect" class="form-control">
-                    <option value="">-- Chọn phim --</option>
-                   
-                    @if (ViewBag.Movies != null)
-                    {
+                    <label>Chọn phim:</label>
+                    <select id="modalMovieSelect" name="MovieId" class="form-control" required>
+                        <option value="">-- Chọn phim --</option>
                         @foreach (var movie in ViewBag.Movies)
                         {
                             <option value="@movie.Id">@movie.Title</option>
                         }
-                    }
-                    else
-                    {
-                        <option disabled>Không có movie</option>
-                    }
-                </select>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="saveShowTime">Lưu</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-            </div>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
 
 
+
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#modalShowTimePicker", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let dateInput = document.getElementById("showDate");
@@ -243,50 +239,13 @@
         });
 
 
-            
-        $(document).ready(function () {
-            // Mở modal
+                    $(document).ready(function () {
             $("#btnAddShowTime").click(function () {
+                var selectedDate = $("#showDate").val();
+                $("#modalShowDate").val(selectedDate);
                 $("#addShowTimeModal").modal("show");
             });
-
-            // Khi chọn phòng, load danh sách giờ chiếu có thể chọn
-               $("#modalRoomSelect").change(function () {
-        let roomId = $(this).val();
-        let showDate = $("#modalShowDate").val();
-
-                if (roomId && showDate) {
-                    $.get("/Admin/GetAvailableShowTimes", { roomId, showDate }, function (data) {
-                        $("#showTimeSelect").empty().append('<option value="">-- Chọn suất chiếu --</option>');
-                        data.forEach(time => {
-                            $("#showTimeSelect").append(`<option value="${time}">${time}</option>`);
-                        });
-                        $("#showTimeSelect").prop("disabled", data.length === 0);
-                    });
-                }
-            });
-
-            // Gửi dữ liệu thêm suất chiếu
-            $("#saveShowTime").click(function () {
-                let showDate = $("#showDate").val();
-                let roomId = $("#roomSelect").val();
-                let showTime = $("#showTimeSelect").val();
-                let movieId = $("#movieSelect").val();
-
-                if (!roomId || !showDate || !showTime || !movieId) {
-                    alert("Vui lòng nhập đầy đủ thông tin!");
-                    return;
-                }
-
-                $.post("/Admin/AddShowTime", { showDate, roomId, showTime, movieId }, function (response) {
-                    alert("Thêm suất chiếu thành công!");
-                    location.reload();
-                }).fail(function () {
-                    alert("Có lỗi xảy ra!");
-                });
-            });
         });
-    
 
     </script>
 }
