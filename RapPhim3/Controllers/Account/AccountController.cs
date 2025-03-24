@@ -85,6 +85,7 @@ namespace RapPhim3.Controllers.Account
                 var user = await _accountService.GetUserByEmail(username);
                 HttpContext.Session.SetInt32("UserId", user.Id);
                 HttpContext.Session.SetString("FullName", user.FullName);
+                HttpContext.Session.SetString("Email", user.Email);
                 HttpContext.Session.SetString("Role", user.Role); // Lưu role vào session
                 Console.WriteLine("Session FullName: " + user.FullName);
 

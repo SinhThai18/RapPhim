@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gb2khtesym</Fingerprint>
-      <Integrity>vG2CF2QS5XBwXMW7RGSQweHNBEsuO69BomtbB2pZZnM=</Integrity>
+      <Fingerprint>6ytgxaixji</Fingerprint>
+      <Integrity>Ynsb6hgXYJ/qQzcGUTtC+clwc0Xb3oJf9e+F09nEM6Q=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\adminprofile.css'))</OriginalItemSpec>
@@ -858,8 +858,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+<<<<<<< HEAD
       <Fingerprint>qjm33z392v</Fingerprint>
       <Integrity>GqxwpxHFw1edh0TvJzZwpYHDTiPktyDUrdyj4zlM+g8=</Integrity>
+=======
+      <Fingerprint>r40wg23i0e</Fingerprint>
+      <Integrity>VS9UkykfSxStx73ET1MgZ9Y3ncRh3wiuqD3UI17nu9E=</Integrity>
+>>>>>>> 6a47b7d (admin profile)
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\movietypestyle.css'))</OriginalItemSpec>

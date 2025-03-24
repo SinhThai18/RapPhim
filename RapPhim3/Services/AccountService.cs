@@ -101,9 +101,47 @@ namespace RapPhim3.Services
         {
             return await _context.Users
                 .Where(u => u.Email == username)
-                .Select(u => new User { Id = u.Id,FullName=u.FullName, Email = u.Email,
+                .Select(u => new User { Id = u.Id,FullName=u.FullName, Email = u.Email,PhoneNumber=u.PhoneNumber,
                     Role=u.Role,PasswordHash = u.PasswordHash })
                 .FirstOrDefaultAsync();
+        }
+
+       
+
+        public async Task<bool> UpdateUser(int userId, string fullName, string email, string phoneNumber)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+            {
+                return false; // Không tìm thấy user
+            }
+
+            user.FullName = fullName;
+            user.Email = email;
+            user.PhoneNumber = phoneNumber;
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<bool> UpdateUserProfile(int userId, string fullName, string email, string phoneNumber, string password)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null) return false;
+
+            user.FullName = fullName;
+            user.Email = email;
+            user.PhoneNumber = phoneNumber;
+
+            if (!string.IsNullOrWhiteSpace(password))
+            {
+                user.PasswordHash = HashPassword(password);
+            }
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
     }

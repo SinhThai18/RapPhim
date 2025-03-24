@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "D:\\prnn\\RapPhim3\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\home\\movietype.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\home\\movietype.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -29,12 +30,17 @@
     {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\services\\showtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\services\\showtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 6a47b7d (admin profile)
     },
     {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\listshowtimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\listshowtimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -61,6 +67,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\movies\\moviedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\movies\\moviedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\adminprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\adminprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\wwwroot\\css\\adminprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\wwwroot\\css\\adminprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+>>>>>>> 6a47b7d (admin profile)
     }
   ],
   "DocumentGroupContainers": [
@@ -70,16 +84,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 4,
+=======
+          "SelectedChildIndex": 1,
+>>>>>>> 6a47b7d (admin profile)
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
+<<<<<<< HEAD
               "Title": "movietypestyle.css",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\movietypestyle.css",
               "RelativeDocumentMoniker": "RapPhim3\\wwwroot\\css\\movietypestyle.css",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\movietypestyle.css*",
-              "RelativeToolTip": "RapPhim3\\wwwroot\\css\\movietypestyle.css*",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\movietypestyle.css",
+              "RelativeToolTip": "RapPhim3\\wwwroot\\css\\movietypestyle.css",
               "ViewState": "AgIAAKABAAAAAAAAAAAAALIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-03-23T15:36:02.194Z",
@@ -122,23 +141,58 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T04:57:41.639Z",
+=======
+              "Title": "adminprofile.css",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\adminprofile.css",
+              "RelativeDocumentMoniker": "RapPhim3\\wwwroot\\css\\adminprofile.css",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\adminprofile.css",
+              "RelativeToolTip": "RapPhim3\\wwwroot\\css\\adminprofile.css",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAIwOQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-24T13:42:57.537Z",
+>>>>>>> 6a47b7d (admin profile)
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "MovieType.cshtml",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Home\\MovieType.cshtml",
               "RelativeDocumentMoniker": "RapPhim3\\Views\\Home\\MovieType.cshtml",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Home\\MovieType.cshtml*",
-              "RelativeToolTip": "RapPhim3\\Views\\Home\\MovieType.cshtml*",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAE4AAAAqAAAAAAAAAA==",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Home\\MovieType.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\Home\\MovieType.cshtml",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAAE4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-19T03:18:16.644Z",
+=======
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\Services\\AccountService.cs",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\AccountService.cs",
+              "RelativeToolTip": "RapPhim3\\Services\\AccountService.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAtwH8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T13:08:23.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminProfile.cshtml",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\AdminProfile.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\AdminProfile.cshtml",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\AdminProfile.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\Admin\\AdminProfile.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAADwv7EAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T13:11:37.383Z",
+>>>>>>> 6a47b7d (admin profile)
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\HomeController.cs",
@@ -166,11 +220,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
+=======
+              "DocumentIndex": 1,
+>>>>>>> 6a47b7d (admin profile)
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
               "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
               "RelativeToolTip": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAAK0AAAAAAAAAAAAswMUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T14:56:04.931Z",
@@ -264,6 +322,11 @@
               "ViewState": "AgIAABEAAAAAAAAAAAAwwCMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T02:14:45.863Z",
+=======
+              "ViewState": "AgIAAOQAAAAAAAAAAADwv+kAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T15:42:50.211Z",
+>>>>>>> 6a47b7d (admin profile)
               "EditorCaption": ""
             }
           ]

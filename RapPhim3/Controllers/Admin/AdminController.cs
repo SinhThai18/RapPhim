@@ -3,6 +3,7 @@ using RapPhim3.Models;
 using RapPhim3.Services;
 using RapPhim3.ViewModel;
 using Newtonsoft.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace RapPhim3.Controllers.Admin
 {
@@ -12,10 +13,13 @@ namespace RapPhim3.Controllers.Admin
 
         private readonly ShowTimeService _showTimeService;
 
-        public AdminController(MovieService movieService, ShowTimeService showTimeService)
+        private readonly AccountService _accountService;
+
+        public AdminController(MovieService movieService, ShowTimeService showTimeService, AccountService accountService)
         {
             _movieService = movieService;
             _showTimeService = showTimeService;
+            _accountService = accountService;
         }
 
         public IActionResult Home()
@@ -191,6 +195,54 @@ namespace RapPhim3.Controllers.Admin
         {
             var showTimes = _showTimeService.ShowTimes();
             return View(showTimes);
+        }
+
+
+        [HttpGet]
+        public JsonResult GetAvailableShowTimes(int roomId, string showDate)
+        {
+            DateOnly date = DateOnly.Parse(showDate);
+            var availableTimes = _showTimeService.GetAvailableShowTimes(roomId, date);
+            return Json(availableTimes);
+        }
+
+        [HttpPost]
+        public IActionResult AddShowTime(string showDate, int roomId, string showTime, int movieId)
+        {
+            bool isSuccess = _showTimeService.AddShowTime(showDate, roomId, showTime, movieId);
+            if (isSuccess)
+            {
+                return Json(new { success = true });
+            }
+            return BadRequest(new { success = false, message = "Thêm suất chiếu thất bại!" });
+        }
+
+     
+        public async Task<IActionResult> AdminProfile()
+        
+        {
+            var userEmail = HttpContext.Session.GetString("Email"); // Lấy email từ session/login
+            var user = await _accountService.GetUserByEmail(userEmail);
+            if (user == null) return NotFound();
+
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AdminProfile(int id, string fullName, string email, string phoneNumber, string password)
+        {
+            var result = await _accountService.UpdateUserProfile(id, fullName, email, phoneNumber, password);
+
+            if (result)
+            {
+                TempData["SuccessMessage"] = "Cập nhật thành công!";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Cập nhật thất bại!";
+            }
+
+            return RedirectToAction("AdminProfile");
         }
 
     }

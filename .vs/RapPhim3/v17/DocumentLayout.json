@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\prnn\\RapPhim3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\listshowtimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\listshowtimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\home\\movietype.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\home\\movietype.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\listshowtimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\listshowtimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|d:\\prnn\\rapphim3\\rapphim3\\views\\admin\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -70,37 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "movietypestyle.css",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\movietypestyle.css",
-              "RelativeDocumentMoniker": "RapPhim3\\wwwroot\\css\\movietypestyle.css",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\movietypestyle.css",
-              "RelativeToolTip": "RapPhim3\\wwwroot\\css\\movietypestyle.css",
-              "ViewState": "AgIAAKABAAAAAAAAAAAAALIBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-23T15:36:02.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MovieTypeViewModel.cs",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
-              "RelativeDocumentMoniker": "RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
-              "RelativeToolTip": "RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T15:27:51.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MovieService.cs",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\MovieService.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Services\\MovieService.cs",
@@ -108,12 +82,11 @@
               "RelativeToolTip": "RapPhim3\\Services\\MovieService.cs",
               "ViewState": "AgIAAKoAAAAAAAAAAAAowLoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T14:56:30.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T14:56:30.514Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ShowTime.cs",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Models\\ShowTime.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Models\\ShowTime.cs",
@@ -121,12 +94,11 @@
               "RelativeToolTip": "RapPhim3\\Models\\ShowTime.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T04:57:41.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T04:57:41.639Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MovieType.cshtml",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Home\\MovieType.cshtml",
               "RelativeDocumentMoniker": "RapPhim3\\Views\\Home\\MovieType.cshtml",
@@ -139,7 +111,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListShowTimes.cshtml",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\ListShowTimes.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\ListShowTimes.cshtml",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\ListShowTimes.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\Admin\\ListShowTimes.cshtml",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAwwLMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T14:50:13.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MovieTypeViewModel.cs",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
+              "RelativeToolTip": "RapPhim3\\ViewModel\\MovieTypeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T15:27:51.866Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "movietypestyle.css",
+              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\movietypestyle.css",
+              "RelativeDocumentMoniker": "RapPhim3\\wwwroot\\css\\movietypestyle.css",
+              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\movietypestyle.css",
+              "RelativeToolTip": "RapPhim3\\wwwroot\\css\\movietypestyle.css",
+              "ViewState": "AgIAAKABAAAAAAAAAAAAALIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-23T15:36:02.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Controllers\\HomeController.cs",
@@ -147,12 +156,11 @@
               "RelativeToolTip": "RapPhim3\\Controllers\\HomeController.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAwwDsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T03:09:08.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T03:09:08.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ShowTimeService.cs",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Services\\ShowTimeService.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Services\\ShowTimeService.cs",
@@ -160,12 +168,11 @@
               "RelativeToolTip": "RapPhim3\\Services\\ShowTimeService.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T14:56:37.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T14:56:37.913Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
@@ -173,21 +180,7 @@
               "RelativeToolTip": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
               "ViewState": "AgIAAK0AAAAAAAAAAAAswMUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T14:56:04.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ListShowTimes.cshtml",
-              "DocumentMoniker": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\ListShowTimes.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\ListShowTimes.cshtml",
-              "ToolTip": "D:\\prnn\\RapPhim3\\RapPhim3\\Views\\Admin\\ListShowTimes.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Admin\\ListShowTimes.cshtml",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAwwLsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-23T14:50:13.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T14:56:04.931Z"
             },
             {
               "$type": "Document",
@@ -199,8 +192,7 @@
               "RelativeToolTip": "RapPhim3\\Controllers\\Account\\AccountController.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAswHkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T14:58:56.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T14:58:56.96Z"
             },
             {
               "$type": "Document",
@@ -212,8 +204,7 @@
               "RelativeToolTip": "RapPhim3\\Models\\Movie.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T14:57:18.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T14:57:18.239Z"
             },
             {
               "$type": "Document",
@@ -225,8 +216,7 @@
               "RelativeToolTip": "RapPhim3\\Views\\Admin\\List.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-23T15:15:25.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T15:15:25.865Z"
             },
             {
               "$type": "Document",
@@ -238,8 +228,7 @@
               "RelativeToolTip": "RapPhim3\\Models\\RapPhimContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T14:57:17.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T14:57:17.617Z"
             },
             {
               "$type": "Document",
@@ -263,8 +252,7 @@
               "RelativeToolTip": "RapPhim3\\Controllers\\Movies\\MoviesController .cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAwwCMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:14:45.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:14:45.863Z"
             }
           ]
         }
