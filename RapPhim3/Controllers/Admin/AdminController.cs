@@ -250,6 +250,42 @@ namespace RapPhim3.Controllers.Admin
             return RedirectToAction("ListShowTimes");
         }
 
+        [HttpGet]
+        public IActionResult GetShowTime(int id)
+        {
+            var showTime = _showTimeService.GetShowTimeById(id);
+            if (showTime == null) return NotFound();
+
+            return Json(new
+            {
+                id = showTime.Id,
+                showDate = showTime.ShowDate.ToString("yyyy-MM-dd"),
+                showTime = showTime.ShowTime1.ToString(@"HH\:mm"),
+                roomId = showTime.Room.Id,
+                movieId = showTime.Movie.Id
+            });
+        }
+
+        [HttpGet]
+        public IActionResult CheckDuplicateShowTime(DateTime showDate, string showTime, int roomId, int showTimeId)
+        {
+            bool isDuplicate = _showTimeService.CheckDuplicateShowTime(showDate, showTime, roomId, showTimeId);
+            return Json(new { isDuplicate });
+        }
+
+        [HttpPost]
+        public IActionResult EditShowTime(ShowTime model)
+        {
+            bool success = _showTimeService.EditShowTime(model);
+            if (!success)
+            {
+                TempData["ErrorMessage"] = "Suất chiếu này đã tồn tại hoặc có lỗi!";
+                return RedirectToAction("Index");
+            }
+
+            TempData["SuccessMessage"] = "Chỉnh sửa suất chiếu thành công!";
+            return RedirectToAction("ListShowTimes");
+        }
     }
 }
 

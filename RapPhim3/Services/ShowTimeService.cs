@@ -20,7 +20,7 @@ namespace RapPhim3.Services
                 .ToList();
         }
 
-        public bool AddShowTime(string showDate, int roomId, string showTime, int movieId, int bufferTime = 15)
+        public bool AddShowTime(string showDate, int roomId, string showTime, int movieId, int bufferTime = 60)
         {
             try
             {
@@ -66,8 +66,6 @@ namespace RapPhim3.Services
                 return false;
             }
         }
-
-
         public List<Movie> GetMoviesByDate(DateOnly date)
         {
             return _context.ShowTimes
@@ -86,10 +84,63 @@ namespace RapPhim3.Services
                 .ToList();
         }
 
-
         public List<Room> GetRooms()
         {
             return _context.Rooms.ToList();
         }
+
+        public ShowTime? GetShowTimeById(int id)
+        {
+            return _context.ShowTimes
+                .Include(s => s.Movie)
+                .Include(s => s.Room)
+                .FirstOrDefault(s => s.Id == id);
+        }
+
+        public bool CheckDuplicateShowTime(DateTime showDate, string showTime, int roomId, int showTimeId)
+        {
+            try
+            {
+                DateOnly parsedDate = DateOnly.FromDateTime(showDate); 
+                TimeOnly parsedShowTime = TimeOnly.Parse(showTime);    // Chuyển string -> TimeOnly
+
+                return _context.ShowTimes.Any(s =>
+                    s.ShowDate == parsedDate &&
+                    s.ShowTime1 == parsedShowTime &&
+                    s.RoomId == roomId && // Dùng trực tiếp RoomId thay vì s.Room.Id
+                    s.Id != showTimeId);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khi kiểm tra trùng suất chiếu: " + ex.Message);
+                return false;
+            }
+        }
+
+
+        public bool EditShowTime(ShowTime model)
+        {
+            var existingShowTime = _context.ShowTimes.Find(model.Id);
+            if (existingShowTime == null) return false;
+
+            // Kiểm tra trùng suất chiếu trước khi cập nhật
+            if (_context.ShowTimes.Any(s =>
+                s.ShowDate == model.ShowDate &&
+                s.ShowTime1 == model.ShowTime1 &&
+                s.RoomId == model.RoomId &&
+                s.Id != model.Id))
+            {
+                return false;
+            }
+
+            existingShowTime.ShowDate = model.ShowDate;
+            existingShowTime.ShowTime1 = model.ShowTime1;
+            existingShowTime.RoomId = model.RoomId;
+            existingShowTime.MovieId = model.MovieId;
+
+            _context.SaveChanges();
+            return true;
+        }
+
     }
 }

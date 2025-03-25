@@ -122,9 +122,9 @@
                             <td>@showTime.ShowDate.ToString("dd/MM/yyyy")</td>
                             <td data-room-id="@showTime.Room.Id">@showTime.Room.Name</td>
                             <td>
-                                <a href="@Url.Action("EditShowTime", "Admin", new { id = showTime.Id })" class="btn btn-warning btn-sm">
-                                    <i class="fas fa-edit"></i> Sửa
-                                </a>
+                                <button class="btn btn-warning btnEditShowTime" data-id="@showTime.Id">
+                                    <i class="fas fa-edit"></i> Chỉnh sửa
+                                </button>
                                 <a href="@Url.Action("DeleteShowTime", "Admin", new { id = showTime.Id })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">
                                     <i class="fas fa-trash"></i> Xóa
                                 </a>
@@ -187,9 +187,49 @@
     </div>
 </div>
 
+<!-- Modal chỉnh sửa suất chiếu -->
+<div id="editShowTimeModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Chỉnh sửa suất chiếu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="editShowTimeForm" asp-action="EditShowTime" method="post">
+                <input type="hidden" id="editShowTimeId" name="Id">
+                <div class="modal-body">
+                    <label>Ngày chiếu:</label>
+                    <input type="date" id="editShowDate" name="ShowDate" class="form-control" required>
 
+                    <label>Chọn phòng:</label>
+                    <select id="editRoomSelect" name="RoomId" class="form-control" required>
+                        <option value="">-- Chọn phòng --</option>
+                        @foreach (var room in ViewBag.Rooms)
+                        {
+                            <option value="@room.Id">@room.Name</option>
+                        }
+                    </select>
 
+                    <label>Chọn giờ chiếu:</label>
+                    <input type="text" id="editShowTimePicker" name="ShowTime1" class="form-control" required>
 
+                    <label>Chọn phim:</label>
+                    <select id="editMovieSelect" name="MovieId" class="form-control" required>
+                        <option value="">-- Chọn phim --</option>
+                        @foreach (var movie in ViewBag.Movies)
+                        {
+                            <option value="@movie.Id">@movie.Title</option>
+                        }
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 @section Scripts {
@@ -210,11 +250,9 @@
             let prevBtn = document.getElementById("prevDate");
             let nextBtn = document.getElementById("nextDate");
             let roomSelect = document.getElementById("roomSelect");
-
             // Set ngày mặc định là hôm nay
             let today = new Date();
             dateInput.value = today.toISOString().split('T')[0];
-
             // Xử lý khi nhấn nút "Trước"
             prevBtn.addEventListener("click", function () {
                 let currentDate = new Date(dateInput.value);
@@ -222,7 +260,6 @@
                 dateInput.value = currentDate.toISOString().split('T')[0];
                 filterShowTimes();
             });
-
             // Xử lý khi nhấn nút "Sau"
             nextBtn.addEventListener("click", function () {
                 let currentDate = new Date(dateInput.value);
@@ -230,7 +267,6 @@
                 dateInput.value = currentDate.toISOString().split('T')[0];
                 filterShowTimes();
             });
-
             // Lọc phim khi thay đổi ngày hoặc chọn phòng
             dateInput.addEventListener("change", filterShowTimes);
             roomSelect.addEventListener("change", filterShowTimes);
@@ -246,12 +282,10 @@
 
                     let dateMatch = !selectedDate || showDate === selectedDate;
                     let roomMatch = !selectedRoom || roomId === selectedRoom;
-
                     row.style.display = (dateMatch && roomMatch) ? "" : "none";
                 });
             }
         });
-
                     $(document).ready(function () {
             $("#btnAddShowTime").click(function () {
                 var selectedDate = $("#showDate").val();
@@ -265,5 +299,60 @@
             $(".alert").fadeOut("slow");
         }, 3000);
     </script>
+    <script>
+                flatpickr("#editShowTimePicker", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i", // Định dạng 24h
+            time_24hr: true
+        });
+                document.addEventListener("DOMContentLoaded", function () {
+            // Gán sự kiện click cho nút chỉnh sửa
+            document.querySelectorAll(".btnEditShowTime").forEach(button => {
+                button.addEventListener("click", function () {
+                    let showTimeId = this.getAttribute("data-id");
 
+                    // Gửi AJAX để lấy thông tin suất chiếu
+                    fetch(`/Admin/GetShowTime/${showTimeId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            document.getElementById("editShowTimeId").value = data.id;
+                            document.getElementById("editShowDate").value = data.showDate;
+                            document.getElementById("editShowTimePicker").value = data.showTime;
+                            document.getElementById("editRoomSelect").value = data.roomId;
+                            document.getElementById("editMovieSelect").value = data.movieId;
+                            // Hiển thị modal
+                            new bootstrap.Modal(document.getElementById("editShowTimeModal")).show();
+                        });
+                });
+            });
+
+            // Kiểm tra suất chiếu trùng khi thay đổi dữ liệu
+            document.getElementById("editShowTimePicker").addEventListener("change", checkDuplicateShowTime);
+            document.getElementById("editShowDate").addEventListener("change", checkDuplicateShowTime);
+            document.getElementById("editRoomSelect").addEventListener("change", checkDuplicateShowTime);
+
+            function checkDuplicateShowTime() {
+                let showDate = document.getElementById("editShowDate").value;
+                let showTime = document.getElementById("editShowTimePicker").value;
+                let roomId = document.getElementById("editRoomSelect").value;
+                let showTimeId = document.getElementById("editShowTimeId").value;
+
+                if (!showDate || !showTime || !roomId) return;
+
+                   fetch(`/Admin/CheckDuplicateShowTime?showDate=${showDate}&showTime=${showTime}&roomId=${roomId}&showTimeId=${showTimeId}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.isDuplicate) {
+                setTimeout(() => {
+                    alert("Suất chiếu này bị trùng với suất chiếu khác!");
+                    document.getElementById("editShowTimePicker").value = "";
+                }, 2000); // Delay 2 giây trước khi hiển thị alert
+            }
+        });
+
+            }
+        });
+
+    </script>
 }
