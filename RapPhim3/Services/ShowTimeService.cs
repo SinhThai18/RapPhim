@@ -20,19 +20,44 @@ namespace RapPhim3.Services
                 .ToList();
         }
 
-        public bool AddShowTime(string showDate, int roomId, string showTime, int movieId)
+        public bool AddShowTime(string showDate, int roomId, string showTime, int movieId, int bufferTime = 15)
         {
             try
             {
-                var newShowTime = new ShowTime
+                var movie = _context.Movies.Find(movieId);
+                if (movie == null) return false;
+
+                var newShowTime = TimeOnly.Parse(showTime);
+                var duration = movie.Duration ?? 0; // Nếu Duration là null, gán mặc định 0
+                var endTime = newShowTime.AddMinutes(duration + bufferTime); // Thêm bufferTime vào thời gian kết thúc
+
+                // Kiểm tra trùng lịch chiếu
+                var existingShowTimes = _context.ShowTimes
+                    .Include(s => s.Movie) 
+                    .Where(s => s.RoomId == roomId && s.ShowDate == DateOnly.Parse(showDate))
+                    .ToList();
+
+                foreach (var existingShow in existingShowTimes)
+                {
+                    var existingDuration = existingShow.Movie.Duration ?? 0;
+                    var existingEndTime = existingShow.ShowTime1.AddMinutes(existingDuration + bufferTime); // Thêm bufferTime vào suất chiếu cũ
+
+                    if ((newShowTime >= existingShow.ShowTime1 && newShowTime < existingEndTime) ||
+                        (endTime > existingShow.ShowTime1 && endTime <= existingEndTime))
+                    {
+                        return false; // Suất chiếu bị trùng
+                    }
+                }
+
+                var newShow = new ShowTime
                 {
                     ShowDate = DateOnly.Parse(showDate),
                     RoomId = roomId,
-                    ShowTime1 = TimeOnly.Parse(showTime),
+                    ShowTime1 = newShowTime,
                     MovieId = movieId
                 };
 
-                _context.ShowTimes.Add(newShowTime);
+                _context.ShowTimes.Add(newShow);
                 _context.SaveChanges();
                 return true;
             }
@@ -41,6 +66,7 @@ namespace RapPhim3.Services
                 return false;
             }
         }
+
 
         public List<Movie> GetMoviesByDate(DateOnly date)
         {

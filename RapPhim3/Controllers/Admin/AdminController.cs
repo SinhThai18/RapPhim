@@ -244,11 +244,12 @@ namespace RapPhim3.Controllers.Admin
             }
             else
             {
-                TempData["ErrorMessage"] = "Đã xảy ra lỗi khi thêm suất chiếu!";
+                TempData["ErrorMessage"] = "Suất chiếu bị trùng thời gian với suất chiếu khác!";
             }
 
             return RedirectToAction("ListShowTimes");
         }
+
     }
 }
 

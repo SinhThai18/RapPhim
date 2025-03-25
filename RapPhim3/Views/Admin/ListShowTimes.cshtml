@@ -60,7 +60,19 @@
     </style>
 
 }
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
 
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
 <div class="container-fluid wrapper">
     <div class="getdate">
         <!-- Button mở form modal -->
@@ -178,6 +190,8 @@
 
 
 
+
+
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -238,7 +252,6 @@
             }
         });
 
-
                     $(document).ready(function () {
             $("#btnAddShowTime").click(function () {
                 var selectedDate = $("#showDate").val();
@@ -246,6 +259,11 @@
                 $("#addShowTimeModal").modal("show");
             });
         });
-
     </script>
+    <script>
+        setTimeout(function () {
+            $(".alert").fadeOut("slow");
+        }, 3000);
+    </script>
+
 }
