@@ -94,6 +94,10 @@ namespace RapPhim3.Services
             {
                 return false;
             }
+            if (!user.EmailConfirmed)
+            {
+                return false;
+            }
             return true;
         }
 

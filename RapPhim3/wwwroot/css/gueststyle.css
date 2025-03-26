@@ -21,6 +21,24 @@
 
 
 /* List */
+
+.btn-custom {
+    background-color: #f4a261; /* Cam nhạt */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-inline :10px;
+}
+
+    .btn-custom:hover {
+        background-color: #e76f51; /* Cam đậm khi hover */
+        transform: scale(1.05);
+    }
+
 .list-group-horizontal {
     border: none;
     margin-left: -30px;
@@ -722,3 +740,51 @@
     font-weight:600;
     color: #000;
 }
+
+.notification-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification-list {
+    list-style: none;
+    padding: 0;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+    .notification.unread {
+        background: #f1f1f1;
+        font-weight: bold;
+    }
+
+.notif-icon {
+    margin-right: 10px;
+}
+
+.notif-time {
+    margin-left: auto;
+    font-size: 12px;
+    color: gray;
+}
+
+.mark-all-read {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .mark-all-read:hover {
+        background: #0056b3;
+    }

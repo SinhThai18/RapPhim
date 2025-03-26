@@ -30,3 +30,11 @@ inforBtn.forEach(element => {
     });
    
 });
+
+document.querySelector(".mark-all-read").addEventListener("click", function () {
+    document.querySelectorAll(".notification").forEach(notif => {
+        notif.classList.remove("unread");
+        notif.classList.add("read");
+    });
+});
+

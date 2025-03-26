@@ -1,0 +1,275 @@
+﻿
+@{
+    ViewData["Title"] = "User profile";
+}
+@section Styles {
+    <link rel="icon" href="~/images/cinema-logo.png" type="image/png">
+    <link rel="stylesheet" href="~/css/userstyle.css">
+}
+@model RapPhim3.Models.User
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+
+<div class="container-fluid box">
+    <div class="row ">
+        <div class="col-md-3 left">
+            <div class="row user" style="margin-left: 50px;">
+                <div class="col-auto">
+                    <img src="~/images/account.png" alt="">
+                </div>
+                <div class="col-auto">
+                    <div class="row name" style="font-weight: 600;">
+                        <img class="icon" src="~/images/logomini.png" alt="">
+                       @Model.FullName
+                    </div>
+                    <div class="row star">
+                        <img class="icon" src="~/images/icon-gift.190935e4.png" alt="">
+                        0 Star
+                    </div>
+                </div>
+               
+                <div class="col-auto">
+                    <img src="~/images/1458201.png" alt="" style="width:30%;margin-top:10px" >
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-9 right">
+            <div class="row header_list">
+                <ul class="list_fc">
+                    <li class="list_item">
+                        <a href="#history" class="history-btn accordion-toggle" data-bs-toggle="collapse" data-bs-target="#history" aria-expanded="false">Lịch sử giao dịch</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#infor" class="infor-btn accordion-toggle" data-bs-toggle="collapse" data-bs-target="#infor" aria-expanded="false">Thông tin cá nhân</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#noti" class="accordion-toggle" data-bs-toggle="collapse" data-bs-target="#noti" aria-expanded="false">Thông báo</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#gift" class="accordion-toggle" data-bs-toggle="collapse" data-bs-target="#gift" aria-expanded="false">Quà tặng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row box-content">
+                <div class="collapse history" id="history">
+                    <div class="row history-box">
+                        <div class="col-md-2 mv-img" style="margin-top: 0;">
+                            <img src="~/images/movie/exhuma.jpg" alt="">
+                        </div>
+                        <div class="col-md-5 mv-name">
+                            Exhuma: Quật mộ trùng ma
+                        </div>
+                        <div class="col-md-3 date">
+                            20:00h Thứ ba, 09/04/2024
+                        </div>
+                        <div class="col-md-2 bill">
+                            <a href="#detail1" class="accordion-toggle" data-bs-toggle="modal" data-bs-target="#detail1" aria-expanded="false">Chi tiết</a>
+                        </div>
+                        <div class="modal" id="detail1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="col">
+                                        <div class="row1">
+                                            <img src="~/images/movie/exhuma.jpg" alt="">
+                                            <p>Exhuma: Quật mộ trùng ma</p>
+                                        </div>
+                                        <div class="row2">
+                                            <p>Ohayou cenima</p>
+                                            <p>Suất 20:00 Thứ ba, 09/04/2024</p>
+                                        </div>
+                                        <div class="row3">
+                                            <p class="p">Ghế</p>
+                                            <p>D5, D6</p>
+                                        </div>
+                                        <div class="row4">
+                                            <div class="col">
+                                                <p class="p">Mã vé</p>
+                                                <p>WJHC3B5</p>
+                                            </div>
+                                            <div class="col">
+                                                <p class="p">Giá</p>
+                                                <p>100.000đ</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row history-box">
+                        <div class="col-md-2 mv-img" style="margin-top: 0;">
+                            <img src="~/images/movie/kungfu-panda-4.jpg" alt="">
+                        </div>
+                        <div class="col-md-5 mv-name">
+                            Kungfu Panda 4
+                        </div>
+                        <div class="col-md-3 date">
+                            20:00h Thứ hai, 08/04/2024
+                        </div>
+                        <div class="col-md-2 bill">
+                            <a href="#detail2" class="accordion-toggle" data-bs-toggle="modal" data-bs-target="#detail2" aria-expanded="false">Chi tiết</a>
+                        </div>
+                        <div class="modal" id="detail2">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="col">
+                                        <div class="row1">
+                                            <img src="~/images/movie/kungfu-panda-4.jpg" alt="">
+                                            <p>Kungfu Panda 4</p>
+                                        </div>
+                                        <div class="row2">
+                                            <p>Ohayou cenima</p>
+                                            <p>Suất 20:00 Thứ hai, 08/04/2024</p>
+                                        </div>
+                                        <div class="row3">
+                                            <p class="p">Ghế</p>
+                                            <p>H5</p>
+                                        </div>
+                                        <div class="row4">
+                                            <div class="col">
+                                                <p class="p">Mã vé</p>
+                                                <p>WJHC3B8</p>
+                                            </div>
+                                            <div class="col">
+                                                <p class="p">Giá</p>
+                                                <p>50.000đ</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse infor" id="infor">
+                    <div class="row user-infor-box">
+                        <div class="col box-left">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <div class="form remove">
+                                    <input type="text" required placeholder="@Model.FullName">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <div class="form remove">
+                                    <input type="text" required placeholder="@Model.Email">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col box-right">
+                            <div class="form-group">
+                                <label for="Phone">Phone number</label>
+                                <div class="form remove">
+                                    <input type="text" required placeholder="@Model.PhoneNumber">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button class="update accordion-toggle " data-bs-toggle="modal" data-bs-target="#update" aria-expanded="false">Cập nhật</button>
+                            </div>
+                            <div class="modal fade" id="update" tabindex="-1" aria-labelledby="updateLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content p-4">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Nhập Thông Tin Chỉnh Sửa</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form asp-action="UpdateProfile" asp-controller="User" method="post">
+                                                <input type="hidden" name="Id" value="@Model.Id" />
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="name" class="form-label">Name</label>
+                                                            <input type="text" class="form-control" name="FullName" required value="@Model.FullName">
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="email" class="form-label">Email</label>
+                                                            <input type="email" class="form-control" name="Email" required value="@Model.Email" readonly>
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="phone" class="form-label">Phone Number</label>
+                                                            <input type="text" class="form-control" name="PhoneNumber" required value="@Model.PhoneNumber">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="password" class="form-label">New Password</label>
+                                                            <input type="password" class="form-control" name="NewPassword">
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                                            <input type="password" class="form-control" name="ConfirmPassword">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse notifications" id="noti">
+                <div class="row notification-box">
+                    <div class="col-md-12">
+                        <h5>Thông báo</h5>
+                        <button class="mark-all-read">Đánh dấu tất cả đã đọc</button>
+                        <ul class="notification-list">
+                            <li class="notification unread">
+                                <span class="notif-icon">🔔</span>
+                                <span class="notif-text">Bạn đã đặt vé thành công cho "Exhuma: Quật mộ trùng ma"!</span>
+                                <span class="notif-time">5 phút trước</span>
+                            </li>
+                            <li class="notification read">
+                                <span class="notif-icon">🎁</span>
+                                <span class="notif-text">Chúc mừng! Bạn nhận được một ưu đãi giảm giá 10%.</span>
+                                <span class="notif-time">Hôm qua</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/userscript.js"></script>
+}
+
+  

@@ -104,7 +104,8 @@ namespace RapPhim3.Controllers.Account
             else
             {
                 _cache.Set(cacheKey, attempts + 1, TimeSpan.FromMinutes(BLOCK_TIME_MINUTES));
-                return Json(new { success = false, message = $"Sai tài khoản hoặc mật khẩu! Bạn còn {MAX_ATTEMPTS - attempts - 1} lần thử." });
+                return Json(new { success = false, message = $"Sai tài khoản hoặc mật khẩu hoặc " +
+                    $"bạn chưa xác minh tài khoản! Bạn còn {MAX_ATTEMPTS - attempts - 1} lần thử." });
             }
         }
 

@@ -122,47 +122,32 @@
 <body>
     <div class="header">
         <div class="container-fluid  p-4">
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-between">
+                <!-- Logo -->
                 <div class="col-md-2 px-5 py-1">
                     <a href="@Url.Action("Index", "Home")" class="navbar-brand">
                         <img src="~/images/cinema-logo.png" alt="Ohayou Cinema" class="img-fluid">
                     </a>
                 </div>
-                <div class="col-md-2 buyticket-area">
+
+                <!-- Nút mua vé -->
+                <div class="col-md-2 buyticket-area text-center">
                     <button type="button" class="buyticket-btn btn">
                         <img src="~/images/btn-ticket.png" alt="" class="img-buy-btn img-fluid">
                     </button>
                 </div>
+
+                <!-- Menu Thể loại, Diễn viên, Đạo diễn -->
                 <div class="col-md-5">
-                    <ul class="list-gr-1 list-group d-flex flex-row">
-                        <li class="list-group-item cinema-corner text-center">
-                            Góc Điện Ảnh
-                            <i class="ti-angle-down down-btn"></i>
-                            <ul class="sub-list-gr-1 list-group">
-                                <li><a href="@Url.Action("MovieType","Home")">Thể loại phim</a></li>
-                                <li><a href="@Url.Action("Actor","Home")">Diễn viên</a></li>
-                                <li><a href="@Url.Action("Director","Home")">Đạo diễn</a></li>
-                                <li><a href="@Url.Action("Review","Home")">Bình luận phim</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="list-group-item event-list text-center">
-                            Sự Kiện
-                            <i class="ti-angle-down down-btn"></i>
-                            <ul class="sub-list-gr-1 list-group">
-                                <li><a href="favors.html">Ưu đãi</a></li>
-                                <li><a href="#">Phim hay tháng</a></li>
-                            </ul>
-                        </li>
-
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li class="me-3"><a href="@Url.Action("MovieType","Home")" class="btn btn-custom">Thể loại phim</a></li>
+                        <li class="me-3"><a href="@Url.Action("Actor","Home")" class="btn btn-custom">Diễn viên</a></li>
+                        <li><a href="@Url.Action("Director","Home")" class="btn btn-custom">Đạo diễn</a></li>
                     </ul>
                 </div>
-                @* <div class="col-md-1"> *@
-                @*     <button class="search-btn btn"> *@
-                @*         <i class="search-icon ti-search"></i> *@
-                @*     </button> *@
-                @* </div> *@
-                <div class="login-area col-md-2">
+
+                <!-- Khu vực đăng nhập -->
+                <div class="col-md-3 login-area text-end">
                     @if (string.IsNullOrEmpty(fullName))
                     {
                         <!-- Nếu chưa đăng nhập, hiển thị nút đăng nhập -->
@@ -183,7 +168,7 @@
                                 <i class="fas fa-chevron-down dropdown-icon"></i>
                             </div>
                             <ul class="account-dropdown">
-                                <li><a href="/profile"><i class="fas fa-user"></i> Hồ sơ</a></li>
+                                <li><a href="@Url.Action("Profile","User")"><i class="fas fa-user"></i> Hồ sơ</a></li>
                                 <li>
                                     <form id="logoutForm" action="/Account/Logout" method="post">
                                         <button type="submit"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
@@ -193,6 +178,7 @@
                         </div>
                     }
                 </div>
+          
 
                     <div class="modal js-modal">
                         <div class="login-container" id="js-login-container">

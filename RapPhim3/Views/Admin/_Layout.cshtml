@@ -1,10 +1,10 @@
-﻿@* @{ *@
-@*     var role = Context.Session.GetString("Role"); *@
-@*     if (string.IsNullOrEmpty(role) || role != "Admin") *@
-@*     { *@
-@*         Context.Response.Redirect("/Home/Index"); *@
-@*     } *@
-@* } *@
+﻿ @{
+    var role = Context.Session.GetString("Role"); 
+    if (string.IsNullOrEmpty(role) || role != "Admin") 
+   {
+       Context.Response.Redirect("/Home/Index"); 
+    } 
+} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
