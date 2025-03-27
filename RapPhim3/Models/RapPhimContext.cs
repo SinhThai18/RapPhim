@@ -37,7 +37,7 @@ public partial class RapPhimContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=SinhThai\\SQLEXPRESS;Database=RapPhim;User Id=sa;Password=160203;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=localhost;Database=RapPhim;User Id=sa;Password=160203;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -88,6 +88,7 @@ public partial class RapPhimContext : DbContext
 
             entity.Property(e => e.LandscapeImage).HasMaxLength(500);
             entity.Property(e => e.PortraitImage).HasMaxLength(500);
+          
             entity.Property(e => e.Title).HasMaxLength(255);
             entity.Property(e => e.TrailerUrl).HasMaxLength(500);
 

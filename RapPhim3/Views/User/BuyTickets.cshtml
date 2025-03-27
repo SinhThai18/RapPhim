@@ -4,69 +4,107 @@
 @{
     ViewData["Title"] = "Buy Ticket";
 }
-
+@model RapPhim3.ViewModel.BuyTicketViewModel
 @section Styles {
     <link rel="stylesheet" href="~/css/bookticket.css" />
 }
+
 <div class="container mt-4">
     <div class="card p-4">
-        <h4 class="fw-bold">Chọn phim - Thanh Xuân 18x2: Lữ Trình Hướng Về Em</h4>
-
+        <h4 class="fw-bold">Chọn phim - @Model.Movie.Title</h4>
+        <image src="@Model.Movie.PortraitImage" style="height:200px ; width:fit-content"></image>
         <!-- Chọn suất -->
         <div class="mt-3">
             <h5 class="fw-bold">Chọn suất</h5>
-            <div class="d-flex gap-2 mt-2">
-                <button class="btn btn-outline-primary active">Thứ Năm 13/06</button>
-                <button class="btn btn-outline-primary">Thứ Sáu 14/06</button>
-                <button class="btn btn-outline-primary">Thứ Bảy 15/06</button>
+            <div id="show-date-buttons" class="d-flex gap-2 mt-2">
+                @foreach (var date in Model.ShowDates)
+                {
+                    <button class="btn btn-outline-primary show-date-btn" data-date="@date.ToString("yyyy-MM-dd")">
+                        @date.ToString("dddd dd/MM")
+                    </button>
+                }
             </div>
-            <div class="mt-3">
-                <button class="btn btn-primary">09:30</button>
-                <button class="btn btn-outline-secondary">23:15</button>
-            </div>
+            <div id="show-times" class="mt-3"></div>
         </div>
 
         <!-- Chọn ghế -->
         <div class="mt-4">
             <h5 class="fw-bold">Chọn ghế</h5>
-            <div class="seat-grid">
-                <div class="row">
-                    <button class="seat">1</button>
-                    <button class="seat">2</button>
-                    <button class="seat occupied">5</button>
-                    <button class="seat">6</button>
-                </div>
-                <div class="row">
-                    <button class="seat">3</button>
-                    <button class="seat">4</button>
-                    <button class="seat occupied">8</button>
-                    <button class="seat">9</button>
-                </div>
-            </div>
+            <div id="seat-container" class="seat-grid"></div>
         </div>
 
         <!-- Thông tin đặt vé -->
         <div class="summary mt-4 p-3 border rounded">
-            <div class="d-flex align-items-center">
-                <img src="movie-poster.jpg" class="movie-poster me-3" alt="Poster phim">
-                <div>
-                    <h6 class="fw-bold">Thanh Xuân 18x2: Lữ Trình Hướng Về Em</h6>
-                    <p class="mb-1">Ohayou Đà Nẵng - RAP 4</p>
-                    <p class="mb-1">Suất: 09:30 - Thứ Năm, 13/06/2024</p>
-                    <p class="fw-bold">Ghế: <span id="selected-seats">A5, A6</span></p>
-                </div>
-            </div>
+            <h6 class="fw-bold">Tóm tắt đặt vé</h6>
+            <p>Phim: @Model.Movie.Title</p>
+            <p>Ghế: <span id="selected-seats"></span></p>
             <hr>
             <div class="d-flex justify-content-between fw-bold">
                 <span>Tổng cộng</span>
-                <span>120,000 đ</span>
+                <span id="total-price">0 đ</span>
             </div>
         </div>
 
-        <!-- Nút hành động -->
         <div class="mt-3 d-flex justify-content-between">
-            <button class="btn btn-secondary">Quay lại</button>
+            <button class="btn btn-secondary" onclick="window.location.href='/home/index'">Quay lại</button>
             <button class="btn btn-warning">Tiếp tục</button>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".show-date-btn").click(function () {
+                var selectedDate = $(this).data("date");
+                var movieId = @Model.Movie.Id;
+
+                $.get(`/User/GetShowTimes?movieId=${movieId}&selectedDate=${selectedDate}`, function (data) {
+                    var html = "";
+                    data.forEach(time => {
+                        html += `<button class="btn btn-primary show-time-btn" data-id="${time.id}">${time.time}</button>`;
+                    });
+                    $("#show-times").html(html);
+                });
+            });
+
+                    $(document).on("click", ".show-time-btn", function () {
+            var showTimeId = $(this).data("id");
+
+            $.get(`/User/GetSeats?showTimeId=${showTimeId}`, function (data) {
+                var html = "";
+                data.forEach(group => {
+                    html += `<h6 class="fw-bold">${group.seatType} - Giá: ${group.seats[0].price} đ</h6>`;
+                    html += "<div class='row'>";
+                    group.seats.forEach(seat => {
+                       html += `<button class="seat" data-id="${seat.id}" data-price="${seat.price}">${seat.seatNumber}</button>`;
+                    });
+                    html += "</div>";
+                });
+                $("#seat-container").html(html);
+            });
+        });
+
+
+            $(document).on("click", ".seat:not(.occupied)", function () {
+                $(this).toggleClass("selected");
+                updateSummary();
+            });
+
+                   function updateSummary() {
+            var selectedSeats = $(".seat.selected").map(function () { return $(this).text(); }).get();
+            var seatTotal = 0;
+
+            $(".seat.selected").each(function () {
+                seatTotal += parseInt($(this).data("price"));
+            });
+            var totalPrice = seatTotal;
+
+            $("#selected-seats").text(selectedSeats.join(", "));
+            $("#total-price").text(totalPrice.toLocaleString("vi-VN") + " đ");
+        }
+
+        });
+    </script>
+}

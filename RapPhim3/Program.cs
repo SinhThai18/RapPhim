@@ -17,6 +17,7 @@ builder.Services.AddScoped<AccountService>();
 builder.Services.AddScoped<ShowTimeService>();
 builder.Services.AddScoped<EmailService>();
 builder.Services.AddScoped<UserService> ();
+builder.Services.AddScoped<SeatService>();
 builder.Services.AddMemoryCache();
 
 

@@ -143,5 +143,21 @@ namespace RapPhim3.Services
             return true;
         }
 
+
+        public List<DateOnly> GetShowDatesByMovie(int movieId)
+        {
+            return _context.ShowTimes.Where(st => st.MovieId == movieId)
+                .Select(st => st.ShowDate)
+                .Distinct()
+                .ToList();
+        }
+
+        public List<object> GetShowTimesByDate(int movieId, DateOnly date)
+        {
+            return _context.ShowTimes
+                .Where(st => st.MovieId == movieId && st.ShowDate == date)
+                .Select(st => new { id = st.Id, time = st.ShowTime1.ToString("HH:mm") })
+                .ToList<object>();
+        }
     }
 }

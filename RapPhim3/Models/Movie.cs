@@ -23,6 +23,7 @@ public partial class Movie
 
     public string? TrailerUrl { get; set; }
 
+
     public virtual Country? Country { get; set; }
 
     public virtual ICollection<ShowTime> ShowTimes { get; set; } = new List<ShowTime>();

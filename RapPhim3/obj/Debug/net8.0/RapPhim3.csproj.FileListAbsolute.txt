@@ -169,10 +169,10 @@ D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets\msbuild.build.RapPhim
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RapPhim3.props
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RapPhim3.props
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets.pack.json
-D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.csproj.Up2Date
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.dll
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\refint\RapPhim3.dll
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.pdb
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.genruntimeconfig.cache
 D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\ref\RapPhim3.dll
+D:\prnn\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
