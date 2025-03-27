@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\css\\bestmoviestyle.css"
     },
     {
+      "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bookticket.css",
+      "PackagePath": "staticwebassets\\css\\bookticket.css"
+    },
+    {
       "Id": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\css\\bootstrap-grid.css"
     },

@@ -17,6 +17,7 @@ namespace RapPhim3.Services
             return _context.ShowTimes
                 .Include(s => s.Movie)
                 .Include(s => s.Room)
+                .OrderByDescending(s => s.ShowDate) // Sắp xếp theo ShowDate giảm dần
                 .ToList();
         }
 

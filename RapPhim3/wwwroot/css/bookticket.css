@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    background-color: #f8f9fa;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+    .seat.occupied {
+        background-color: #f39c12;
+    }
+
+    .seat:hover {
+        background-color: #3498db;
+        color: white;
+    }
+
+.movie-poster {
+    width: 80px;
+    height: 120px;
+    border-radius: 5px;
+}

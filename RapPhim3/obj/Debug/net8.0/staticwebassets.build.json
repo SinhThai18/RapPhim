@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y3gKKT0cS3VwG7vSs2BVuHnVa5CrFXD0hL3v+OGLEsY=",
+  "Hash": "xYEfYpdBYdB5WIBbwqgjfB8XVN70VSXvXCm3XsVuXJQ=",
   "Source": "RapPhim3",
   "BasePath": "_content/RapPhim3",
   "Mode": "Default",
@@ -162,6 +162,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bestmoviestyle.css"
+    },
+    {
+      "Identity": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bookticket.css",
+      "SourceId": "RapPhim3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\",
+      "BasePath": "_content/RapPhim3",
+      "RelativePath": "css/bookticket#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jz5ag4fxlw",
+      "Integrity": "zwzJwSeGPFQH/13iGZWxdjfjPEIvqWwKsNPs6YT+WMg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bookticket.css"
     },
     {
       "Identity": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bootstrap.css",
@@ -12836,6 +12857,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-r12Qk9dt5jcJn5qoHWRpfQ6MhP72N0ihNrdlBTCNUJ8="
+        }
+      ]
+    },
+    {
+      "Route": "css/bookticket.css",
+      "AssetFile": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bookticket.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "536"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwzJwSeGPFQH/13iGZWxdjfjPEIvqWwKsNPs6YT+WMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 03:35:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwzJwSeGPFQH/13iGZWxdjfjPEIvqWwKsNPs6YT+WMg="
+        }
+      ]
+    },
+    {
+      "Route": "css/bookticket.jz5ag4fxlw.css",
+      "AssetFile": "D:\\prnn\\RapPhim3\\RapPhim3\\wwwroot\\css\\bookticket.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "536"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwzJwSeGPFQH/13iGZWxdjfjPEIvqWwKsNPs6YT+WMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 03:35:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jz5ag4fxlw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bookticket.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwzJwSeGPFQH/13iGZWxdjfjPEIvqWwKsNPs6YT+WMg="
         }
       ]
     },

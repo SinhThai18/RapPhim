@@ -577,6 +577,88 @@
       ]
     },
     {
+      "Route": "css/bookticket.css",
+      "AssetFile": "css/bookticket.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "536"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwzJwSeGPFQH/13iGZWxdjfjPEIvqWwKsNPs6YT+WMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 03:35:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwzJwSeGPFQH/13iGZWxdjfjPEIvqWwKsNPs6YT+WMg="
+        }
+      ]
+    },
+    {
+      "Route": "css/bookticket.jz5ag4fxlw.css",
+      "AssetFile": "css/bookticket.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "536"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwzJwSeGPFQH/13iGZWxdjfjPEIvqWwKsNPs6YT+WMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 03:35:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jz5ag4fxlw"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwzJwSeGPFQH/13iGZWxdjfjPEIvqWwKsNPs6YT+WMg="
+        },
+        {
+          "Name": "label",
+          "Value": "css/bookticket.css"
+        }
+      ]
+    },
+    {
       "Route": "css/bootstrap-grid.bqjiyaj88i.css",
       "AssetFile": "css/bootstrap-grid.css",
       "Selectors": [],

@@ -3,6 +3,7 @@ wwwroot\css\actorstyle.css
 wwwroot\css\addMovie.css
 wwwroot\css\adminprofile.css
 wwwroot\css\bestmoviestyle.css
+wwwroot\css\bookticket.css
 wwwroot\css\bootstrap.css
 wwwroot\css\bootstrap.css.map
 wwwroot\css\bootstrap.min.css

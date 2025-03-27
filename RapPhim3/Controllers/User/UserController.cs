@@ -56,5 +56,10 @@ namespace RapPhim3.Controllers.User
             TempData["Success"] = "Cập nhật thành công!";
             return RedirectToAction("Profile");
         }
+
+        public IActionResult BuyTickets()
+        {
+            return View();
+        }
     }
 }

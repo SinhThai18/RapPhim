@@ -190,17 +190,6 @@ namespace RapPhim3.Controllers.Admin
 
 
         //-------------------------------------------------------------------------------
-
-        public IActionResult ListShowTimes()
-        {
-            ViewBag.Rooms = _showTimeService.GetRooms(); // Lấy danh sách phòng chiếu
-            ViewBag.Movies = _movieService.GetMovies(); // Lấy danh sách phim
-
-            var showTimes = _showTimeService.ShowTimes();
-            return View(showTimes);
-        }
-
-
         public async Task<IActionResult> AdminProfile()
         
         {
@@ -227,6 +216,17 @@ namespace RapPhim3.Controllers.Admin
 
             return RedirectToAction("AdminProfile");
         }
+
+        //-------------------------------------------------------------------------------
+        public IActionResult ListShowTimes()
+        {
+            ViewBag.Rooms = _showTimeService.GetRooms(); // Lấy danh sách phòng chiếu
+            ViewBag.Movies = _movieService.GetMovies(); // Lấy danh sách phim
+
+            var showTimes = _showTimeService.ShowTimes();
+            return View(showTimes);
+        }
+
 
         [HttpPost]
         public IActionResult AddShowTime(string ShowDate, int RoomId, string ShowTime, int MovieId)
@@ -286,6 +286,8 @@ namespace RapPhim3.Controllers.Admin
             TempData["SuccessMessage"] = "Chỉnh sửa suất chiếu thành công!";
             return RedirectToAction("ListShowTimes");
         }
+
+
     }
 }
 

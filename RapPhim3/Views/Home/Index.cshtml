@@ -90,9 +90,9 @@
                 {
                     <div class="col-md-3">
                         <img src="@Url.Content(movie.PortraitImage)" alt="" class="img-fluid img-movie">
-                        <button class="buy-ticket-btn btn">
+                        <a href="@Url.Action("BuyTickets", "User", new { movieId = movie.Id })" class="buy-ticket-btn btn">
                             <i class="ti-ticket"></i> Mua vé
-                        </button>
+                        </a>
                         <a href="@Url.Action("MovieDetail", "Movies", new { id = movie.Id })" class="text-dark-emphasis movie-name">
                             @movie.Title
                         </a>
