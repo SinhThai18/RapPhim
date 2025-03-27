@@ -146,11 +146,18 @@ namespace RapPhim3.Services
 
         public List<DateOnly> GetShowDatesByMovie(int movieId)
         {
-            return _context.ShowTimes.Where(st => st.MovieId == movieId)
+            var currentDate = DateOnly.FromDateTime(DateTime.Now);
+            var currentTime = TimeOnly.FromDateTime(DateTime.Now);
+
+            return _context.ShowTimes
+                .Where(st => st.MovieId == movieId &&
+                            (st.ShowDate > currentDate ||
+                            (st.ShowDate == currentDate && st.ShowTime1 > currentTime))) // Lọc suất còn có thể mua
                 .Select(st => st.ShowDate)
                 .Distinct()
                 .ToList();
         }
+
 
         public List<object> GetShowTimesByDate(int movieId, DateOnly date)
         {
