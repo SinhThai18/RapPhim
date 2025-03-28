@@ -15,6 +15,11 @@ namespace RapPhim3.Services
             _context = context;
         }
 
+        public int GetMovieCount()
+        {
+            return _context.Movies.Count();
+        }
+
         public List<Movie> GetMovies()
         {
             return _context.Movies

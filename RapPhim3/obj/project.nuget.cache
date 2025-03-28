@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9razc0aNmBc=",
+  "dgSpecHash": "ump7MY7BN5s=",
   "success": true,
-  "projectFilePath": "D:\\prnn\\RapPhim3\\RapPhim3\\RapPhim3.csproj",
+  "projectFilePath": "C:\\Users\\thaim\\OneDrive\\Máy tính\\kì 7\\lai\\RapPhim\\RapPhim3\\RapPhim3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thaim\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\thaim\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

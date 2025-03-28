@@ -22,10 +22,33 @@ namespace RapPhim3.Controllers.Admin
             _accountService = accountService;
         }
 
-        public IActionResult Home()
+        public async Task<IActionResult> ListCustomer(string search, string sortOrder)
         {
+            var customers = await _accountService.GetCustomersAsync(search, sortOrder);
+            return View(customers);
+        }
+
+        public async Task<IActionResult> Revenue ()
+        {
+           
             return View();
         }
+
+        public IActionResult Home()
+        {
+            var movieCount = _movieService.GetMovieCount();
+            var customerCount = _accountService.GetCustomerCount();
+            var showTimeCount = _showTimeService.GetShowTimeCount();
+            var totalRevenue = _showTimeService.GetTotalRevenue();
+
+            ViewBag.MovieCount = movieCount;
+            ViewBag.CustomerCount = customerCount;
+            ViewBag.ShowTimeCount = showTimeCount;
+            ViewBag.TotalRevenue = totalRevenue;
+
+            return View();
+        }
+
 
         public IActionResult List()
         {
@@ -287,6 +310,7 @@ namespace RapPhim3.Controllers.Admin
             return RedirectToAction("ListShowTimes");
         }
 
+        
 
     }
 }

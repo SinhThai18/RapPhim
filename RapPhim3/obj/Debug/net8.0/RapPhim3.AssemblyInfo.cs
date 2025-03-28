@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RapPhim3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1358fe52cb534b1beead3a748bb48aeea846423d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+005630d840eb34d5f8263e869976e0bb55e908ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("RapPhim3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RapPhim3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

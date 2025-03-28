@@ -52,6 +52,27 @@
     </div>
 </div>
 
+<!-- Modal chọn phương thức thanh toán -->
+<div class="modal fade" id="paymentModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Chọn phương thức thanh toán</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <label>
+                    <input type="radio" name="paymentMethod" value="bankTransfer" checked> Chuyển khoản ngân hàng
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#paymentModal">Tiếp tục</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -107,4 +128,20 @@
 
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $("#confirmPayment").click(function () {
+                var paymentMethod = $("input[name='paymentMethod']:checked").val();
+                if (paymentMethod === "bankTransfer") {
+                    var selectedSeats = $("#selected-seats").text();
+                    var totalPrice = $("#total-price").text();
+                    var showTime = $(".show-time-btn.active").text();
+
+                    window.location.href = `/user/bankPayment?seats=${selectedSeats}&price=${totalPrice}&showtime=${showTime}`;
+                }
+            });
+        });
+    </script>
+
+
 }
