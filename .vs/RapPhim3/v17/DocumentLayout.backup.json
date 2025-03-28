@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\views\\admin\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\views\\admin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\views\\admin\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\viewmodel\\dailyrevenueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\viewmodel\\dailyrevenueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\viewmodel\\movierevenueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\viewmodel\\movierevenueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,10 +59,6 @@
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\views\\admin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\rapphim\\rapphim3\\views\\admin\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -62,11 +78,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "RelativeToolTip": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
+              "ViewState": "AgIAAOsAAAAAAAAAAAAgwPgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T07:28:33.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Revenue.cshtml",
+              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\Revenue.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\Revenue.cshtml",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\Revenue.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\Admin\\Revenue.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAuwH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-28T08:07:51.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Services\\TicketService.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\Services\\TicketService.cs",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Services\\TicketService.cs",
+              "RelativeToolTip": "RapPhim3\\Services\\TicketService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAArwCUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:16:15.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "MovieRevenueViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\ViewModel\\MovieRevenueViewModel.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\ViewModel\\MovieRevenueViewModel.cs",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\ViewModel\\MovieRevenueViewModel.cs",
+              "RelativeToolTip": "RapPhim3\\ViewModel\\MovieRevenueViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:39:33.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\Home.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\Home.cshtml",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\Home.cshtml*",
+              "RelativeToolTip": "RapPhim3\\Views\\Admin\\Home.cshtml*",
+              "ViewState": "AgIAADMAAAAAAAAAAAAUwDgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-28T07:32:02.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DailyRevenueViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\ViewModel\\DailyRevenueViewModel.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\ViewModel\\DailyRevenueViewModel.cs",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\ViewModel\\DailyRevenueViewModel.cs",
+              "RelativeToolTip": "RapPhim3\\ViewModel\\DailyRevenueViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:39:50.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Program.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\Program.cs",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Program.cs",
+              "RelativeToolTip": "RapPhim3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:16:23.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ShowTime.cs",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Models\\ShowTime.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Models\\ShowTime.cs",
@@ -74,64 +181,36 @@
               "RelativeToolTip": "RapPhim3\\Models\\ShowTime.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAA3wA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T08:36:31.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T08:36:31.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Revenue.cshtml",
-              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\Revenue.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\Revenue.cshtml",
-              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\Revenue.cshtml*",
-              "RelativeToolTip": "RapPhim3\\Views\\Admin\\Revenue.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T08:07:51.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "RelativeDocumentMoniker": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Controllers\\Admin\\AdminController.cs*",
-              "RelativeToolTip": "RapPhim3\\Controllers\\Admin\\AdminController.cs*",
-              "ViewState": "AgIAACwBAAAAAAAAAAAAwDkBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T07:28:33.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "ShowTimeService.cs",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Services\\ShowTimeService.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Services\\ShowTimeService.cs",
-              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Services\\ShowTimeService.cs*",
-              "RelativeToolTip": "RapPhim3\\Services\\ShowTimeService.cs*",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Services\\ShowTimeService.cs",
+              "RelativeToolTip": "RapPhim3\\Services\\ShowTimeService.cs",
               "ViewState": "AgIAAKAAAAAAAAAAAAAAALUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T07:31:47.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T07:31:47.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Ticket.cs",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Models\\Ticket.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Models\\Ticket.cs",
               "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Models\\Ticket.cs",
               "RelativeToolTip": "RapPhim3\\Models\\Ticket.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wA8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-28T07:43:53.687Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "BuyTicketViewModel.cs",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\ViewModel\\BuyTicketViewModel.cs",
               "RelativeDocumentMoniker": "RapPhim3\\ViewModel\\BuyTicketViewModel.cs",
@@ -139,12 +218,11 @@
               "RelativeToolTip": "RapPhim3\\ViewModel\\BuyTicketViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T07:59:39.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T07:59:39.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "ListCustomer.cshtml",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\ListCustomer.cshtml",
               "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\ListCustomer.cshtml",
@@ -152,12 +230,11 @@
               "RelativeToolTip": "RapPhim3\\Views\\Admin\\ListCustomer.cshtml",
               "ViewState": "AgIAAEsAAAAAAAAAAAAuwF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T07:40:24.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T07:40:24.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "AdminProfile.cshtml",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\AdminProfile.cshtml",
               "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\AdminProfile.cshtml",
@@ -165,12 +242,11 @@
               "RelativeToolTip": "RapPhim3\\Views\\Admin\\AdminProfile.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T07:59:42.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T07:59:42.297Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "AccountService.cs",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Services\\AccountService.cs",
@@ -178,12 +254,11 @@
               "RelativeToolTip": "RapPhim3\\Services\\AccountService.cs",
               "ViewState": "AgIAAKwAAAAAAAAAAAAUwL8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T07:31:04.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T07:31:04.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "List.cshtml",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\List.cshtml",
               "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\List.cshtml",
@@ -191,25 +266,11 @@
               "RelativeToolTip": "RapPhim3\\Views\\Admin\\List.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T07:39:15.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T07:39:15.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\Home.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\Home.cshtml",
-              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Views\\Admin\\Home.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Admin\\Home.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAUwDAAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T07:32:02.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "CustomerViewModel.cs",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\ViewModel\\CustomerViewModel.cs",
               "RelativeDocumentMoniker": "RapPhim3\\ViewModel\\CustomerViewModel.cs",
@@ -217,12 +278,11 @@
               "RelativeToolTip": "RapPhim3\\ViewModel\\CustomerViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T07:48:02.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T07:48:02.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "MovieService.cs",
               "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\lai\\RapPhim\\RapPhim3\\Services\\MovieService.cs",
               "RelativeDocumentMoniker": "RapPhim3\\Services\\MovieService.cs",
@@ -230,8 +290,7 @@
               "RelativeToolTip": "RapPhim3\\Services\\MovieService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T07:30:57.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T07:30:57.279Z"
             }
           ]
         }
