@@ -1,0 +1,42 @@
+﻿@*
+    Trang thông báo thanh toán thất bại
+*@
+@{
+    ViewData["Title"] = "Payment Fail";
+}
+
+@section Styles {
+    <style>
+        .card {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .error-icon {
+            animation: shake 0.5s ease-in-out;
+            display: inline-block;
+        }
+
+       
+    </style>
+}
+
+<div class="container text-center mt-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-danger fw-bold">Thanh toán thất bại!</h2>
+        <p class="fs-5"> Vui lòng thử lại.</p>
+
+        <div class="error-icon my-3">
+            <i class="bi bi-x-circle text-danger" style="font-size: 4rem;"></i>
+        </div>
+
+        <a href="@Url.Action("Index", "Home")" class="btn btn-secondary mt-4 px-4 py-2 fw-bold shadow">
+            <i class="bi bi-arrow-left"></i> Quay về trang chủ
+        </a>
+    </div>
+</div>

@@ -1,4 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.history-table-container {
+    max-height: 400px; /* Chiều cao cố định của bảng */
+    overflow-y: auto; /* Thanh cuộn dọc khi có nhiều dữ liệu */
+}
+
+    .history-table-container table {
+        width: 100%;
+        table-layout: fixed; /* Đảm bảo tất cả cột có độ rộng cố định */
+    }
+
+    .history-table-container th,
+    .history-table-container td {
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; /* Tránh các nội dung bị tràn ra ngoài */
+    }
+
+    .history-table-container img {
+        width: 50px; /* Kích thước ảnh nhỏ lại cho dễ nhìn */
+        height: auto;
+    }
+
+/* Điều chỉnh kích thước ảnh trong cột "Phim" */
+table td img {
+    width: 50px; /* Thay đổi kích thước ảnh cho phù hợp */
+    height: auto;
+    object-fit: cover;
+}
 
 * {
     padding: 0;

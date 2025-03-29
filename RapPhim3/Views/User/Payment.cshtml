@@ -1,25 +1,85 @@
-﻿<h2>Thanh toán vé</h2>
-<p>Mã vé: @Model.TicketId</p>
-<p>Số tiền: @Model.Amount VND</p>
-<img src="@Model.QrCodeUrl" alt="QR Code Thanh Toán" />
+﻿@{
+    ViewData["Title"] = "Payment";
+}
 
-<button id="verifyPaymentBtn" class="btn btn-primary">Xác nhận thanh toán</button>
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary">Thanh toán vé</h2>
+
+        <div class="alert alert-info text-center">
+            <strong>Thời gian còn lại: <span id="countdown" class="text-danger">10:00</span></strong>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Thông tin thanh toán</h5>
+                <p><strong>Mã vé:</strong> @Model.TicketId</p>
+                <p><strong>Số tiền:</strong> <span class="text-danger">@Model.Amount.ToString("N0") VND</span></p>
+            </div>
+            <div class="col-md-6">
+                <h5>Thông tin tài khoản</h5>
+                <p><strong>Chủ tài khoản:</strong> Nguyễn Sinh Thái</p>
+                <p><strong>Ngân hàng:</strong> MB Bank</p>
+                <p><strong>Số tài khoản:</strong> <span class="text-primary">1699918082003</span></p>
+            </div>
+        </div>
+
+        <div class="text-center my-3">
+            <img src="@Model.QrCodeUrl" alt="QR Code Thanh Toán" class="img-fluid" style="max-width: 250px;" />
+        </div>
+
+        <div class="text-center mt-3">
+            <button id="verifyPaymentBtn" class="btn btn-success mx-2">✅ Xác nhận thanh toán</button>
+            <button id="cancelPaymentBtn" class="btn btn-danger mx-2">❌ Hủy thanh toán</button>
+        </div>
+    </div>
+</div>
 
 <script>
+    var ticketId = @Model.TicketId;
+    var countdownTime = 30;//10 phút (600 giây)
+
+    function updateCountdown() {
+        var minutes = Math.floor(countdownTime / 60);
+        var seconds = countdownTime % 60;
+        document.getElementById("countdown").innerText = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        countdownTime--;
+
+        if (countdownTime < 0) {
+            cancelPaymentAndRedirect();
+        }
+    }
+
+    var countdownInterval = setInterval(updateCountdown, 1000);
+
+    function cancelPaymentAndRedirect() {
+        clearInterval(countdownInterval);
+        fetch(`/User/CancelPayment?ticketId=${ticketId}`, { method: "POST" })
+            .then(response => response.json())
+            .then(() => window.location.href = "/User/PaymentFail")
+            .catch(() => window.location.href = "/User/PaymentFail");
+    }
+
     document.getElementById("verifyPaymentBtn").addEventListener("click", function () {
-        var ticketId = @Model.TicketId;
+        clearInterval(countdownInterval);
         fetch(`/User/VerifyPayment?ticketId=${ticketId}`)
             .then(response => response.json())
             .then(data => {
-                if (data.success) {
-                    alert("Thanh toán thành công! Chuyển hướng đến trang xác nhận.");
-                    window.location.href = "/User/PaymentSuccess";
+                if (!data.success) {
+                     alert(data.message || "Thanh toán chưa được xác nhận. Vui lòng thử lại.");  
                 } else {
-                    alert(data.message || "Thanh toán chưa được xác nhận. Vui lòng thử lại.");
+                    alert("Thanh toán thành công! Chuyển hướng đến trang xác nhận.");
+                     window.location.href = "/User/PaymentSuccess";
                 }
             })
-            .catch(error => {
-                console.error("Lỗi khi xác nhận thanh toán:", error);
-            });
+            .catch(error => console.error("Lỗi khi xác nhận thanh toán:", error));
     });
+
+    document.getElementById("cancelPaymentBtn").addEventListener("click", function () {
+        if (confirm("Bạn có chắc chắn muốn hủy thanh toán không?")) {
+            cancelPaymentAndRedirect();
+        }
+    });
+
+    updateCountdown();
 </script>

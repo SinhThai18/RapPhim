@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\new folder\\rapphim3\\rapphim3\\rapphim3\\services\\showtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\services\\showtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\new folder\\rapphim3\\rapphim3\\rapphim3\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\new folder\\rapphim3\\rapphim3\\rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\controllers\\admin\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\new folder\\rapphim3\\rapphim3\\rapphim3\\views\\admin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\admin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|c:\\users\\thaim\\onedrive\\m\u00E1y t\u00EDnh\\k\u00EC 7\\new folder\\rapphim3\\rapphim3\\rapphim3\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775078BC-53E7-45BF-B26E-4AAA6EA30753}|RapPhim3\\RapPhim3.csproj|solutionrelative:rapphim3\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ShowTimeService.cs",
-              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Services\\ShowTimeService.cs",
-              "RelativeDocumentMoniker": "RapPhim3\\Services\\ShowTimeService.cs",
-              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Services\\ShowTimeService.cs*",
-              "RelativeToolTip": "RapPhim3\\Services\\ShowTimeService.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA/wBEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T07:53:33.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "RelativeDocumentMoniker": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "RelativeToolTip": "RapPhim3\\Controllers\\Admin\\AdminController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwC4AAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T07:53:18.278Z",
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Views\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "RapPhim3\\Views\\User\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Views\\User\\Profile.cshtml",
+              "RelativeToolTip": "RapPhim3\\Views\\User\\Profile.cshtml",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAawAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T15:51:02.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Views\\Admin\\Home.cshtml",
-              "RelativeDocumentMoniker": "RapPhim3\\Views\\Admin\\Home.cshtml",
-              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Views\\Admin\\Home.cshtml",
-              "RelativeToolTip": "RapPhim3\\Views\\Admin\\Home.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T07:53:13.581Z",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Controllers\\User\\UserController.cs",
+              "RelativeDocumentMoniker": "RapPhim3\\Controllers\\User\\UserController.cs",
+              "ToolTip": "C:\\Users\\thaim\\OneDrive\\M\u00E1y t\u00EDnh\\k\u00EC 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\Controllers\\User\\UserController.cs*",
+              "RelativeToolTip": "RapPhim3\\Controllers\\User\\UserController.cs*",
+              "ViewState": "AgIAAGQBAAAAAAAAAAASwGsBAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T10:47:20.502Z",
               "EditorCaption": ""
             }
           ]

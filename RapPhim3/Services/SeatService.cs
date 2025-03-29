@@ -34,6 +34,10 @@ namespace RapPhim3.Services
                 .ToListAsync();
         }
 
+        public async Task<Seat?> GetSeatById(int seatId)
+        {
+            return await _context.Seats.FindAsync(seatId);
+        }
 
     }
 }

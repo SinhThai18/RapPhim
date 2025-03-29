@@ -32,6 +32,7 @@ namespace RapPhim3.Services
                 .ToList();
         }
 
+
         public bool AddShowTime(string showDate, int roomId, string showTime, int movieId, int bufferTime = 60)
         {
             try
@@ -108,6 +109,15 @@ namespace RapPhim3.Services
                 .Include(s => s.Room)
                 .FirstOrDefault(s => s.Id == id);
         }
+
+        public async Task<ShowTime?> GetShowTimeByIdÁync(int showTimeId)
+        {
+            return await _context.ShowTimes
+                .Include(st => st.Movie)
+                .Include(st => st.Room)
+                .FirstOrDefaultAsync(st => st.Id == showTimeId);
+        }
+
 
         public bool CheckDuplicateShowTime(DateTime showDate, string showTime, int roomId, int showTimeId)
         {

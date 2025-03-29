@@ -3,4 +3,32 @@
 *@
 @{
 }
-<h1>okkkkkkkkkkkkkkkk</h1>
+@section Styles {
+    <style>
+        .card {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+        }
+
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+}
+
+
+<div class="container text-center mt-5">
+    <div class="card shadow-lg p-4 rounded border-0">
+        <h2 class="text-success fw-bold">Thanh toán thành công!</h2>
+        <p class="fs-5">Vé của bạn đã được xác nhận.</p>
+        <p class="fs-5">vé được lưu trong lịch sử giao dịch</p>
+                        
+   
+
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary mt-4 px-4 py-2 fw-bold shadow">
+            <i class="bi bi-house-door"></i> Quay về trang chủ
+        </a>
+    </div>
+</div>

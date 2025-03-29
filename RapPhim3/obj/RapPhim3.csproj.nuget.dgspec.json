@@ -64,6 +64,14 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "X.PagedList.Mvc.Core": {
               "target": "Package",
               "version": "[10.5.7, )"

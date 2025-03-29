@@ -4,5 +4,7 @@
     {
         public int ShowTimeId { get; set; }
         public List<int> SeatIds { get; set; }
+
+        public decimal TotalPrice { get; set; }
     }
 }

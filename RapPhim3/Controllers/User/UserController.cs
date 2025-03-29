@@ -8,6 +8,10 @@ using RapPhim3.Services;
 using RapPhim3.ViewModel;
 using System.Net.Http.Json;
 using System.Net.Http.Headers;
+using QRCoder;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace RapPhim3.Controllers.User
 {
@@ -49,8 +53,19 @@ namespace RapPhim3.Controllers.User
             {
                 return NotFound();
             }
-            return View(user);
+
+            // Lấy danh sách vé đã thanh toán của user
+            var paidTickets = await _ticketService.GetPaidTicketsByUser(user.Id);
+
+            var viewModel = new ProfileViewModel
+            {
+                User = user,
+                PaidTickets = paidTickets
+            };
+
+            return View(viewModel);
         }
+
 
         [HttpPost]
         public async Task<IActionResult> UpdateProfile(int Id, string FullName, string Email, string PhoneNumber, string NewPassword, string ConfirmPassword)
@@ -109,7 +124,7 @@ namespace RapPhim3.Controllers.User
         public async Task<IActionResult> GetSeats(int showTimeId)
         {
             // Lấy danh sách các ghế đã có vé (loại bỏ vé có trạng thái "Paid")
-           
+
             var paidSeats = await _ticketService.GetPaidSeats(showTimeId); // Lấy danh sách ghế đã thanh toán
 
             var allSeats = await _seatService.GetSeatsByShowTime(showTimeId);
@@ -169,11 +184,17 @@ namespace RapPhim3.Controllers.User
                 await _ticketService.CreateTicket(ticket);
             }
 
+            
+
             return Json(new { ticketId = tickets.First().Id });
         }
 
         public async Task<IActionResult> Payment(int ticketId)
         {
+            if (ticketId == 0 )
+            {
+                return RedirectToAction("BuyTickets");
+            }
             var ticket = await _ticketService.GetTicketById(ticketId);
             if (ticket == null || ticket.PaymentStatus != "Pending")
             {
@@ -183,7 +204,7 @@ namespace RapPhim3.Controllers.User
             // Thông tin thanh toán
             string accountNumber = "1699918082003"; // Số tài khoản MB Bank của bạn
             string bankShortName = "MBBank"; // Tên ngắn của MB Bank theo SePay
-            decimal amount = ticket.Price; // Số tiền cần thanh toán
+            decimal amount = await _ticketService.GetTotalPendingAmountAsync(ticketId); // Số tiền cần thanh toán
             string description = $"Thanh toan ve xem phim so {ticket.Id}"; // Nội dung chuyển khoản
             string encodedDescription = Uri.EscapeDataString(description); // Encode nội dung tránh lỗi URL
 
@@ -193,25 +214,27 @@ namespace RapPhim3.Controllers.User
             var model = new PaymentViewModel
             {
                 TicketId = ticket.Id,
-                Amount = ticket.Price,
+                Amount = await _ticketService.GetTotalPendingAmountAsync(ticketId),
                 QrCodeUrl = qrCodeUrl
             };
 
             return View(model);
         }
 
+       
+
         [HttpGet]
         public async Task<IActionResult> VerifyPayment(int ticketId)
         {
-             var ticket = await _ticketService.GetTicketById(ticketId);
+            var ticket = await _ticketService.GetTicketById(ticketId);
             if (ticket == null)
             {
                 return NotFound(new { success = false, message = "Vé không tồn tại" });
             }
 
-            string accountNumber = "1699918082003"; // Số tài khoản MB Bank của bạn
-            decimal amount = ticket.Price; // Số tiền cần thanh toán
-            string apiToken = "LJ5BD8WIAPNYEX6NCA2MWBGXZ4W9HQVMOY9VLDRVX10AEQDMHRJTNR32BBFOFGEI"; // API token cần thay thế
+            string accountNumber = "1699918082003"; // Số tài khoản MB Bank
+            decimal amount = await _ticketService.GetTotalPendingAmountAsync(ticketId); // Số tiền cần thanh toán
+            string apiToken = "LJ5BD8WIAPNYEX6NCA2MWBGXZ4W9HQVMOY9VLDRVX10AEQDMHRJTNR32BBFOFGEI"; // API token
 
             using (var httpClient = new HttpClient())
             {
@@ -240,19 +263,29 @@ namespace RapPhim3.Controllers.User
                     {
                         if (transaction.TransactionContent.Contains($"Thanh toan ve xem phim so {ticket.Id}"))
                         {
-                            // Cập nhật trạng thái vé
-                            ticket.PaymentStatus = "Paid";
-                            await _ticketService.UpdateTicket(ticket);
+                            await _ticketService.UpdateTicketsStatusAsync(ticket.Id); // Cập nhật tất cả các vé liên quan
 
-                            // Chuyển hướng đến trang PaymentSuccess
+                            // Kiểm tra lại trạng thái của vé sau khi cập nhật
+                            var updatedTicket = await _ticketService.GetTicketById(ticket.Id);
+                            if (updatedTicket.PaymentStatus == "Paid")
+                            {
+                                // Tạo QR code chứa thông tin vé
+                                string qrData = $"Vé ID: {updatedTicket.Id}";
+                                byte[] qrCodeImage = GenerateQRCode(qrData);
+                                // Truyền dữ liệu sang PaymentSuccess
+                                TempData["TicketId"] = updatedTicket.Id;
+                                TempData["QrCodeImage"] = Convert.ToBase64String(qrCodeImage);
+
+                                TempData.Keep("TicketId");
+                                TempData.Keep("QrCodeImage");
+
+                            }
+
                             return Json(new { success = true });
                         }
-                        Console.WriteLine($"Transaction Content: '{transaction.TransactionContent}'");
-                        Console.WriteLine($"Expected Content: 'Thanh toan ve xem phim số {ticket.Id}'");
-
                     }
 
-                    return Ok(new { success = false, message = "Không tìm thấy giao dịch hợp lệ.Bạn chưa thanh toán!" });
+                    return Ok(new { success = false, message = "Không tìm thấy giao dịch hợp lệ. Bạn chưa thanh toán!" });
                 }
                 catch (Exception ex)
                 {
@@ -260,6 +293,27 @@ namespace RapPhim3.Controllers.User
                 }
             }
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> CancelPayment(int ticketId)
+        {
+            var ticket = await _ticketService.GetTicketById(ticketId);
+            if (ticket == null || ticket.PaymentStatus != "Pending")
+            {
+                return Json(new { success = false, message = "Vé không tồn tại hoặc đã được thanh toán." });
+            }
+
+            // Xóa vé khỏi database
+            bool isDeleted = await _ticketService.DeleteTicket(ticketId);
+            if (!isDeleted)
+            {
+                return Json(new { success = false, message = "Không thể xóa vé, vui lòng thử lại." });
+            }
+
+            return Json(new { success = true });
+        }
+
 
         // Định nghĩa lớp để ánh xạ JSON
         public class TransactionResponse
@@ -280,10 +334,47 @@ namespace RapPhim3.Controllers.User
             public string TransactionContent { get; set; }
         }
 
+        [HttpGet]
         public IActionResult PaymentSuccess()
+        {  
+            return View();
+        }
+
+
+
+        public IActionResult PaymentFail()
         {
             return View();
         }
 
+        public byte[] GenerateQRCode(string qrText)
+        {
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
+            var qrCode = new PngByteQRCode(qrCodeData);
+            return qrCode.GetGraphic(20); // Trả về ảnh QR dưới dạng byte[]
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetTicketQRCode(int ticketId)
+        {
+            var ticket = await _ticketService.GetTicketById(ticketId);
+            if (ticket == null || ticket.PaymentStatus != "paid")
+            {
+                return NotFound("Vé không tồn tại hoặc chưa thanh toán.");
+            }
+
+            string qrContent = $"Vé số: {ticket.Id}";
+
+            using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+            {
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrContent, QRCodeGenerator.ECCLevel.Q);
+                PngByteQRCode qrCode = new PngByteQRCode(qrCodeData);
+                byte[] qrCodeImage = qrCode.GetGraphic(20);
+
+                return File(qrCodeImage, "image/png");
+            }
+        }
     }
 }
+

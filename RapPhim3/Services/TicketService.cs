@@ -94,10 +94,55 @@ namespace RapPhim3.Services
                 .FirstOrDefaultAsync(t => t.Id == ticketId);
         }
 
-        public async Task UpdateTicket(Ticket ticket)
+        public async Task<bool> UpdateTicketsStatusAsync(int ticketId)
         {
-            _context.Tickets.Update(ticket);
-            await _context.SaveChangesAsync();
+            // Tìm ticket theo ID
+            var ticket = await _context.Tickets.FindAsync(ticketId);
+            if (ticket == null)
+            {
+                throw new Exception("Ticket not found.");
+            }
+
+            // Lấy danh sách các vé cần cập nhật
+            var ticketsToUpdate = await _context.Tickets
+                .Where(t => t.ShowTimeId == ticket.ShowTimeId
+                            && t.UserId == ticket.UserId
+                            && t.PaymentStatus == "pending")
+                .ToListAsync();
+
+            if (!ticketsToUpdate.Any())
+            {
+                return false; // Không có vé nào để cập nhật
+            }
+
+            // Cập nhật trạng thái paymentStatus thành "paid"
+            foreach (var t in ticketsToUpdate)
+            {
+                t.PaymentStatus = "paid";
+            }
+
+            await _context.SaveChangesAsync(); // Lưu thay đổi vào database
+
+            return true;
+        }
+
+        public async Task<decimal> GetTotalPendingAmountAsync(int ticketId)
+        {
+            // Tìm ticket theo ID
+            var ticket = await _context.Tickets.FindAsync(ticketId);
+            if (ticket == null)
+            {
+                throw new Exception("Ticket not found.");
+            }
+
+            // Tính tổng price của các vé có cùng showtimeId, userId và paymentStatus = "pending"
+            var totalAmount = await _context.Tickets
+                .Where(t => t.ShowTimeId == ticket.ShowTimeId
+                            && t.UserId == ticket.UserId
+                            && t.PaymentStatus == "pending")
+                .SumAsync(t => t.Price);
+
+            return totalAmount;
         }
 
         public decimal CalculateTotalPrice(List<int> seatIds)
@@ -130,6 +175,43 @@ namespace RapPhim3.Services
             await _context.SaveChangesAsync();
         }
 
+        public async Task<bool> DeleteTicket(int ticketId)
+        {
+            var ticket = await _context.Tickets.FindAsync(ticketId);
+            if (ticket == null)
+            {
+                return false;
+            }
+            int showtimeId = ticket.ShowTimeId;
+            int userId = ticket.UserId;
+
+            // Tìm tất cả các vé có cùng showtimeId, userId và paymentStatus = "Pending"
+            var ticketsToDelete = _context.Tickets
+                .Where(t => t.ShowTimeId == showtimeId
+                         && t.UserId == userId
+                         && t.PaymentStatus == "Pending")
+                .ToList();
+
+            if (ticketsToDelete.Any())
+            {
+                _context.Tickets.RemoveRange(ticketsToDelete);
+                _context.SaveChanges();
+                return true; // Xóa thành công
+            }
+
+            return false; // Không có vé nào để xóa
+        }
+
+        public async Task<List<Ticket>> GetPaidTicketsByUser(int userId)
+        {
+            return await _context.Tickets
+                .Where(t => t.UserId == userId && t.PaymentStatus == "Paid")
+                .Include(t => t.Seat)
+                .Include(t => t.ShowTime)
+                .ThenInclude(st => st.Movie)
+                 .OrderByDescending(t => t.Id)
+                .ToListAsync();
+        }
 
     }
 }
