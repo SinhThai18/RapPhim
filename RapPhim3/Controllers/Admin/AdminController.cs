@@ -315,7 +315,26 @@ namespace RapPhim3.Controllers.Admin
             return RedirectToAction("ListShowTimes");
         }
 
+        public async Task<IActionResult> ListTickets()
+        {
+            var tickets = await _ticketService.GetTicketsAsync();
+            return View(tickets);
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> UpdatePaymentStatus(int id)
+        {
+            var success = await _ticketService.UpdatePaymentStatusAsync(id);
+            if (success)
+            {
+                TempData["SuccessMessage"] = "Cập nhật trạng thái thành công!";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Lỗi khi cập nhật trạng thái!";
+            }
+            return RedirectToAction("ListTickets");
+        }
 
     }
 }

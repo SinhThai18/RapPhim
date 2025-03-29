@@ -267,7 +267,7 @@ namespace RapPhim3.Controllers.User
 
                             // Kiểm tra lại trạng thái của vé sau khi cập nhật
                             var updatedTicket = await _ticketService.GetTicketById(ticket.Id);
-                            if (updatedTicket.PaymentStatus == "Paid")
+                            if (updatedTicket.PaymentStatus == "paid")
                             {
                                 // Tạo QR code chứa thông tin vé
                                 string qrData = $"Vé ID: {updatedTicket.Id}";
@@ -359,10 +359,16 @@ namespace RapPhim3.Controllers.User
         public async Task<IActionResult> GetTicketQRCode(int ticketId)
         {
             var ticket = await _ticketService.GetTicketById(ticketId);
-            if (ticket == null || ticket.PaymentStatus != "paid")
+            if (ticket == null)
             {
-                return NotFound("Vé không tồn tại hoặc chưa thanh toán.");
+                return NotFound("Vé không tồn tại.");
             }
+
+            if (ticket.PaymentStatus == "success")
+            {
+                return BadRequest("Vé đã được sử dụng.");
+            }
+
 
             string qrContent = $"Vé số: {ticket.Id}";
 
@@ -375,6 +381,7 @@ namespace RapPhim3.Controllers.User
                 return File(qrCodeImage, "image/png");
             }
         }
+
     }
 }
 

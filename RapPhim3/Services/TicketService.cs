@@ -17,7 +17,7 @@ namespace RapPhim3.Services
         public async Task<List<MovieRevenueViewModel>> GetRevenueByMovieAsync()
         {
             return await _context.Tickets
-                 .Where(t => t.PaymentStatus == "Paid")
+                 .Where(t => (t.PaymentStatus == "paid" || t.PaymentStatus == "Success"))
                 .Include(t => t.ShowTime)
                 .ThenInclude(st => st.Movie)
                 .GroupBy(t => t.ShowTime.Movie.Title)
@@ -33,7 +33,7 @@ namespace RapPhim3.Services
         public async Task<List<DailyRevenueViewModel>> GetRevenueByDateAsync()
         {
             return await _context.Tickets
-                .Where(t => t.PaymentStatus == "Paid")
+                .Where(t => (t.PaymentStatus == "paid" || t.PaymentStatus == "Success"))
                 .GroupBy(t => t.BookingTime.Date)
                 .Select(g => new DailyRevenueViewModel
                 {
@@ -61,7 +61,7 @@ namespace RapPhim3.Services
         public async Task<List<int>> GetBookedSeats(int showTimeId)
         {
             return await _context.Tickets
-                .Where(t => t.ShowTimeId == showTimeId && t.PaymentStatus == "Paid")
+                .Where(t => t.ShowTimeId == showTimeId && t.PaymentStatus == "paid")
                 .Select(t => t.SeatId)
                 .ToListAsync();
         }
@@ -69,7 +69,7 @@ namespace RapPhim3.Services
         public async Task<List<int>> GetPaidSeats(int showTimeId)
         {
             return await _context.Tickets
-                .Where(t => t.ShowTimeId == showTimeId && t.PaymentStatus == "Paid")
+                .Where(t => t.ShowTimeId == showTimeId && t.PaymentStatus == "paid")
                 .Select(t => t.SeatId)
                 .ToListAsync();
         }
@@ -107,7 +107,7 @@ namespace RapPhim3.Services
             var ticketsToUpdate = await _context.Tickets
                 .Where(t => t.ShowTimeId == ticket.ShowTimeId
                             && t.UserId == ticket.UserId
-                            && t.PaymentStatus == "pending")
+                            && t.PaymentStatus == "Pending")
                 .ToListAsync();
 
             if (!ticketsToUpdate.Any())
@@ -139,7 +139,7 @@ namespace RapPhim3.Services
             var totalAmount = await _context.Tickets
                 .Where(t => t.ShowTimeId == ticket.ShowTimeId
                             && t.UserId == ticket.UserId
-                            && t.PaymentStatus == "pending")
+                            && t.PaymentStatus == "Pending")
                 .SumAsync(t => t.Price);
 
             return totalAmount;
@@ -169,7 +169,7 @@ namespace RapPhim3.Services
 
             foreach (var ticket in tickets)
             {
-                ticket.PaymentStatus = "Paid"; // Cập nhật trạng thái thanh toán
+                ticket.PaymentStatus = "paid"; // Cập nhật trạng thái thanh toán
             }
 
             await _context.SaveChangesAsync();
@@ -205,13 +205,34 @@ namespace RapPhim3.Services
         public async Task<List<Ticket>> GetPaidTicketsByUser(int userId)
         {
             return await _context.Tickets
-                .Where(t => t.UserId == userId && t.PaymentStatus == "Paid")
+                .Where(t => t.UserId == userId && (t.PaymentStatus == "paid" || t.PaymentStatus == "Success"))
                 .Include(t => t.Seat)
                 .Include(t => t.ShowTime)
                 .ThenInclude(st => st.Movie)
-                 .OrderByDescending(t => t.Id)
+                .OrderByDescending(t => t.Id)
                 .ToListAsync();
         }
 
+    
+
+     public async Task<List<Ticket>> GetTicketsAsync()
+        {
+            return await _context.Tickets
+                .Where(t => t.PaymentStatus != "paid")
+                .Include(t => t.ShowTime).ThenInclude(s=>s.Movie)
+                .Include(t => t.Seat)
+                .Include(t => t.User)
+                .ToListAsync();
+        }
+
+        public async Task<bool> UpdatePaymentStatusAsync(int ticketId)
+        {
+            var ticket = await _context.Tickets.FindAsync(ticketId);
+            if (ticket == null) return false;
+
+            ticket.PaymentStatus = "Success";
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }
