@@ -92,9 +92,19 @@ namespace RapPhim3.Controllers.User
         [HttpGet]
         public IActionResult GetShowTimes(int movieId, DateOnly selectedDate)
         {
-            var showTimes = _showTimeService.GetShowTimesByDate(movieId, selectedDate);
+            var now = DateTime.Now;
+            var showTimes = _showTimeService.GetShowTimesByDate(movieId, selectedDate)
+                .Select(st => new
+                {
+                    Id = (int)st.GetType().GetProperty("id").GetValue(st),
+                    Time = TimeOnly.Parse((string)st.GetType().GetProperty("time").GetValue(st)).ToString("HH:mm")
+                })
+                .Where(st => !(selectedDate == DateOnly.FromDateTime(now) && TimeOnly.Parse(st.Time) < TimeOnly.FromDateTime(now)))
+                .ToList();
+
             return Json(showTimes);
         }
+
 
         public async Task<IActionResult> GetSeats(int showTimeId)
         {

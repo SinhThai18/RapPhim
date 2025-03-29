@@ -19,7 +19,8 @@ namespace RapPhim3.Services
 
         public decimal GetTotalRevenue()
         {
-            return _context.Tickets.Sum(t => t.Price);
+            return _context.Tickets.
+                Where(t=>t.PaymentStatus=="Paid").Sum(t => t.Price);
         }
 
         public List<ShowTime> ShowTimes()

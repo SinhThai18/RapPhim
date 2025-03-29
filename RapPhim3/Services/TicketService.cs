@@ -17,6 +17,7 @@ namespace RapPhim3.Services
         public async Task<List<MovieRevenueViewModel>> GetRevenueByMovieAsync()
         {
             return await _context.Tickets
+                 .Where(t => t.PaymentStatus == "Paid")
                 .Include(t => t.ShowTime)
                 .ThenInclude(st => st.Movie)
                 .GroupBy(t => t.ShowTime.Movie.Title)
@@ -32,6 +33,7 @@ namespace RapPhim3.Services
         public async Task<List<DailyRevenueViewModel>> GetRevenueByDateAsync()
         {
             return await _context.Tickets
+                .Where(t => t.PaymentStatus == "Paid")
                 .GroupBy(t => t.BookingTime.Date)
                 .Select(g => new DailyRevenueViewModel
                 {
@@ -41,7 +43,7 @@ namespace RapPhim3.Services
                 .OrderBy(g => g.Date)
                 .ToListAsync();
         }
-    
+
         // Tạo vé mới
         public async Task CreateTicket(Ticket ticket)
         {

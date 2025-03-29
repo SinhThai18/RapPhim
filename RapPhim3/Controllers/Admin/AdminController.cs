@@ -17,7 +17,7 @@ namespace RapPhim3.Controllers.Admin
 
         private readonly TicketService _ticketService;
 
-        public AdminController(MovieService movieService, ShowTimeService showTimeService, 
+        public AdminController(MovieService movieService, ShowTimeService showTimeService,
             AccountService accountService, TicketService ticketService)
         {
             _movieService = movieService;
@@ -219,7 +219,7 @@ namespace RapPhim3.Controllers.Admin
 
         //-------------------------------------------------------------------------------
         public async Task<IActionResult> AdminProfile()
-        
+
         {
             var userEmail = HttpContext.Session.GetString("Email"); // Lấy email từ session/login
             var user = await _accountService.GetUserByEmail(userEmail);
@@ -315,8 +315,7 @@ namespace RapPhim3.Controllers.Admin
             return RedirectToAction("ListShowTimes");
         }
 
-        
+
 
     }
 }
-
