@@ -13,9 +13,11 @@ public partial class Ticket
 
     public int UserId { get; set; }
 
-    public DateTime BookingTime { get; set; }
+    public DateTime BookingTime { get; set; } = DateTime.Now;
 
     public decimal Price { get; set; }
+
+    public string? PaymentStatus { get; set; } = "UnPaid";
 
     public virtual Seat Seat { get; set; } = null!;
 

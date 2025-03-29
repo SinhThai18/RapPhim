@@ -1,0 +1,25 @@
+﻿<h2>Thanh toán vé</h2>
+<p>Mã vé: @Model.TicketId</p>
+<p>Số tiền: @Model.Amount VND</p>
+<img src="@Model.QrCodeUrl" alt="QR Code Thanh Toán" />
+
+<button id="verifyPaymentBtn" class="btn btn-primary">Xác nhận thanh toán</button>
+
+<script>
+    document.getElementById("verifyPaymentBtn").addEventListener("click", function () {
+        var ticketId = @Model.TicketId;
+        fetch(`/User/VerifyPayment?ticketId=${ticketId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Thanh toán thành công! Chuyển hướng đến trang xác nhận.");
+                    window.location.href = "/User/PaymentSuccess";
+                } else {
+                    alert(data.message || "Thanh toán chưa được xác nhận. Vui lòng thử lại.");
+                }
+            })
+            .catch(error => {
+                console.error("Lỗi khi xác nhận thanh toán:", error);
+            });
+    });
+</script>

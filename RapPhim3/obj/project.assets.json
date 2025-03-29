@@ -4845,11 +4845,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\prnn\\RapPhim3\\RapPhim3\\RapPhim3.csproj",
+      "projectUniqueName": "C:\\Users\\thaim\\OneDrive\\Máy tính\\kì 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\RapPhim3.csproj",
       "projectName": "RapPhim3",
-      "projectPath": "D:\\prnn\\RapPhim3\\RapPhim3\\RapPhim3.csproj",
+      "projectPath": "C:\\Users\\thaim\\OneDrive\\Máy tính\\kì 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\RapPhim3.csproj",
       "packagesPath": "C:\\Users\\thaim\\.nuget\\packages\\",
-      "outputPath": "D:\\prnn\\RapPhim3\\RapPhim3\\obj\\",
+      "outputPath": "C:\\Users\\thaim\\OneDrive\\Máy tính\\kì 7\\New folder\\RapPhim3\\RapPhim3\\RapPhim3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

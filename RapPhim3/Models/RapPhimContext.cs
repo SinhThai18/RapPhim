@@ -88,7 +88,6 @@ public partial class RapPhimContext : DbContext
 
             entity.Property(e => e.LandscapeImage).HasMaxLength(500);
             entity.Property(e => e.PortraitImage).HasMaxLength(500);
-          
             entity.Property(e => e.Title).HasMaxLength(255);
             entity.Property(e => e.TrailerUrl).HasMaxLength(500);
 
@@ -197,6 +196,9 @@ public partial class RapPhimContext : DbContext
             entity.Property(e => e.BookingTime)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
+            entity.Property(e => e.PaymentStatus)
+                .HasMaxLength(20)
+                .HasDefaultValue("Unpaid");
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
             entity.Property(e => e.SeatId).HasColumnName("SeatID");
             entity.Property(e => e.ShowTimeId).HasColumnName("ShowTimeID");

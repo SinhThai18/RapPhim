@@ -82,12 +82,12 @@
                             <li class="movie">
                                 <div class="row">
                                     <div class="col-md-4 mv-poster">
-                                        <a href="@Url.Action("Details", "Movies", new { id = movie.Id })" class="img-link">
+                                        <a href="@Url.Action("MovieDetail", "Movies", new { id = movie.Id })" class="img-link">
                                             <img src="@(movie.PortraitImage ?? "default.jpg")" alt="@movie.Title" class="poster">
                                         </a>
                                     </div>
                                     <div class="col-md-8 mv-desciption">
-                                        <a href="@Url.Action("Details", "Movies", new { id = movie.Id })" class="mvname">
+                                        <a href="@Url.Action("MovieDetail", "Movies", new { id = movie.Id })" class="mvname">
                                             @movie.Title
                                         </a>
                                         <div class="post-description">

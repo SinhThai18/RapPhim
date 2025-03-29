@@ -1,26 +1,33 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Text;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using RapPhim3.Models;
 using RapPhim3.Services;
 using RapPhim3.ViewModel;
+using System.Net.Http.Json;
+using System.Net.Http.Headers;
 
 namespace RapPhim3.Controllers.User
 {
     public class UserController : Controller
     {
-        
+
         private readonly UserService _userService;
         private readonly MovieService _movieService;
         private readonly ShowTimeService _showTimeService;
         private readonly SeatService _seatService;
+        private readonly TicketService _ticketService;
 
         public UserController(UserService userService, MovieService movieService, ShowTimeService showTimeService,
-           SeatService seatService )
+           SeatService seatService, TicketService ticketService)
         {
             _userService = userService;
             _movieService = movieService;
             _showTimeService = showTimeService;
             _seatService = seatService;
+            _ticketService = ticketService;
         }
 
         public async Task<IActionResult> Profile()
@@ -95,5 +102,159 @@ namespace RapPhim3.Controllers.User
             var seats = _seatService.GetSeatsByShowTime(showTimeId);
             return Json(seats);
         }
+
+        [HttpGet]
+        public IActionResult CheckLogin()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+            return Json(new { isLoggedIn = userId.HasValue });
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> CreatePendingTicket([FromBody] TicketRequestModel request)
+        {
+            var email = HttpContext.Session.GetString("Email");
+            if (email == null)
+            {
+                return Unauthorized("Người dùng chưa đăng nhập.");
+            }
+
+            var user = await _userService.GetUserByEmail(email);
+            if (user == null)
+            {
+                return NotFound("Người dùng không tồn tại.");
+            }
+
+            var tickets = request.SeatIds.Select(seatId => new Ticket
+            {
+                ShowTimeId = request.ShowTimeId,
+                SeatId = seatId,
+                UserId = user.Id,
+                Price = _ticketService.GetSeatPrice(seatId).Result,
+                PaymentStatus = "Pending"
+            }).ToList();
+
+            foreach (var ticket in tickets)
+            {
+                await _ticketService.CreateTicket(ticket);
+            }
+
+            return Json(new { ticketId = tickets.First().Id });
+        }
+
+        public async Task<IActionResult> Payment(int ticketId)
+        {
+            var ticket = await _ticketService.GetTicketById(ticketId);
+            if (ticket == null || ticket.PaymentStatus != "Pending")
+            {
+                return NotFound("Vé không tồn tại hoặc đã thanh toán.");
+            }
+
+            // Thông tin thanh toán
+            string accountNumber = "1699918082003"; // Số tài khoản MB Bank của bạn
+            string bankShortName = "MBBank"; // Tên ngắn của MB Bank theo SePay
+            decimal amount = ticket.Price; // Số tiền cần thanh toán
+            string description = $"Thanh toan ve xem phim so {ticket.Id}"; // Nội dung chuyển khoản
+            string encodedDescription = Uri.EscapeDataString(description); // Encode nội dung tránh lỗi URL
+
+            // Tạo đường dẫn QR Code theo cấu trúc của SePay
+            string qrCodeUrl = $"https://qr.sepay.vn/img?acc={accountNumber}&bank={bankShortName}&amount={amount}&des={encodedDescription}";
+
+            var model = new PaymentViewModel
+            {
+                TicketId = ticket.Id,
+                Amount = ticket.Price,
+                QrCodeUrl = qrCodeUrl
+            };
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> VerifyPayment(int ticketId)
+        {
+             var ticket = await _ticketService.GetTicketById(ticketId);
+            if (ticket == null)
+            {
+                return NotFound(new { success = false, message = "Vé không tồn tại" });
+            }
+
+            string accountNumber = "1699918082003"; // Số tài khoản MB Bank của bạn
+            decimal amount = ticket.Price; // Số tiền cần thanh toán
+            string apiToken = "LJ5BD8WIAPNYEX6NCA2MWBGXZ4W9HQVMOY9VLDRVX10AEQDMHRJTNR32BBFOFGEI"; // API token cần thay thế
+
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiToken);
+
+                string apiUrl = $"https://my.sepay.vn/userapi/transactions/list?account_number={accountNumber}&limit=20";
+
+                try
+                {
+                    HttpResponseMessage response = await httpClient.GetAsync(apiUrl);
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        return BadRequest(new { success = false, message = "Không thể lấy dữ liệu giao dịch." });
+                    }
+
+                    var responseData = await response.Content.ReadAsStringAsync();
+                    var jsonResponse = JsonConvert.DeserializeObject<TransactionResponse>(responseData);
+
+                    if (jsonResponse == null || jsonResponse.Status != 200 || jsonResponse.Transactions == null)
+                    {
+                        return BadRequest(new { success = false, message = "Lỗi khi lấy danh sách giao dịch." });
+                    }
+
+                    foreach (var transaction in jsonResponse.Transactions)
+                    {
+                        if (transaction.TransactionContent.Contains($"Thanh toan ve xem phim so {ticket.Id}"))
+                        {
+                            // Cập nhật trạng thái vé
+                            ticket.PaymentStatus = "Paid";
+                            await _ticketService.UpdateTicket(ticket);
+
+                            // Chuyển hướng đến trang PaymentSuccess
+                            return Json(new { success = true });
+                        }
+                        Console.WriteLine($"Transaction Content: '{transaction.TransactionContent}'");
+                        Console.WriteLine($"Expected Content: 'Thanh toan ve xem phim số {ticket.Id}'");
+
+                    }
+
+                    return Ok(new { success = false, message = "Không tìm thấy giao dịch hợp lệ.Bạn chưa thanh toán!" });
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, new { success = false, message = "Lỗi hệ thống.", error = ex.Message });
+                }
+            }
+        }
+
+        // Định nghĩa lớp để ánh xạ JSON
+        public class TransactionResponse
+        {
+            [JsonProperty("status")]
+            public int Status { get; set; }
+
+            [JsonProperty("transactions")]
+            public List<Transaction> Transactions { get; set; }
+        }
+
+        public class Transaction
+        {
+            [JsonProperty("amount_in")]
+            public string AmountIn { get; set; }
+
+            [JsonProperty("transaction_content")]
+            public string TransactionContent { get; set; }
+        }
+
+        public IActionResult PaymentSuccess()
+        {
+            return View();
+        }
+
     }
 }

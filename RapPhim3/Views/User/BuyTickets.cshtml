@@ -47,64 +47,105 @@
 
         <div class="mt-3 d-flex justify-content-between">
             <button class="btn btn-secondary" onclick="window.location.href='/home/index'">Quay lại</button>
-            <button class="btn btn-warning">Tiếp tục</button>
+            <button id="btnContinue" class="btn btn-warning">Tiếp tục</button>
         </div>
     </div>
 </div>
 
-@section Scripts {
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@section Scripts { 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+     <script> 
+        $(document).ready(function () { 
+            $(".show-date-btn").click(function () { 
+                 var selectedDate = $(this).data("date"); 
+                var movieId = @Model.Movie.Id; 
+
+                $.get(`/User/GetShowTimes?movieId=${movieId}&selectedDate=${selectedDate}`, function (data) { 
+                    var html = ""; 
+                     data.forEach(time => { 
+                        html += `<button class="btn btn-primary show-time-btn" data-id="${time.id}">${time.time}</button>`; 
+                     }); 
+                    $("#show-times").html(html); 
+                }); 
+            }); 
+
+                    $(document).on("click", ".show-time-btn", function () { 
+            var showTimeId = $(this).data("id"); 
+
+                 $(".show-time-btn").removeClass("active");
+        $(this).addClass("active");
+
+            $.get(`/User/GetSeats?showTimeId=${showTimeId}`, function (data) { 
+               var html = ""; 
+                data.forEach(group => { 
+                     html += `<h6 class="fw-bold">${group.seatType} - Giá: ${group.seats[0].price} đ</h6>`; 
+                   html += "<div class='row'>"; 
+                     group.seats.forEach(seat => { 
+                        html += `<button class="seat" data-id="${seat.id}" data-price="${seat.price}">${seat.seatNumber}</button>`; 
+                     }); 
+                   html += "</div>"; 
+                }); 
+                $("#seat-container").html(html); 
+             }); 
+         }); 
+
+
+             $(document).on("click", ".seat:not(.occupied)", function () { 
+                $(this).toggleClass("selected"); 
+                updateSummary(); 
+            }); 
+
+                   function updateSummary() { 
+             var selectedSeats = $(".seat.selected").map(function () { return $(this).text(); }).get(); 
+             var seatTotal = 0; 
+
+             $(".seat.selected").each(function () { 
+                 seatTotal += parseInt($(this).data("price")); 
+            }); 
+             var totalPrice = seatTotal; 
+
+             $("#selected-seats").text(selectedSeats.join(", ")); 
+            $("#total-price").text(totalPrice.toLocaleString("vi-VN") + " đ"); 
+        } 
+
+        }); 
+     </script>
     <script>
-        $(document).ready(function () {
-            $(".show-date-btn").click(function () {
-                var selectedDate = $(this).data("date");
-                var movieId = @Model.Movie.Id;
+                $("#btnContinue").click(function () {
+            var isLoggedIn = '@Context.Session.GetString("Email")' !== ''; // Kiểm tra session email
+            if (!isLoggedIn) {
+                alert("Bạn cần đăng nhập trước khi tiếp tục!");
+                return;
+            }
 
-                $.get(`/User/GetShowTimes?movieId=${movieId}&selectedDate=${selectedDate}`, function (data) {
-                    var html = "";
-                    data.forEach(time => {
-                        html += `<button class="btn btn-primary show-time-btn" data-id="${time.id}">${time.time}</button>`;
-                    });
-                    $("#show-times").html(html);
-                });
-            });
+            var showTimeId = $(".show-time-btn.active").data("id");
+            var selectedSeats = $(".seat.selected").map(function () { return $(this).data("id"); }).get();
+            var totalPrice = parseInt($("#total-price").text().replace(/\D/g, ''));
 
-                    $(document).on("click", ".show-time-btn", function () {
-            var showTimeId = $(this).data("id");
+            if (!showTimeId || selectedSeats.length === 0) {
+                alert("Vui lòng chọn suất chiếu và ghế!");
+                return;
+            }
 
-            $.get(`/User/GetSeats?showTimeId=${showTimeId}`, function (data) {
-                var html = "";
-                data.forEach(group => {
-                    html += `<h6 class="fw-bold">${group.seatType} - Giá: ${group.seats[0].price} đ</h6>`;
-                    html += "<div class='row'>";
-                    group.seats.forEach(seat => {
-                       html += `<button class="seat" data-id="${seat.id}" data-price="${seat.price}">${seat.seatNumber}</button>`;
-                    });
-                    html += "</div>";
-                });
-                $("#seat-container").html(html);
+            var requestData = {
+                ShowTimeId: showTimeId,
+                SeatIds: selectedSeats,
+                TotalPrice: totalPrice
+            };
+
+            $.ajax({
+                url: "/User/CreatePendingTicket",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(requestData),
+                success: function (response) {
+                    window.location.href = `/User/Payment?ticketId=${response.ticketId}`;
+                },
+                error: function () {
+                    alert("Đặt vé thất bại, vui lòng thử lại.");
+                }
             });
         });
 
-
-            $(document).on("click", ".seat:not(.occupied)", function () {
-                $(this).toggleClass("selected");
-                updateSummary();
-            });
-
-                   function updateSummary() {
-            var selectedSeats = $(".seat.selected").map(function () { return $(this).text(); }).get();
-            var seatTotal = 0;
-
-            $(".seat.selected").each(function () {
-                seatTotal += parseInt($(this).data("price"));
-            });
-            var totalPrice = seatTotal;
-
-            $("#selected-seats").text(selectedSeats.join(", "));
-            $("#total-price").text(totalPrice.toLocaleString("vi-VN") + " đ");
-        }
-
-        });
     </script>
-}
+ } 
