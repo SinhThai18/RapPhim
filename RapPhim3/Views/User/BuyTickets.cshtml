@@ -14,18 +14,23 @@
         <h4 class="fw-bold">Chọn phim - @Model.Movie.Title</h4>
         <image src="@Model.Movie.PortraitImage" style="height:200px ; width:fit-content"></image>
         <!-- Chọn suất -->
-        <div class="mt-3">
-            <h5 class="fw-bold">Chọn suất</h5>
-            <div id="show-date-buttons" class="d-flex gap-2 mt-2">
+        <div id="show-date-buttons" class="d-flex gap-2 mt-2">
+            @if (Model.ShowDates.Any())
+            {
                 @foreach (var date in Model.ShowDates)
                 {
                     <button class="btn btn-outline-primary show-date-btn" data-date="@date.ToString("yyyy-MM-dd")">
                         @date.ToString("dddd dd/MM")
                     </button>
                 }
-            </div>
-            <div id="show-times" class="mt-3"></div>
+            }
+            else
+            {
+                <p class="text-danger">Không có suất chiếu cho phim này.</p>
+            }
         </div>
+        <div id="show-times" class="mt-3"></div>
+
 
         <!-- Chọn ghế -->
         <div class="mt-4">
@@ -57,18 +62,23 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
-            $(".show-date-btn").click(function () {
-                var selectedDate = $(this).data("date");
-                var movieId = @Model.Movie.Id;
+                  $(".show-date-btn").click(function () {
+            var selectedDate = $(this).data("date");
+            var movieId = @Model.Movie.Id;
 
-                $.get(`/User/GetShowTimes?movieId=${movieId}&selectedDate=${selectedDate}`, function (data) {
-                    var html = "";
+            $.get(`/User/GetShowTimes?movieId=${movieId}&selectedDate=${selectedDate}`, function (data) {
+                var html = "";
+                if (data.length > 0) {
                     data.forEach(time => {
                         html += `<button class="btn btn-primary show-time-btn" data-id="${time.id}">${time.time}</button>`;
                     });
-                    $("#show-times").html(html);
-                });
+                } else {
+                    html = "<p class='text-danger'>Không có suất chiếu trong ngày này.</p>";
+                }
+                $("#show-times").html(html);
             });
+        });
+
 
                            $(document).on("click", ".show-time-btn", function () {
             $(".show-time-btn").removeClass("active"); // Xóa active khỏi các nút khác
