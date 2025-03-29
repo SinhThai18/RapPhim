@@ -1,0 +1,94 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using RapPhim3.ViewModel
+@model List<CustomerViewModel>
+
+@{
+    ViewData["Title"] = "Danh sách khách hàng";
+}
+@section Styles{
+    <style>
+        .table-hover tbody tr:hover {
+            background-color: #f0f8ff !important;
+        }
+
+        .card {
+            border-radius: 10px;
+            border: none;
+        }
+
+        input.form-control, select.form-select {
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .btn-primary {
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+    </style>
+}
+<!-- Tiêu đề trang -->
+<div class="container mt-4">
+    <h2 class="text-center text-primary fw-bold">📋 Danh Sách Khách Hàng</h2>
+
+    <!-- Form tìm kiếm và bộ lọc -->
+    <div class="card shadow-sm p-3 my-4">
+        <form method="get" asp-action="ListCustomer" class="d-flex gap-2">
+            <!-- Ô tìm kiếm -->
+            <input type="text" name="search" class="form-control"
+                   placeholder="🔍 Tìm theo tên, email, số điện thoại..."
+                   value="@Context.Request.Query["search"]" />
+
+            <!-- Bộ lọc sắp xếp -->
+            <select name="sortOrder" class="form-select">
+                <option value="">-- Sắp xếp theo tổng tiền --</option>
+                <option value="desc" selected="@(Context.Request.Query["sortOrder"] == "desc")">Giảm dần</option>
+                <option value="asc" selected="@(Context.Request.Query["sortOrder"] == "asc")">Tăng dần</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary"><i class="fas fa-filter"></i> Lọc</button>
+        </form>
+    </div>
+
+    <!-- Bảng danh sách khách hàng -->
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle text-center">
+            <thead class="table-danger">
+                <tr>
+                    <th>#</th>
+                    <th>Họ và tên</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Tổng tiền đã mua</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Count > 0)
+                {
+                    int index = 1;
+                    foreach (var customer in Model)
+                    {
+                        <tr>
+                            <td class="fw-bold">@index</td>
+                            <td>@customer.FullName</td>
+                            <td>@customer.Email</td>
+                            <td>@customer.PhoneNumber</td>
+                            <td class="text-success fw-bold">@customer.TotalSpent.ToString("N0") VNĐ</td>
+                        </tr>
+                        index++;
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" class="text-center text-danger fw-bold">🚫 Không tìm thấy khách hàng nào.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

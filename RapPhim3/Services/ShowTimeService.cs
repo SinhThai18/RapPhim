@@ -12,6 +12,16 @@ namespace RapPhim3.Services
             _context = context;
         }
 
+        public int GetShowTimeCount()
+        {
+            return _context.ShowTimes.Count();
+        }
+
+        public decimal GetTotalRevenue()
+        {
+            return _context.Tickets.Sum(t => t.Price);
+        }
+
         public List<ShowTime> ShowTimes()
         {
             return _context.ShowTimes
@@ -166,5 +176,9 @@ namespace RapPhim3.Services
                 .Select(st => new { id = st.Id, time = st.ShowTime1.ToString("HH:mm") })
                 .ToList<object>();
         }
+
+       
+
+       
     }
 }

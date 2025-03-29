@@ -15,17 +15,45 @@ namespace RapPhim3.Controllers.Admin
 
         private readonly AccountService _accountService;
 
-        public AdminController(MovieService movieService, ShowTimeService showTimeService, AccountService accountService)
+        private readonly TicketService _ticketService;
+
+        public AdminController(MovieService movieService, ShowTimeService showTimeService, 
+            AccountService accountService, TicketService ticketService)
         {
             _movieService = movieService;
             _showTimeService = showTimeService;
             _accountService = accountService;
+            _ticketService = ticketService;
+        }
+
+        public async Task<IActionResult> ListCustomer(string search, string sortOrder)
+        {
+            var customers = await _accountService.GetCustomersAsync(search, sortOrder);
+            return View(customers);
+        }
+
+        public async Task<IActionResult> Revenue()
+        {
+            ViewBag.RevenueByMovie = await _ticketService.GetRevenueByMovieAsync();
+            ViewBag.RevenueByDate = await _ticketService.GetRevenueByDateAsync();
+            return View();
         }
 
         public IActionResult Home()
         {
+            var movieCount = _movieService.GetMovieCount();
+            var customerCount = _accountService.GetCustomerCount();
+            var showTimeCount = _showTimeService.GetShowTimeCount();
+            var totalRevenue = _showTimeService.GetTotalRevenue();
+
+            ViewBag.MovieCount = movieCount;
+            ViewBag.CustomerCount = customerCount;
+            ViewBag.ShowTimeCount = showTimeCount;
+            ViewBag.TotalRevenue = totalRevenue;
+
             return View();
         }
+
 
         public IActionResult List()
         {
@@ -287,6 +315,7 @@ namespace RapPhim3.Controllers.Admin
             return RedirectToAction("ListShowTimes");
         }
 
+        
 
     }
 }

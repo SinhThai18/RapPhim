@@ -5,6 +5,7 @@ using RapPhim3.Models;
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using RapPhim3.ViewModel;
 
 namespace RapPhim3.Services
 {
@@ -16,6 +17,12 @@ namespace RapPhim3.Services
         {
             _context = context;
         }
+
+        public int GetCustomerCount()
+        {
+            return _context.Users.Count(u => u.Role == "Customer");
+        }
+
 
         // Hàm đăng ký tài khoản
         public async Task<bool> RegisterUser(string fullName, string email, string password, string phoneNumber)
@@ -146,6 +153,41 @@ namespace RapPhim3.Services
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<List<CustomerViewModel>> GetCustomersAsync(string? search, string? sortOrder)
+        {
+            var query = _context.Users
+                .Where(u => u.Role == "Customer") // Chỉ lấy khách hàng
+                .Select(u => new CustomerViewModel
+                {
+                    Id = u.Id,
+                    FullName = u.FullName,
+                    Email = u.Email,
+                    PhoneNumber = u.PhoneNumber,
+                    TotalSpent = u.Tickets.Sum(t => t.Price) // Tổng tiền đã mua
+                });
+
+            // Nếu có tìm kiếm
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(u =>
+                    u.FullName.Contains(search) ||
+                    u.Email.Contains(search) ||
+                    u.PhoneNumber.Contains(search));
+            }
+
+            // Sắp xếp theo tổng tiền đã mua (nhiều nhất -> ít nhất)
+            if (sortOrder == "desc")
+            {
+                query = query.OrderByDescending(u => u.TotalSpent);
+            }
+            else if (sortOrder == "asc")
+            {
+                query = query.OrderBy(u => u.TotalSpent);
+            }
+
+            return await query.ToListAsync();
         }
 
     }

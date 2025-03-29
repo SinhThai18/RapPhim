@@ -1,0 +1,127 @@
+﻿@using Newtonsoft.Json
+@{
+    ViewData["Title"] = "Thống kê Doanh Thu";
+}
+
+<h2 class="text-center">Thống kê Doanh Thu</h2>
+
+<div class="row">
+    <!-- Bộ lọc doanh thu -->
+    <div class="col-md-12">
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label>Chọn tháng:</label>
+                <input type="month" id="filterMonth" class="form-control">
+            </div>
+            <div class="col-md-4">
+                <label>Từ ngày:</label>
+                <input type="date" id="startDate" class="form-control">
+            </div>
+            <div class="col-md-4">
+                <label>Đến ngày:</label>
+                <input type="date" id="endDate" class="form-control">
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="applyFilters()">Lọc doanh thu</button>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <!-- Danh sách doanh thu theo phim -->
+    <div class="col-md-6">
+        <h4>Doanh thu theo phim</h4>
+        <div style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Phim</th>
+                        <th>Doanh Thu (VNĐ)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var movie in ViewBag.RevenueByMovie)
+                    {
+                        <tr>
+                            <td>@movie.MovieTitle</td>
+                            <td>@movie.TotalRevenue.ToString("N0") VNĐ</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Biểu đồ doanh thu -->
+    <div class="col-md-6">
+        <h4>Biểu đồ doanh thu theo ngày</h4>
+        <canvas id="revenueChart"></canvas>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var revenueDates = @Html.Raw(JsonConvert.SerializeObject(ViewBag.RevenueByDate));
+        var originalData = [...revenueDates]; // Lưu dữ liệu gốc để reset khi cần
+
+        function updateChart(filteredData) {
+            var labels = filteredData.map(d => new Date(d.Date).toLocaleDateString('vi-VN'));
+            var dataValues = filteredData.map(d => d.TotalRevenue);
+
+            revenueChart.data.labels = labels;
+            revenueChart.data.datasets[0].data = dataValues;
+            revenueChart.update();
+        }
+
+        function applyFilters() {
+            var selectedMonth = document.getElementById('filterMonth').value;
+            var startDate = document.getElementById('startDate').value;
+            var endDate = document.getElementById('endDate').value;
+
+            let filteredData = originalData;
+
+            if (selectedMonth) {
+                let [year, month] = selectedMonth.split('-');
+                filteredData = filteredData.filter(d => {
+                    let date = new Date(d.Date);
+                    return date.getFullYear() == year && (date.getMonth() + 1) == month;
+                });
+            }
+
+            if (startDate && endDate) {
+                let start = new Date(startDate);
+                let end = new Date(endDate);
+                filteredData = filteredData.filter(d => {
+                    let date = new Date(d.Date);
+                    return date >= start && date <= end;
+                });
+            }
+
+            updateChart(filteredData);
+        }
+
+        var ctx = document.getElementById('revenueChart').getContext('2d');
+        var revenueData = {
+            labels: revenueDates.map(d => new Date(d.Date).toLocaleDateString('vi-VN')),
+            datasets: [{
+                label: 'Doanh thu (VNĐ)',
+                data: revenueDates.map(d => d.TotalRevenue),
+                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        var revenueChart = new Chart(ctx, {
+            type: 'line',
+            data: revenueData,
+            options: {
+                responsive: true,
+                scales: {
+                    x: { title: { display: true, text: '' } },
+                    y: { title: { display: true, text: 'Doanh thu (VNĐ)' } }
+                }
+            }
+        });
+    </script>
+}
