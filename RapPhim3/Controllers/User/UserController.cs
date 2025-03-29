@@ -96,12 +96,31 @@ namespace RapPhim3.Controllers.User
             return Json(showTimes);
         }
 
-        [HttpGet]
-        public IActionResult GetSeats(int showTimeId)
+        public async Task<IActionResult> GetSeats(int showTimeId)
         {
-            var seats = _seatService.GetSeatsByShowTime(showTimeId);
-            return Json(seats);
+            // Lấy danh sách các ghế đã có vé (loại bỏ vé có trạng thái "Paid")
+           
+            var paidSeats = await _ticketService.GetPaidSeats(showTimeId); // Lấy danh sách ghế đã thanh toán
+
+            var allSeats = await _seatService.GetSeatsByShowTime(showTimeId);
+
+            // Chỉ lấy những ghế không nằm trong danh sách ghế đã thanh toán
+            var availableSeats = allSeats
+                .Where(seat => !paidSeats.Contains(seat.Id))
+                .ToList();
+
+            var groupedSeats = availableSeats
+                .GroupBy(s => s.SeatType)
+                .Select(g => new
+                {
+                    SeatType = g.Key,
+                    Seats = g.Select(s => new { s.Id, s.SeatNumber, s.Price }).ToList()
+                }).ToList();
+
+            return Json(groupedSeats);
         }
+
+
 
         [HttpGet]
         public IActionResult CheckLogin()

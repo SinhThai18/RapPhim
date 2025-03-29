@@ -56,6 +56,23 @@ namespace RapPhim3.Services
             return seat?.Price ?? 0; // Nếu không tìm thấy, trả về 0
         }
 
+        public async Task<List<int>> GetBookedSeats(int showTimeId)
+        {
+            return await _context.Tickets
+                .Where(t => t.ShowTimeId == showTimeId && t.PaymentStatus == "Paid")
+                .Select(t => t.SeatId)
+                .ToListAsync();
+        }
+
+        public async Task<List<int>> GetPaidSeats(int showTimeId)
+        {
+            return await _context.Tickets
+                .Where(t => t.ShowTimeId == showTimeId && t.PaymentStatus == "Paid")
+                .Select(t => t.SeatId)
+                .ToListAsync();
+        }
+
+
         // Lấy danh sách vé theo User
         public async Task<List<Ticket>> GetTicketsByUser(int userId)
         {
