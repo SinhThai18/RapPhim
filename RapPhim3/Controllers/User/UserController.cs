@@ -155,6 +155,40 @@ namespace RapPhim3.Controllers.User
         }
 
 
+        //[HttpPost]
+        //public async Task<IActionResult> CreatePendingTicket([FromBody] TicketRequestModel request)
+        //{
+        //    var email = HttpContext.Session.GetString("Email");
+        //    if (email == null)
+        //    {
+        //        return Unauthorized("Người dùng chưa đăng nhập.");
+        //    }
+
+        //    var user = await _userService.GetUserByEmail(email);
+        //    if (user == null)
+        //    {
+        //        return NotFound("Người dùng không tồn tại.");
+        //    }
+
+        //    var tickets = request.SeatIds.Select(seatId => new Ticket
+        //    {
+        //        ShowTimeId = request.ShowTimeId,
+        //        SeatId = seatId,
+        //        UserId = user.Id,
+        //        Price = _ticketService.GetSeatPrice(seatId).Result,
+        //        PaymentStatus = "Pending"
+        //    }).ToList();
+
+        //    foreach (var ticket in tickets)
+        //    {
+        //        await _ticketService.CreateTicket(ticket);
+        //    }
+
+
+
+        //    return Json(new { ticketId = tickets.First().Id });
+        //}
+
         [HttpPost]
         public async Task<IActionResult> CreatePendingTicket([FromBody] TicketRequestModel request)
         {
@@ -170,24 +204,34 @@ namespace RapPhim3.Controllers.User
                 return NotFound("Người dùng không tồn tại.");
             }
 
-            var tickets = request.SeatIds.Select(seatId => new Ticket
-            {
-                ShowTimeId = request.ShowTimeId,
-                SeatId = seatId,
-                UserId = user.Id,
-                Price = _ticketService.GetSeatPrice(seatId).Result,
-                PaymentStatus = "Pending"
-            }).ToList();
+            var createdTickets = new List<Ticket>();
 
-            foreach (var ticket in tickets)
+            foreach (var seatId in request.SeatIds)
             {
-                await _ticketService.CreateTicket(ticket);
+                var ticket = new Ticket
+                {
+                    ShowTimeId = request.ShowTimeId,
+                    SeatId = seatId,
+                    UserId = user.Id,
+                    Price = await _ticketService.GetSeatPrice(seatId),
+                    PaymentStatus = "Pending"
+                };
+
+                bool isCreated = await _ticketService.CreateTicket(ticket);
+                if (isCreated)
+                {
+                    createdTickets.Add(ticket);
+                }
             }
 
-            
+            if (createdTickets.Count == 0)
+            {
+                return BadRequest("Tất cả các vé đã tồn tại, không thể tạo thêm.");
+            }
 
-            return Json(new { ticketId = tickets.First().Id });
+            return Json(new { ticketId = createdTickets.First().Id });
         }
+
 
         public async Task<IActionResult> Payment(int ticketId)
         {

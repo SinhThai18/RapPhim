@@ -45,11 +45,27 @@ namespace RapPhim3.Services
         }
 
         // Tạo vé mới
-        public async Task CreateTicket(Ticket ticket)
+        //public async Task CreateTicket(Ticket ticket)
+        //{
+        //    _context.Tickets.Add(ticket);
+        //    await _context.SaveChangesAsync();
+        //}
+
+        public async Task<bool> CreateTicket(Ticket ticket)
         {
+            var existingTicket = await _context.Tickets
+                .FirstOrDefaultAsync(t => t.SeatId == ticket.SeatId && t.ShowTimeId == ticket.ShowTimeId);
+
+            if (existingTicket != null && existingTicket.PaymentStatus == "paid")
+            {
+                return false; // Vé đã tồn tại và đã thanh toán, không thể đặt lại
+            }
+
             _context.Tickets.Add(ticket);
             await _context.SaveChangesAsync();
+            return true; // Vé tạo thành công
         }
+
 
         // Lấy giá vé dựa vào ghế
         public async Task<decimal> GetSeatPrice(int seatId)
