@@ -32,8 +32,8 @@
     <div class="col-md-4">
         <select id="filterStatus" class="form-select">
             <option value="">-- Lọc theo trạng thái thanh toán --</option>
-            <option value="Success">Đã thanh toán</option>
-            <option value="Pending">Chưa thanh toán</option>
+            <option value="Success">Đã sử dụng</option>
+            <option value="paid">Đã thanh toán</option>
         </select>
     </div>
 </div>
@@ -65,11 +65,11 @@
                 <td>
                     @if (ticket.PaymentStatus == "Success")
                     {
-                        <span class="badge bg-success">Đã thanh toán</span>
+                        <span class="badge bg-success">Đã sử dụng</span>
                     }
                     else
                     {
-                        <span class="badge bg-warning text-dark">Chưa thanh toán</span>
+                        <span class="badge bg-warning text-dark">Đã thanh toán</span>
                     }
                 </td>
                 <td>
@@ -131,11 +131,14 @@
                 rows.forEach(row => {
                     let id = row.cells[0].innerText.toLowerCase();
                     let username = row.cells[1].innerText.toLowerCase();
-                    let status = row.cells[6].innerText.toLowerCase();
+                   let status = row.cells[6].innerText.trim();
 
                     let matchId = !searchId || id.includes(searchId);
                     let matchUser = !searchUser || username.includes(searchUser);
-                    let matchStatus = !filterStatus || status === filterStatus;
+                  let matchStatus = !filterStatus ||
+                  (filterStatus === "success" && status.includes("Đã sử dụng")) ||
+                  (filterStatus === "paid" && status.includes("Đã thanh toán"));
+
 
                     row.style.display = (matchId && matchUser && matchStatus) ? "" : "none";
                 });

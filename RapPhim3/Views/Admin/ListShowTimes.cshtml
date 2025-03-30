@@ -125,7 +125,9 @@
                                 <button class="btn btn-warning btnEditShowTime" data-id="@showTime.Id">
                                     <i class="fas fa-edit"></i> Chỉnh sửa
                                 </button>
-                                <a href="@Url.Action("DeleteShowTime", "Admin", new { id = showTime.Id })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">
+                                <a href="@Url.Action("DeleteShowTime", "Admin", new { id = showTime.Id })"
+                                   class="btn btn-danger btn-sm"
+                                   onclick="return confirm('Bạn có chắc chắn muốn xóa suất chiếu này không?');">
                                     <i class="fas fa-trash"></i> Xóa
                                 </a>
                             </td>

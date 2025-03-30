@@ -188,8 +188,33 @@ namespace RapPhim3.Services
                 .ToList<object>();
         }
 
-       
+        public bool DeleteShowTime(int id)
+        {
+            try
+            {
+                var showTime = _context.ShowTimes
+                    .Include(st => st.Tickets) // Load vé liên quan nếu có
+                    .FirstOrDefault(st => st.Id == id);
 
-       
+                if (showTime == null) return false;
+
+                // Kiểm tra xem suất chiếu có vé nào đã được bán không
+                if (showTime.Tickets.Any())
+                {
+                    return false; // Không thể xóa nếu đã có vé bán ra
+                }
+
+                _context.ShowTimes.Remove(showTime);
+                _context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+
     }
 }

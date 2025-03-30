@@ -73,7 +73,7 @@
                                     <th>Phim</th>
                                     <th>Ngày chiếu</th>
                                     <th>Ghế</th>
-                                    <th>Giá</th>
+                                    <th>Phòng</th>
                                     <th>QR Code</th>
                                 </tr>
                             </thead>
@@ -87,7 +87,7 @@
                                             <td><img src="@ticket.ShowTime.Movie.PortraitImage" alt="Movie Poster" class="img-fluid"></td>
                                             <td>@ticket.ShowTime.ShowDate.ToString("dd/MM/yyyy")</td>
                                             <td>@ticket.Seat.SeatNumber</td>
-                                            <td>@ticket.Price VNĐ</td>
+                                            <td>@ticket.ShowTime.Room.Name</td>
                                             <td>
                                                 <button class="btn btn-primary" onclick="showQRCode(@ticket.Id)">Xem QR</button>
                                             </td>

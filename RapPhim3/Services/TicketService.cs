@@ -224,20 +224,24 @@ namespace RapPhim3.Services
                 .Where(t => t.UserId == userId && (t.PaymentStatus == "paid" || t.PaymentStatus == "Success"))
                 .Include(t => t.Seat)
                 .Include(t => t.ShowTime)
-                .ThenInclude(st => st.Movie)
+                    .ThenInclude(st => st.Movie) // Bao gồm thông tin phim
+                .Include(t => t.ShowTime)
+                    .ThenInclude(st => st.Room) // Bao gồm thông tin phòng
                 .OrderByDescending(t => t.Id)
                 .ToListAsync();
         }
 
-    
 
-     public async Task<List<Ticket>> GetTicketsAsync()
+
+
+        public async Task<List<Ticket>> GetTicketsAsync()
         {
             return await _context.Tickets
                 .Where(t => t.PaymentStatus != "paid")
                 .Include(t => t.ShowTime).ThenInclude(s=>s.Movie)
                 .Include(t => t.Seat)
                 .Include(t => t.User)
+                .OrderByDescending (t => t.Id)
                 .ToListAsync();
         }
 

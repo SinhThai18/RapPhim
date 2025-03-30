@@ -308,7 +308,7 @@ namespace RapPhim3.Controllers.Admin
             if (!success)
             {
                 TempData["ErrorMessage"] = "Suất chiếu này đã tồn tại hoặc có lỗi!";
-                return RedirectToAction("Index");
+                return RedirectToAction("ListShowTimes");
             }
 
             TempData["SuccessMessage"] = "Chỉnh sửa suất chiếu thành công!";
@@ -334,6 +334,23 @@ namespace RapPhim3.Controllers.Admin
                 TempData["ErrorMessage"] = "Lỗi khi cập nhật trạng thái!";
             }
             return RedirectToAction("ListTickets");
+        }
+
+        [HttpGet]
+        public IActionResult DeleteShowTime(int id)
+        {
+            bool success = _showTimeService.DeleteShowTime(id);
+
+            if (success)
+            {
+                TempData["SuccessMessage"] = "Xóa suất chiếu thành công!";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Không thể xóa suất chiếu, có thể đã có vé được bán!";
+            }
+
+            return RedirectToAction("ListShowTimes");
         }
 
     }
