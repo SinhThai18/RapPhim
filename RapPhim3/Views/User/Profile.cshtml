@@ -5,6 +5,7 @@
 @section Styles {
     <link rel="icon" href="~/images/cinema-logo.png" type="image/png">
     <link rel="stylesheet" href="~/css/userstyle.css">
+    
 }
 
 @if (TempData["Success"] != null)
@@ -18,6 +19,12 @@
         {
             <p>@error.ErrorMessage</p>
         }
+    </div>
+}
+@if (Model.HasUnreadNotifications)
+{
+    <div class="alert alert-warning" role="alert">
+        Bạn có thông báo mới! 
     </div>
 }
 
@@ -57,16 +64,13 @@
                     <li class="list_item">
                         <a href="#noti" class="accordion-toggle" data-bs-toggle="collapse" data-bs-target="#noti" aria-expanded="false">Thông báo</a>
                     </li>
-                    <li class="list_item">
-                        <a href="#gift" class="accordion-toggle" data-bs-toggle="collapse" data-bs-target="#gift" aria-expanded="false">Quà tặng</a>
-                    </li>
                 </ul>
             </div>
             <div class="row box-content">
                 <div class="collapse history" id="history">
                     <h2>Danh sách vé đã mua</h2>
                     <div class="history-table-container">
-                        <table class="table">
+                        <table class="table table-responsive">
                             <thead>
                                 <tr>
                                     <th>Mã vé</th>
@@ -84,10 +88,27 @@
                                     {
                                         <tr>
                                             <td>@ticket.Id</td>
-                                            <td><img src="@ticket.ShowTime.Movie.PortraitImage" alt="Movie Poster" class="img-fluid"></td>
-                                            <td>@ticket.ShowTime.ShowDate.ToString("dd/MM/yyyy")</td>
+                                            <td>
+                                                @if (ticket.ShowTime != null)
+                                                {
+                                                    <img src="@ticket.ShowTime.Movie.PortraitImage" alt="Movie Poster" class="img-fluid">
+                                                }
+                                                else
+                                                {
+                                                    <span>Suất chiếu đã bị hủy</span>
+                                                }
+                                            </td>
+
+                                            <td>
+                                                @(ticket.ShowTime != null ?
+                                                    $"{ticket.ShowTime.ShowDate:dd/MM/yyyy} {ticket.ShowTime.ShowTime1}"
+                                                    : "Suất chiếu đã bị hủy")
+                                            </td>
+
                                             <td>@ticket.Seat.SeatNumber</td>
-                                            <td>@ticket.ShowTime.Room.Name</td>
+                                            <td>
+                                                @(ticket.ShowTime?.Room != null ? ticket.ShowTime.Room.Name : "Suất chiếu đã bị hủy")
+                                            </td>
                                             <td>
                                                 <button class="btn btn-primary" onclick="showQRCode(@ticket.Id)">Xem QR</button>
                                             </td>
@@ -211,31 +232,66 @@
                 <div class="row notification-box">
                     <div class="col-md-12">
                         <h5>Thông báo</h5>
-                        <button class="mark-all-read">Đánh dấu tất cả đã đọc</button>
+                        <button class="mark-all-read btn btn-primary" id="markAllRead">Đánh dấu tất cả đã đọc</button>
                         <ul class="notification-list">
-                            <li class="notification unread">
-                                <span class="notif-icon">🔔</span>
-                                <span class="notif-text">Bạn đã đặt vé thành công cho "Exhuma: Quật mộ trùng ma"!</span>
-                                <span class="notif-time">5 phút trước</span>
-                            </li>
-                            <li class="notification read">
-                                <span class="notif-icon">🎁</span>
-                                <span class="notif-text">Chúc mừng! Bạn nhận được một ưu đãi giảm giá 10%.</span>
-                                <span class="notif-time">Hôm qua</span>
-                            </li>
+                            @foreach (var notification in Model.Notifications)
+                            {
+                                <li class="notification @(notification.IsRead ? "read" : "unread")" data-id="@notification.Id">
+                                    <span class="notif-icon">🔔</span>
+                                    <span class="notif-text">@notification.Message</span>
+                                    <span class="notif-time">@notification.CreatedAt.ToString("HH:mm dd/MM/yyyy")</span>
+                                </li>
+                            }
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
 
         <div class="col-md-1"></div>
     </div>
 </div>
+<!-- Modal hiển thị thông báo -->
+<div id="notificationModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Thông báo</h5>
+                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="notificationMessage"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Scripts {
-    <script src="~/js/userscript.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Kết nối tới Hub
+                   var connection = new signalR.HubConnectionBuilder()
+            .withUrl("/notificationHub")
+            .configureLogging(signalR.LogLevel.Information)
+            .build();
+
+        connection.on("ReceiveNotification", function (message) {
+            console.log("Nhận thông báo: " + message);
+            document.getElementById("notificationMessage").innerText = message;
+            $('#notificationModal').modal('show');
+        });
+
+        connection.start()
+            .then(() => console.log("Kết nối SignalR thành công!"))
+            .catch(err => console.error("Lỗi kết nối SignalR: ", err));
+
+        });
+    </script>
+
+    <script src="~/js/userscript.js"></script>
     <script>
                function showQRCode(ticketId) {
             fetch(`/User/GetTicketQRCode?ticketId=${ticketId}`)
@@ -256,6 +312,28 @@
         }
 
     </script>
+        <script>
+            document.getElementById("markAllRead").addEventListener("click", function () {
+                fetch("@Url.Action("MarkAllNotificationsRead", "User")", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "RequestVerificationToken": document.querySelector('input[name="__RequestVerificationToken"]').value
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.querySelectorAll(".notification").forEach(noti => {
+                            noti.classList.remove("unread");
+                            noti.classList.add("read");
+                        });
+                    }
+                })
+                .catch(error => console.error("Lỗi:", error));
+            });
+        </script>
+
 }
 
   

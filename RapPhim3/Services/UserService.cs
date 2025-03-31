@@ -14,6 +14,46 @@ namespace RapPhim3.Services
             _context = context;
         }
 
+        public async Task<List<Notification>> GetUnreadNotifications(int userId)
+        {
+            return await _context.Notifications
+                .Where(n => n.UserId == userId && !n.IsRead)
+                .ToListAsync();
+        }
+
+        public async Task MarkNotificationAsRead(int notificationId)
+        {
+            var notification = await _context.Notifications.FindAsync(notificationId);
+            if (notification != null)
+            {
+                notification.IsRead = true;
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task MarkAllNotificationsAsRead(int userId)
+        {
+            var notifications = await _context.Notifications
+                .Where(n => n.UserId == userId && !n.IsRead)
+                .ToListAsync();
+
+            foreach (var notification in notifications)
+            {
+                notification.IsRead = true;
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<Notification>> GetAllNotifications(int userId)
+        {
+            return await _context.Notifications
+                .Where(n => n.UserId == userId)
+                .OrderByDescending(n => n.CreatedAt)
+                .ToListAsync();
+        }
+
+
         public async Task<User?> GetUserByEmail(string email)
         {
             if (string.IsNullOrEmpty(email))

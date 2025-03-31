@@ -84,7 +84,7 @@
 
                         </div>
                         <div class="col-md-9 item">
-                            <span class="progress-value">@ViewBag.TotalRevenue.ToString("C")</span>
+                            <span class="progress-value">@ViewBag.TotalRevenue.ToString("#,##0", new System.Globalization.CultureInfo("vi-VN")) VNĐ</span>
                             <p class="element">Doanh thu</p>
                         </div>
                     </div>

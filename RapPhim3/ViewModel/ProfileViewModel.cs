@@ -6,5 +6,9 @@ namespace RapPhim3.ViewModel
     {
         public User User { get; set; }
         public List<Ticket> PaidTickets { get; set; }
+
+        public bool HasUnreadNotifications { get; set; }
+
+        public List<Notification> Notifications { get; set; }
     }
 }

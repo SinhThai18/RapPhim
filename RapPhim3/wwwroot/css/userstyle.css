@@ -1,5 +1,10 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+table {
+    width: 100%;
+    table-layout: auto;
+}
+
 .history-table-container {
     max-height: 400px; /* Chiều cao cố định của bảng */
     overflow-y: auto; /* Thanh cuộn dọc khi có nhiều dữ liệu */

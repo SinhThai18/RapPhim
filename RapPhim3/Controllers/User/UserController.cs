@@ -54,16 +54,56 @@ namespace RapPhim3.Controllers.User
                 return NotFound();
             }
 
-            // Lấy danh sách vé đã thanh toán của user
-            var paidTickets = await _ticketService.GetPaidTicketsByUser(user.Id);
+            var unreadNotifications = await _userService.GetUnreadNotifications(user.Id);
+            var allNotifications = await _userService.GetAllNotifications(user.Id);
 
             var viewModel = new ProfileViewModel
             {
                 User = user,
-                PaidTickets = paidTickets
+                PaidTickets = await _ticketService.GetPaidTicketsByUser(user.Id),
+                HasUnreadNotifications = unreadNotifications.Any(),
+                Notifications = allNotifications
             };
 
             return View(viewModel);
+        }
+
+        public async Task<IActionResult> Notifications()
+        {
+            var email = HttpContext.Session.GetString("Email");
+            if (email == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            var user = await _userService.GetUserByEmail(email);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var notifications = await _userService.GetUnreadNotifications(user.Id);
+
+            return View(notifications);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> MarkAllNotificationsRead()
+        {
+            var email = HttpContext.Session.GetString("Email");
+            if (email == null)
+            {
+                return Json(new { success = false, message = "Người dùng chưa đăng nhập." });
+            }
+
+            var user = await _userService.GetUserByEmail(email);
+            if (user == null)
+            {
+                return Json(new { success = false, message = "Người dùng không tồn tại." });
+            }
+
+            await _userService.MarkAllNotificationsAsRead(user.Id);
+            return Json(new { success = true });
         }
 
 
@@ -408,9 +448,18 @@ namespace RapPhim3.Controllers.User
                 return NotFound("Vé không tồn tại.");
             }
 
-            if (ticket.PaymentStatus == "success")
+            if (ticket.PaymentStatus == "Success")
             {
                 return BadRequest("Vé đã được sử dụng.");
+            }
+
+            if (ticket.PaymentStatus == "refund")
+            {
+                return BadRequest("Vé đã bị hủy.");
+            }
+            if (ticket.PaymentStatus == "refunded")
+            {
+                return BadRequest("Vé đã bị hủy.");
             }
 
 

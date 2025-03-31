@@ -21,5 +21,9 @@ public partial class User
 
     public bool EmailConfirmed { get; set; }
 
+    public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+
     public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
+
+    public virtual ICollection<Voucher> Vouchers { get; set; } = new List<Voucher>();
 }

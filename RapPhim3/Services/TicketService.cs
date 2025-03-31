@@ -85,10 +85,12 @@ namespace RapPhim3.Services
         public async Task<List<int>> GetPaidSeats(int showTimeId)
         {
             return await _context.Tickets
-                .Where(t => t.ShowTimeId == showTimeId && t.PaymentStatus == "paid")
+                .Where(t => t.ShowTimeId == showTimeId &&
+                           (t.PaymentStatus == "paid" || t.PaymentStatus == "success")) // Thêm điều kiện lọc
                 .Select(t => t.SeatId)
                 .ToListAsync();
         }
+
 
 
         // Lấy danh sách vé theo User
@@ -198,7 +200,7 @@ namespace RapPhim3.Services
             {
                 return false;
             }
-            int showtimeId = ticket.ShowTimeId;
+            int? showtimeId = ticket.ShowTimeId;
             int userId = ticket.UserId;
 
             // Tìm tất cả các vé có cùng showtimeId, userId và paymentStatus = "Pending"
@@ -221,7 +223,8 @@ namespace RapPhim3.Services
         public async Task<List<Ticket>> GetPaidTicketsByUser(int userId)
         {
             return await _context.Tickets
-                .Where(t => t.UserId == userId && (t.PaymentStatus == "paid" || t.PaymentStatus == "Success"))
+                .Where(t => t.UserId == userId && (t.PaymentStatus == "paid" 
+                || t.PaymentStatus == "Success" || t.PaymentStatus=="refund"))
                 .Include(t => t.Seat)
                 .Include(t => t.ShowTime)
                     .ThenInclude(st => st.Movie) // Bao gồm thông tin phim
@@ -237,7 +240,7 @@ namespace RapPhim3.Services
         public async Task<List<Ticket>> GetTicketsAsync()
         {
             return await _context.Tickets
-                .Where(t => t.PaymentStatus != "paid")
+                .Where(t => t.PaymentStatus != "Pending")
                 .Include(t => t.ShowTime).ThenInclude(s=>s.Movie)
                 .Include(t => t.Seat)
                 .Include(t => t.User)

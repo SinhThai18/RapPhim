@@ -16,12 +16,11 @@ const history = document.querySelector('.history');
 //        input.classList.remove('remove');
 //    }
 // });
-
 historyBtn.forEach(element => {
     element.addEventListener('click', () => {
         document.querySelector('.show').classList.remove('show');
     });
-   
+
 });
 
 inforBtn.forEach(element => {

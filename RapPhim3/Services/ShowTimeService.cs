@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
+using RapPhim3.Hubs;
 using RapPhim3.Models;
 
 namespace RapPhim3.Services
@@ -6,10 +8,12 @@ namespace RapPhim3.Services
     public class ShowTimeService
     {
         private readonly RapPhimContext _context;
+        private readonly IHubContext<NotificationHub> _hubContext;
 
-        public ShowTimeService(RapPhimContext context)
+        public ShowTimeService(RapPhimContext context, IHubContext<NotificationHub> hubContext)
         {
             _context = context;
+            _hubContext = hubContext;
         }
 
         public int GetShowTimeCount()
@@ -20,7 +24,7 @@ namespace RapPhim3.Services
         public decimal GetTotalRevenue()
         {
             return _context.Tickets.
-                Where(t=>t.PaymentStatus=="Paid").Sum(t => t.Price);
+                Where(t=>t.PaymentStatus=="paid" || t.PaymentStatus == "Success").Sum(t => t.Price);
         }
 
         public List<ShowTime> ShowTimes()
@@ -193,16 +197,40 @@ namespace RapPhim3.Services
             try
             {
                 var showTime = _context.ShowTimes
-                    .Include(st => st.Tickets) // Load vé liên quan nếu có
+                    .Include(st => st.Tickets)
+                    .ThenInclude(t => t.User)
                     .FirstOrDefault(st => st.Id == id);
 
                 if (showTime == null) return false;
 
-                // Kiểm tra xem suất chiếu có vé nào đã được bán không
-                if (showTime.Tickets.Any())
+                var tickets = showTime.Tickets.ToList();
+
+                if (tickets.Any())
                 {
-                    return false; // Không thể xóa nếu đã có vé bán ra
+                    foreach (var ticket in tickets)
+                    {
+                        if (ticket.PaymentStatus == "paid")
+                        {
+                            ticket.PaymentStatus = "refund";
+
+                            var notification = new Notification
+                            {
+                                UserId = ticket.UserId,
+                                Message = "Suất chiếu đã bị hủy, xin lỗi bạn. Chúng tôi sẽ hoàn tiền trong vòng 24h.",
+                                CreatedAt = DateTime.Now,
+                                IsRead = false
+                            };
+
+                            _context.Notifications.Add(notification);
+
+
+                            // Gửi thông báo cho user (không cần kiểm tra kết nối)
+                            _hubContext.Clients.User(ticket.UserId.ToString()).SendAsync("ReceiveNotification", notification.Message);
+
+                        }
+                    }
                 }
+
 
                 _context.ShowTimes.Remove(showTime);
                 _context.SaveChanges();
@@ -213,8 +241,6 @@ namespace RapPhim3.Services
                 return false;
             }
         }
-
-
 
     }
 }

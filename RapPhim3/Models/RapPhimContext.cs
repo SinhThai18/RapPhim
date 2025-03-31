@@ -25,6 +25,8 @@ public partial class RapPhimContext : DbContext
 
     public virtual DbSet<Movie> Movies { get; set; }
 
+    public virtual DbSet<Notification> Notifications { get; set; }
+
     public virtual DbSet<Room> Rooms { get; set; }
 
     public virtual DbSet<Seat> Seats { get; set; }
@@ -34,6 +36,8 @@ public partial class RapPhimContext : DbContext
     public virtual DbSet<Ticket> Tickets { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
+
+    public virtual DbSet<Voucher> Vouchers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -141,6 +145,23 @@ public partial class RapPhimContext : DbContext
                     });
         });
 
+        modelBuilder.Entity<Notification>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Notifica__3214EC07E05FA96C");
+
+            entity.ToTable("Notification");
+
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Message).HasMaxLength(500);
+
+            entity.HasOne(d => d.User).WithMany(p => p.Notifications)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Notificat__UserI__0E391C95");
+        });
+
         modelBuilder.Entity<Room>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Room__3214EC271BE4EAE2");
@@ -211,7 +232,6 @@ public partial class RapPhimContext : DbContext
 
             entity.HasOne(d => d.ShowTime).WithMany(p => p.Tickets)
                 .HasForeignKey(d => d.ShowTimeId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Tickets__ShowTim__531856C7");
 
             entity.HasOne(d => d.User).WithMany(p => p.Tickets)
@@ -234,6 +254,24 @@ public partial class RapPhimContext : DbContext
             entity.Property(e => e.PasswordHash).HasMaxLength(255);
             entity.Property(e => e.PhoneNumber).HasMaxLength(20);
             entity.Property(e => e.Role).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<Voucher>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Voucher__3214EC07635DFBD4");
+
+            entity.ToTable("Voucher");
+
+            entity.HasIndex(e => e.Code, "UQ__Voucher__A25C5AA7C9458C58").IsUnique();
+
+            entity.Property(e => e.Code).HasMaxLength(50);
+            entity.Property(e => e.DiscountAmount).HasColumnType("decimal(18, 2)");
+            entity.Property(e => e.IsActive).HasDefaultValue(true);
+
+            entity.HasOne(d => d.User).WithMany(p => p.Vouchers)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("FK__Voucher__UserId__12FDD1B2");
         });
 
         OnModelCreatingPartial(modelBuilder);

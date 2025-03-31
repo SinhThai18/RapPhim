@@ -8,12 +8,15 @@
 
 @if (TempData["SuccessMessage"] != null)
 {
-    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    <div id="successAlert" class="alert alert-success">@TempData["SuccessMessage"]</div>
 }
 @if (TempData["ErrorMessage"] != null)
 {
-    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    <div id="errorAlert" class="alert alert-danger">@TempData["ErrorMessage"]</div>
 }
+
+
+
 
 <!-- Tìm kiếm và lọc -->
 <div class="row mb-3">
@@ -34,6 +37,7 @@
             <option value="">-- Lọc theo trạng thái thanh toán --</option>
             <option value="Success">Đã sử dụng</option>
             <option value="paid">Đã thanh toán</option>
+            <option value="refund">Cần hoàn tiền</option>
         </select>
     </div>
 </div>
@@ -53,42 +57,65 @@
         </tr>
     </thead>
     <tbody id="ticketTableBody">
-        @foreach (var ticket in Model)
+        @if (Model != null && Model.Any())
+        {
+            foreach (var ticket in Model)
+            {
+                <tr>
+                    <td>@ticket.Id</td>
+                    <td>
+                        @(ticket.User != null ? $"{ticket.User.FullName} : {ticket.User.PhoneNumber}" : "Không có thông tin")
+                    </td>
+                    <td>
+                        @(ticket.ShowTime != null
+                            ? $"{ticket.ShowTime.ShowDate} : {ticket.ShowTime.ShowTime1}"
+                            : "Suất chiếu đã bị xóa")
+                    </td>
+                    <td>
+                        @(ticket.Seat != null ? ticket.Seat.SeatNumber : "Chưa có ghế") |
+                        @(ticket.ShowTime?.Room != null ? ticket.ShowTime.Room.Name : "Không xác định")
+                    </td>
+                    <td>@ticket.Price VNĐ</td>
+                    <td>@ticket.BookingTime.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>
+                        @if (ticket.PaymentStatus == "Success")
+                        {
+                            <span class="badge bg-success">Đã sử dụng</span>
+                        }
+                        else if (ticket.PaymentStatus == "refund")
+                        {
+                            <span class="badge bg-danger">Cần hoàn tiền</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-warning text-dark">Đã thanh toán</span>
+                        }
+                    </td>
+                    <td>
+                        @if (ticket.PaymentStatus != "Success")
+                        {
+                            <form method="post" asp-action="UpdatePaymentStatus" asp-route-id="@ticket.Id">
+                                <button type="submit" class="btn btn-sm @(ticket.PaymentStatus == "Refund" ? "btn-danger" : "btn-success")">
+                                    <i class="fas fa-check"></i> Cập nhật
+                                </button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td>@ticket.Id</td>
-                <td>@ticket.User.FullName</td>
-                <td>@ticket.ShowTime.ShowDate : @ticket.ShowTime.ShowTime1</td>
-                <td>@ticket.Seat.SeatNumber</td>
-                <td>@ticket.Price VNĐ</td>
-                <td>@ticket.BookingTime.ToString("dd/MM/yyyy HH:mm")</td>
-                <td>
-                    @if (ticket.PaymentStatus == "Success")
-                    {
-                        <span class="badge bg-success">Đã sử dụng</span>
-                    }
-                    else
-                    {
-                        <span class="badge bg-warning text-dark">Đã thanh toán</span>
-                    }
-                </td>
-                <td>
-                    @if (ticket.PaymentStatus != "Success")
-                    {
-                        <form method="post" asp-action="UpdatePaymentStatus" asp-route-id="@ticket.Id">
-                            <button type="submit" class="btn btn-sm btn-success">
-                                <i class="fas fa-check"></i> Cập nhật
-                            </button>
-                        </form>
-                    }
-                </td>
+                <td colspan="8" class="text-center text-danger">Không có dữ liệu vé</td>
             </tr>
         }
+
     </tbody>
 </table>
 
 <!-- Phân trang -->
-<nav>
+@*@<nav>
     <ul class="pagination justify-content-center">
         <li class="page-item">
             <button id="prevPage" class="page-link">Trang trước</button>
@@ -100,71 +127,46 @@
             <button id="nextPage" class="page-link">Trang sau</button>
         </li>
     </ul>
-</nav>
-
+*@
 @section Scripts {
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const searchId = document.getElementById("searchId");
+            const searchUser = document.getElementById("searchUser");
+            const filterStatus = document.getElementById("filterStatus");
             const rows = document.querySelectorAll("#ticketTableBody tr");
-            const rowsPerPage = 10;
-            let currentPage = 1;
-
-            function showPage(page) {
-                let visibleRows = [...document.querySelectorAll("#ticketTableBody tr:not([style*='display: none'])")];
-                let start = (page - 1) * rowsPerPage;
-                let end = start + rowsPerPage;
-
-                visibleRows.forEach((row, index) => {
-                    row.style.display = (index >= start && index < end) ? "table-row" : "none";
-                });
-
-                document.getElementById("pageNumber").textContent = page;
-                document.getElementById("prevPage").disabled = (page === 1);
-                document.getElementById("nextPage").disabled = (end >= visibleRows.length);
-            }
 
             function applyFilters() {
-                let searchId = document.getElementById("searchId").value.toLowerCase();
-                let searchUser = document.getElementById("searchUser").value.toLowerCase();
-                let filterStatus = document.getElementById("filterStatus").value.toLowerCase();
+                let searchIdValue = searchId.value.toLowerCase();
+                let searchUserValue = searchUser.value.toLowerCase();
+                let filterStatusValue = filterStatus.value.toLowerCase();
 
                 rows.forEach(row => {
-                    let id = row.cells[0].innerText.toLowerCase();
-                    let username = row.cells[1].innerText.toLowerCase();
-                   let status = row.cells[6].innerText.trim();
+                    let id = row.cells[0]?.innerText.toLowerCase() || "";
+                    let username = row.cells[1]?.innerText.toLowerCase() || "";
+                    let status = row.cells[6]?.innerText.trim().toLowerCase() || "";
 
-                    let matchId = !searchId || id.includes(searchId);
-                    let matchUser = !searchUser || username.includes(searchUser);
-                  let matchStatus = !filterStatus ||
-                  (filterStatus === "success" && status.includes("Đã sử dụng")) ||
-                  (filterStatus === "paid" && status.includes("Đã thanh toán"));
-
+                    let matchId = !searchIdValue || id.includes(searchIdValue);
+                    let matchUser = !searchUserValue || username.includes(searchUserValue);
+                    let matchStatus = !filterStatusValue ||
+                        (filterStatusValue === "success" && status.includes("đã sử dụng")) ||
+                        (filterStatusValue === "refund" && status.includes("cần hoàn tiền")) ||
+                        (filterStatusValue === "paid" && status.includes("đã thanh toán"));
 
                     row.style.display = (matchId && matchUser && matchStatus) ? "" : "none";
                 });
-
-                showPage(1);
             }
 
-            document.getElementById("searchId").addEventListener("input", applyFilters);
-            document.getElementById("searchUser").addEventListener("input", applyFilters);
-            document.getElementById("filterStatus").addEventListener("change", applyFilters);
-
-            document.getElementById("prevPage").addEventListener("click", function () {
-                if (currentPage > 1) {
-                    currentPage--;
-                    showPage(currentPage);
-                }
-            });
-
-            document.getElementById("nextPage").addEventListener("click", function () {
-                if (currentPage * rowsPerPage < rows.length) {
-                    currentPage++;
-                    showPage(currentPage);
-                }
-            });
-
-            applyFilters();
+            searchId.addEventListener("input", applyFilters);
+            searchUser.addEventListener("input", applyFilters);
+            filterStatus.addEventListener("change", applyFilters);
         });
+    </script>
+
+    <script>
+        setTimeout(function () {
+            document.getElementById("successAlert")?.style.display = "none";
+            document.getElementById("errorAlert")?.style.display = "none";
+        }, 1000);
     </script>
 }

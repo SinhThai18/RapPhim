@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using RapPhim3.Hubs;
 using RapPhim3.Models;
 using RapPhim3.Services;
 
@@ -21,6 +22,7 @@ builder.Services.AddScoped<SeatService>();
 builder.Services.AddScoped<TicketService>();
 builder.Services.AddMemoryCache();
 
+builder.Services.AddSignalR();
 
 builder.Services.AddSession(options =>
 {
@@ -43,6 +45,8 @@ if (!app.Environment.IsDevelopment())
 app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.MapHub<NotificationHub>("/notificationHub");
 
 app.UseRouting();
 

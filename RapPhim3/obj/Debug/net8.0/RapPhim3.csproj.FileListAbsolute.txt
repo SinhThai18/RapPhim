@@ -169,10 +169,14 @@ C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\o
 C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RapPhim3.props
 C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RapPhim3.props
 C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.csproj.Up2Date
 C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.dll
 C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\refint\RapPhim3.dll
 C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.pdb
 C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\RapPhim3.genruntimeconfig.cache
 C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\ref\RapPhim3.dll
+C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\thaim\OneDrive\Máy tính\kì 7\New folder\RapPhim3\RapPhim3\RapPhim3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
